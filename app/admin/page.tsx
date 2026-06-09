@@ -118,7 +118,7 @@ export default function AdminPage() {
     </div>
   );
 
-  const tabs = ["hero", "about", "socials", "cv"];
+  const tabs = ["hero", "about", "socials", "gallery", "cv"];
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f0ebe3]">
@@ -150,7 +150,7 @@ export default function AdminPage() {
                 activeTab === tab ? "bg-[#c9a96e]/10 text-[#c9a96e]" : "text-[#6b6b6b] hover:text-[#f0ebe3]"
               }`}
             >
-              {tab === "hero" ? "Accueil" : tab === "about" ? "À propos" : tab === "socials" ? "Réseaux" : "CV"}
+              {tab === "hero" ? "Accueil" : tab === "about" ? "À propos" : tab === "socials" ? "Réseaux" : tab === "gallery" ? "Galerie" : "CV"}
             </button>
           ))}
         </div>
@@ -245,6 +245,50 @@ export default function AdminPage() {
                 className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
               >
                 + Ajouter un réseau
+              </button>
+            </div>
+          )}
+
+          {/* Gallery */}
+          {activeTab === "gallery" && (
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Galerie photos</h2>
+              <p className="text-[#6b6b6b] text-sm mb-4">Collez des URLs d&apos;images directement depuis Instagram ou VSCO.</p>
+              {content.gallery.map((item: any, i: number) => (
+                <div key={i} className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-5 space-y-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[#c9a96e] text-sm font-medium">Photo {i + 1}</span>
+                    <button
+                      onClick={() => removeItem("gallery", i)}
+                      className="text-[#6b6b6b] hover:text-red-400 text-xs transition-colors"
+                    >
+                      Supprimer
+                    </button>
+                  </div>
+                  {item.url && (
+                    <img src={item.url} alt={item.caption} className="w-full h-32 object-cover rounded-lg mb-2" />
+                  )}
+                  {["url", "caption", "source"].map(field => (
+                    <div key={field}>
+                      <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">
+                        {field === "url" ? "URL de l'image" : field === "caption" ? "Légende" : "Source (instagram/vsco)"}
+                      </label>
+                      <input
+                        type="text"
+                        value={item[field]}
+                        onChange={e => updateArray("gallery", i, field, e.target.value)}
+                        className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                        placeholder={field === "url" ? "https://..." : field === "source" ? "instagram" : ""}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <button
+                onClick={() => addItem("gallery", { url: "", caption: "", source: "instagram" })}
+                className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
+              >
+                + Ajouter une photo
               </button>
             </div>
           )}

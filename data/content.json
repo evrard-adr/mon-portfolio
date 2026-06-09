@@ -15,7 +15,16 @@
     { "name": "Instagram", "url": "https://instagram.com/evrardadr", "handle": "@evrardadr — pro" },
     { "name": "LinkedIn", "url": "https://linkedin.com/in/evrardandre", "handle": "Evrard André" },
     { "name": "TikTok", "url": "https://www.tiktok.com/@evrard.adr", "handle": "@evrard.adr" },
-    { "name": "Twitter / X", "url": "https://x.com/evrard_andre", "handle": "@evrard_andre" }
+    { "name": "Twitter / X", "url": "https://x.com/evrard_andre", "handle": "@evrard_andre" },
+    { "name": "VSCO", "url": "https://vsco.co/evrardadr", "handle": "@evrardadr" }
+  ],
+  "gallery": [
+    { "url": "", "caption": "Photo 1", "source": "instagram" },
+    { "url": "", "caption": "Photo 2", "source": "vsco" },
+    { "url": "", "caption": "Photo 3", "source": "instagram" },
+    { "url": "", "caption": "Photo 4", "source": "vsco" },
+    { "url": "", "caption": "Photo 5", "source": "instagram" },
+    { "url": "", "caption": "Photo 6", "source": "vsco" }
   ],
   "cv": {
     "formations": [
