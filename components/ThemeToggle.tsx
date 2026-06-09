@@ -1,17 +1,14 @@
 "use client";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useTheme } from "./Providers";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return <div className="w-8 h-8" />;
+  const { theme, toggle } = useTheme();
 
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 dark:border-white/10 dark:hover:border-[#4ade80]/50 light:border-black/10 hover:border-[#16a34a]/50 transition-all text-white/40 dark:text-white/40 hover:text-white dark:hover:text-[#4ade80] hover:text-[#16a34a]"
+      onClick={toggle}
+      className="w-8 h-8 flex items-center justify-center rounded-full transition-all"
+      style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }}
       aria-label="Changer le thème"
     >
       {theme === "dark" ? (
