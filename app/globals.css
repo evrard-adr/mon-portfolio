@@ -151,3 +151,7 @@ body {
   opacity: 0; transition: opacity 0.3s;
 }
 .gallery-item:hover .overlay { opacity: 1; }
+
+/* Gallery external links */
+.gallery-ext-link { color: var(--text-muted); }
+.gallery-ext-link:hover { color: var(--accent); }

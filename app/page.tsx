@@ -3,7 +3,6 @@ import SocialIcon from "@/components/SocialIcon";
 import Menu from "@/components/Menu";
 import ScrollReveal from "@/components/ScrollReveal";
 import Link from "next/link";
-import Image from "next/image";
 
 export const dynamic = "force-dynamic";
 
@@ -158,15 +157,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-4 mt-8" data-reveal="fade">
-            <a href="https://instagram.com/evrard_adr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}
-              onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = "var(--text-muted)")}>
+            <a href="https://instagram.com/evrard_adr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               Instagram ↗
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
-            <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}
-              onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = "var(--text-muted)")}>
+            <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               VSCO ↗
             </a>
           </div>
