@@ -44,13 +44,13 @@ export default function SocialIcon({ name, url, handle }: Props) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-3 px-5 py-3.5 border border-[#1e1e1e] rounded-full hover:border-[#c9a96e] hover:text-[#c9a96e] transition-all duration-300 text-[#6b6b6b]"
+      className="group flex items-center gap-3 px-5 py-3.5 border border-[#1a2a1e] rounded-full bg-[#0d1410] hover:border-[#4ade80]/50 hover:bg-[#4ade80]/5 transition-all duration-300 text-[#5a7060]"
     >
-      <span className="text-[#f0ebe3] group-hover:text-[#c9a96e] transition-colors">
+      <span className="text-white/60 group-hover:text-[#4ade80] transition-colors">
         {icons[name] ?? null}
       </span>
-      <span className="text-sm font-light tracking-wide text-[#f0ebe3]">{name}</span>
-      <span className="text-xs ml-auto">{handle}</span>
+      <span className="text-sm font-medium tracking-wide text-white/70 group-hover:text-white transition-colors">{name}</span>
+      <span className="text-xs ml-auto text-white/25 group-hover:text-[#4ade80]/70 transition-colors">{handle}</span>
     </a>
   );
 }
