@@ -49,7 +49,7 @@ export default function AdminPage() {
     });
     setSaving(false);
     setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    setTimeout(() => setSaved(false), 5000);
   };
 
   const update = (path: string[], value: string) => {
@@ -134,7 +134,7 @@ export default function AdminPage() {
             disabled={saving}
             className="bg-[#c9a96e] text-[#0a0a0a] px-5 py-2 rounded-xl text-sm font-medium hover:bg-[#d4b87a] transition-colors disabled:opacity-50"
           >
-            {saved ? "✓ Sauvegardé" : saving ? "Sauvegarde..." : "Sauvegarder"}
+            {saved ? "✓ En ligne dans ~2min" : saving ? "Envoi..." : "Sauvegarder"}
           </button>
         </div>
       </div>
