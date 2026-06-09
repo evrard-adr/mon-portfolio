@@ -11,7 +11,8 @@
     "email": "everard.andre@exemple.com"
   },
   "socials": [
-    { "name": "Instagram", "url": "https://instagram.com/evrard_adr", "handle": "@evrard_adr" },
+    { "name": "Instagram", "url": "https://instagram.com/evrard_adr", "handle": "@evrard_adr — perso" },
+    { "name": "Instagram", "url": "https://instagram.com/evrardadr", "handle": "@evrardadr — pro" },
     { "name": "LinkedIn", "url": "https://linkedin.com/in/evrardandre", "handle": "Evrard André" },
     { "name": "TikTok", "url": "https://tiktok.com/@votrecompte", "handle": "@votrecompte" },
     { "name": "Twitter / X", "url": "https://x.com/evrard_andre", "handle": "@evrard_andre" }
