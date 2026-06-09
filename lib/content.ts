@@ -1,0 +1,13 @@
+import fs from "fs";
+import path from "path";
+
+const filePath = path.join(process.cwd(), "data", "content.json");
+
+export function getContent() {
+  const raw = fs.readFileSync(filePath, "utf-8");
+  return JSON.parse(raw);
+}
+
+export function saveContent(data: object) {
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
+}

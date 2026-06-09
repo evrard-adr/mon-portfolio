@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "name": "Evrard André",
+    "title": "Étudiant en Droit — Université Jean Moulin Lyon 3",
+    "subtitle": "Passionné par la mobilité de demain, le droit, et l'engagement associatif.",
+    "photo": ""
+  },
+  "about": {
+    "text": "Étudiant en licence de droit à l'Université Jean Moulin Lyon 3, je m'intéresse profondément aux enjeux de mobilité et de transports en commun — comment nous déplacerons-nous à l'horizon 2050-2075 ? En parallèle, je m'engage activement dans la vie associative étudiante et je pratique le violoncelle et le piano.",
+    "location": "Lyon, France",
+    "email": "everard.andre@exemple.com"
+  },
+  "socials": [
+    { "name": "Instagram", "url": "https://instagram.com/votrecompte", "handle": "@votrecompte" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/in/votrecompte", "handle": "Evrard André" },
+    { "name": "TikTok", "url": "https://tiktok.com/@votrecompte", "handle": "@votrecompte" },
+    { "name": "Twitter / X", "url": "https://x.com/votrecompte", "handle": "@votrecompte" }
+  ],
+  "cv": {
+    "formations": [
+      {
+        "annee": "2024 — présent",
+        "titre": "Licence de Droit",
+        "etablissement": "Université Jean Moulin Lyon 3",
+        "description": "Droit civil, droit constitutionnel, droit des obligations, introduction au droit public."
+      }
+    ],
+    "experiences": [
+      {
+        "annee": "Juil. 2025 — présent",
+        "titre": "Responsable Communication — Bureau National",
+        "role": "Parlement des Étudiants — France entière",
+        "description": "Pilotage de la communication pour les 25 sections du Parlement des Étudiants à l'échelle nationale."
+      },
+      {
+        "annee": "Juin 2025 — présent",
+        "titre": "Responsable Communication",
+        "role": "Parlement des Étudiants de Lyon",
+        "description": "Gestion de la communication de la section lyonnaise : réseaux sociaux, identité visuelle, relations presse."
+      },
+      {
+        "annee": "2024 — présent",
+        "titre": "Employé Polyvalent",
+        "role": "U Express Lyon Saint-Louis",
+        "description": "Mise en rayon, caisse, préparation de commandes en ligne."
+      }
+    ],
+    "competences": ["Droit civil", "Droit constitutionnel", "Communication digitale", "Gestion de projet", "Rédaction juridique", "Anglais", "Violoncelle", "Piano"],
+    "interets": ["Mobilité & transports en commun", "Prospective urbaine (2050–2075)", "Droit public", "Musique classique", "Engagement associatif"]
+  }
+}
