@@ -155,36 +155,94 @@ body {
 /* ── PRINT / PDF EXPORT ── */
 @media print {
   @page {
-    margin: 18mm 16mm;
-    size: A4;
+    margin: 10mm 12mm;
+    size: A4 portrait;
   }
 
-  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; box-sizing: border-box !important; }
 
-  body {
+  html, body {
     background: #ffffff !important;
     color: #0d1f10 !important;
-    font-size: 10pt;
+    font-size: 8.5pt !important;
+    line-height: 1.4 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
-  nav, .print\:hidden { display: none !important; }
+  /* Hide everything that's not the CV content */
+  nav, .print\:hidden, footer { display: none !important; }
 
-  main { padding-top: 0 !important; }
+  main {
+    min-height: unset !important;
+    background: #ffffff !important;
+  }
 
-  /* Force light colours for readability */
-  [style*="--bg"] { background-color: #ffffff !important; }
-  [style*="--bg2"] { background-color: #f4f7f4 !important; }
-  [style*="--text)"] { color: #0d1f10 !important; }
-  [style*="--text-muted)"] { color: #4a5e4c !important; }
-  [style*="--accent)"] { color: #16a34a !important; }
-  [style*="--border)"] { border-color: #d0ddd1 !important; }
+  /* CV wrapper — full width, compact padding */
+  main > div {
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
 
-  h1 { font-size: 36pt !important; line-height: 1 !important; }
-  h2, h3 { break-after: avoid; }
+  /* Header block */
+  main > div > div:first-child {
+    margin-bottom: 6mm !important;
+    padding-bottom: 5mm !important;
+  }
 
-  .grid { display: grid !important; }
-  .space-y-16 > * + * { margin-top: 2rem !important; }
-  .space-y-8 > * + * { margin-top: 1.5rem !important; }
+  /* Name: big but not huge */
+  h1 {
+    font-size: 26pt !important;
+    line-height: 1 !important;
+    margin-bottom: 1mm !important;
+  }
+
+  /* Section labels */
+  h2 { font-size: 7pt !important; margin-bottom: 3mm !important; margin-top: 0 !important; }
+  h3 { font-size: 8.5pt !important; margin-bottom: 0.5mm !important; }
+
+  p, li, a, span { font-size: 7.5pt !important; line-height: 1.35 !important; }
+
+  /* Grid: keep 2-col layout */
+  .grid { display: grid !important; grid-template-columns: 2fr 1fr !important; gap: 8mm !important; }
+
+  /* Collapse vertical spacing */
+  .space-y-16 > * + * { margin-top: 5mm !important; }
+  .space-y-10 > * + * { margin-top: 4mm !important; }
+  .space-y-8  > * + * { margin-top: 3.5mm !important; }
+  .space-y-2  > * + * { margin-top: 1mm !important; }
+  .mb-20 { margin-bottom: 0 !important; }
+  .mb-8  { margin-bottom: 3mm !important; }
+  .mb-6  { margin-bottom: 2mm !important; }
+  .mb-5  { margin-bottom: 2mm !important; }
+  .mb-2  { margin-bottom: 1mm !important; }
+  .pt-36 { padding-top: 0 !important; }
+  .pb-32 { padding-bottom: 0 !important; }
+  .gap-16 { gap: 8mm !important; }
+
+  /* Entry cards */
+  .pl-5 { padding-left: 3mm !important; }
+
+  /* Competences pills */
+  .gap-1\.5 { gap: 1mm !important; }
+  .px-3 { padding-left: 2mm !important; padding-right: 2mm !important; }
+  .py-1\.5 { padding-top: 0.5mm !important; padding-bottom: 0.5mm !important; }
+  .rounded-full { border-radius: 3pt !important; }
+
+  /* Force colours */
+  [style*="color: var(--text)"]       { color: #0d1f10 !important; }
+  [style*="color: var(--text-muted)"] { color: #3d5c41 !important; }
+  [style*="color: var(--text-faint)"] { color: #7a9a7e !important; }
+  [style*="color: var(--accent)"]     { color: #16a34a !important; }
+  [style*="background-color: var(--bg2)"]      { background-color: #f0f5f1 !important; }
+  [style*="background-color: var(--accent-glow)"] { background-color: #f0faf3 !important; }
+  [style*="border: 1px solid var(--border)"]   { border-color: #c8dcc9 !important; }
+  [style*="border-left: 1px solid var(--border)"] { border-left-color: #c8dcc9 !important; }
+  [style*="background-color: var(--accent)"]   { background-color: #16a34a !important; }
+
+  /* No page break inside an entry */
+  .pl-5, .space-y-8 > div { break-inside: avoid !important; }
 }
 
 /* Gallery external links */
