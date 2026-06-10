@@ -12,22 +12,78 @@
     "phone": "07 67 26 38 51"
   },
   "socials": [
-    { "name": "Instagram", "url": "https://instagram.com/evrard_adr", "handle": "@evrard_adr — perso" },
-    { "name": "Instagram", "url": "https://instagram.com/evrardadr", "handle": "@evrardadr — pro" },
-    { "name": "LinkedIn", "url": "https://linkedin.com/in/evrardandre", "handle": "Evrard André" },
-    { "name": "TikTok", "url": "https://www.tiktok.com/@evrard.adr", "handle": "@evrard.adr" },
-    { "name": "Twitter / X", "url": "https://x.com/evrard_andre", "handle": "@evrard_andre" },
-    { "name": "VSCO", "url": "https://vsco.co/evrardadr", "handle": "@evrardadr" }
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/evrard_adr",
+      "handle": "@evrard_adr — perso"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/evrardadr",
+      "handle": "@evrardadr — pro"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/in/evrardandre",
+      "handle": "Evrard André"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/@evrard.adr",
+      "handle": "@evrard.adr"
+    },
+    {
+      "name": "Twitter / X",
+      "url": "https://x.com/evrard_andre",
+      "handle": "@evrard_andre"
+    },
+    {
+      "name": "VSCO",
+      "url": "https://vsco.co/evrardadr",
+      "handle": "@evrardadr"
+    }
   ],
   "gallery": [
-    { "url": "/gallery/photo1.jpg", "caption": "35e Journée du Livre Politique", "source": "Paris" },
-    { "url": "/gallery/photo2.jpg", "caption": "Parlement des Étudiants", "source": "PE" },
-    { "url": "/gallery/photo3.jpg", "caption": "Session plénière", "source": "PE" },
-    { "url": "/gallery/photo4.jpg", "caption": "En séance", "source": "PE" },
-    { "url": "/gallery/photo5.jpg", "caption": "Parlement des Étudiants", "source": "PE" },
-    { "url": "/gallery/photo6.jpg", "caption": "Lyon", "source": "Lyon" },
-    { "url": "/gallery/photo7.jpg", "caption": "Assemblée nationale", "source": "Paris" },
-    { "url": "/gallery/photo8.jpg", "caption": "35e Journée du Livre Politique", "source": "Paris" }
+    {
+      "url": "/gallery/photo1.jpg",
+      "caption": "35e Journée du Livre Politique",
+      "source": "Paris"
+    },
+    {
+      "url": "/gallery/photo2.jpg",
+      "caption": "Parlement des Étudiants",
+      "source": "PE"
+    },
+    {
+      "url": "/gallery/photo3.jpg",
+      "caption": "Session plénière",
+      "source": "PE"
+    },
+    {
+      "url": "/gallery/photo4.jpg",
+      "caption": "En séance",
+      "source": "PE"
+    },
+    {
+      "url": "/gallery/photo5.jpg",
+      "caption": "Parlement des Étudiants",
+      "source": "PE"
+    },
+    {
+      "url": "/gallery/photo6.jpg",
+      "caption": "Lyon",
+      "source": "Lyon"
+    },
+    {
+      "url": "/gallery/photo7.jpg",
+      "caption": "Assemblée nationale",
+      "source": "Paris"
+    },
+    {
+      "url": "/gallery/photo8.jpg",
+      "caption": "35e Journée du Livre Politique",
+      "source": "Paris"
+    }
   ],
   "cv": {
     "formations": [
@@ -52,13 +108,28 @@
         "description": "Gestion de la communication de la section lyonnaise : réseaux sociaux, identité visuelle, relations presse."
       },
       {
-        "annee": "2024 — présent",
+        "annee": "octobre 2025 — présent",
         "titre": "Employé Polyvalent",
         "role": "U Express Lyon Saint-Louis",
         "description": "Mise en rayon, caisse, préparation de commandes en ligne."
       }
     ],
-    "competences": ["Droit civil", "Droit constitutionnel", "Communication digitale", "Gestion de projet", "Rédaction juridique", "Anglais", "Violoncelle", "Piano"],
-    "interets": ["Mobilité & transports en commun", "Prospective urbaine (2050–2075)", "Droit public", "Musique classique", "Engagement associatif"]
+    "competences": [
+      "Droit civil",
+      "Droit constitutionnel",
+      "Communication digitale",
+      "Gestion de projet",
+      "Rédaction juridique",
+      "Anglais",
+      "Violoncelle",
+      "Piano"
+    ],
+    "interets": [
+      "Mobilité & transports en commun",
+      "Prospective urbaine (2050–2075)",
+      "Droit public",
+      "Musique classique",
+      "Engagement associatif"
+    ]
   }
 }
