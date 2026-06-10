@@ -243,6 +243,9 @@ body {
 
   /* No page break inside an entry */
   .pl-5, .space-y-8 > div { break-inside: avoid !important; }
+
+  /* Profile photo */
+  .print-profile .relative { width: 22mm !important; height: 22mm !important; }
 }
 
 /* Gallery external links */

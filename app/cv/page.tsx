@@ -21,13 +21,30 @@ export default function CVPage() {
             </div>
             <CVPrintButton />
           </div>
-          <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-2" style={{ color: "var(--text)" }}>
-            Evrard
-          </h1>
-          <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-6" style={{ color: "var(--accent)" }}>
-            André
-          </h1>
-          <p className="text-sm font-light" style={{ color: "var(--text-muted)" }}>{hero.title}</p>
+
+          <div className="flex items-end gap-8">
+            <div>
+              <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-2" style={{ color: "var(--text)" }}>
+                Evrard
+              </h1>
+              <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-6" style={{ color: "var(--accent)" }}>
+                André
+              </h1>
+              <p className="text-sm font-light" style={{ color: "var(--text-muted)" }}>{hero.title}</p>
+            </div>
+
+            {/* Photo de profil ronde */}
+            <div className="shrink-0 ml-auto print-profile">
+              <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden"
+                style={{ border: "2px solid var(--accent-border)", boxShadow: "0 0 0 4px var(--accent-glow)" }}>
+                <img
+                  src="/gallery/profile.jpg"
+                  alt="Evrard André"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-16">

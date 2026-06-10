@@ -19,11 +19,14 @@
     { "name": "VSCO", "url": "https://vsco.co/evrardadr", "handle": "@evrardadr" }
   ],
   "gallery": [
-    { "url": "/gallery/photo1.jpg", "caption": "35e Journée du Livre Politique — Paris", "source": "Paris" },
+    { "url": "/gallery/photo1.jpg", "caption": "35e Journée du Livre Politique", "source": "Paris" },
     { "url": "/gallery/photo2.jpg", "caption": "Parlement des Étudiants", "source": "PE" },
     { "url": "/gallery/photo3.jpg", "caption": "Session plénière", "source": "PE" },
     { "url": "/gallery/photo4.jpg", "caption": "En séance", "source": "PE" },
-    { "url": "/gallery/photo5.jpg", "caption": "Parlement des Étudiants", "source": "PE" }
+    { "url": "/gallery/photo5.jpg", "caption": "Parlement des Étudiants", "source": "PE" },
+    { "url": "/gallery/photo6.jpg", "caption": "Lyon", "source": "Lyon" },
+    { "url": "/gallery/photo7.jpg", "caption": "Assemblée nationale", "source": "Paris" },
+    { "url": "/gallery/photo8.jpg", "caption": "35e Journée du Livre Politique", "source": "Paris" }
   ],
   "cv": {
     "formations": [
