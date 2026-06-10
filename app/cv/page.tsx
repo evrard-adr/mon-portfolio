@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content";
-import ThemeToggle from "@/components/ThemeToggle";
+import Menu from "@/components/Menu";
+import CVPrintButton from "@/components/CVPrintButton";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -10,22 +11,15 @@ export default function CVPage() {
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-5 backdrop-blur-sm" style={{ backgroundColor: "var(--nav-bg)", borderBottom: "1px solid var(--border)" }}>
-        <Link href="/" className="font-display font-extrabold text-sm tracking-tight transition-colors" style={{ color: "var(--text)" }}>
-          Evrard<span style={{ color: "var(--accent)" }}>.</span>
-        </Link>
-        <div className="flex items-center gap-4">
-          <Link href="/" className="text-[11px] font-medium uppercase tracking-[0.12em] transition-colors" style={{ color: "var(--text-muted)" }}>
-            ← Retour
-          </Link>
-          <ThemeToggle />
-        </div>
-      </nav>
+      <Menu />
 
       <div className="px-8 md:px-12 pt-36 pb-32 max-w-5xl mx-auto">
         <div className="mb-20 pb-16" style={{ borderBottom: "1px solid var(--border)" }}>
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Curriculum Vitae</span>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Curriculum Vitae</span>
+            </div>
+            <CVPrintButton />
           </div>
           <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-2" style={{ color: "var(--text)" }}>
             Evrard
