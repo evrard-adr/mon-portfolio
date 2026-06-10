@@ -3,13 +3,14 @@ import SocialIcon from "@/components/SocialIcon";
 import Menu from "@/components/Menu";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroBlob from "@/components/HeroBlob";
+import AnimatedCounter from "@/components/AnimatedCounter";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
 export default function Home() {
   const content = getContent();
-  const { hero, about, socials, gallery } = content;
+  const { hero, about, socials, gallery, badge, engagements, stats, projets } = content as any;
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
@@ -23,11 +24,18 @@ export default function Home() {
         <HeroBlob />
 
         <div className="max-w-5xl w-full relative" style={{ zIndex: 1 }}>
-          <div className="inline-flex items-center gap-2 mb-10 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
+          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
             data-reveal="fade">
             <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)", animation: "pulse-dot 2s ease-in-out infinite" }} />
             <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2025</span>
           </div>
+
+          {badge?.visible && (
+            <div className="inline-flex items-center gap-2 mb-10 ml-3 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)" }} />
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>{badge.text}</span>
+            </div>
+          )}
 
           <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-10" data-reveal data-delay="1">
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
@@ -53,9 +61,9 @@ export default function Home() {
       {/* ── TICKER ── */}
       <div className="py-3 overflow-hidden" style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
         <div className="flex" style={{ animation: "ticker 30s linear infinite", width: "max-content" }}>
-          {Array(2).fill(null).map((_, i) => (
+          {[content.ticker, content.ticker].map((t: string, i: number) => (
             <p key={i} className="whitespace-nowrap font-display font-bold text-[11px] uppercase tracking-[0.25em] px-4" style={{ color: "var(--text-faint)" }}>
-              Droit &nbsp;·&nbsp; Mobilité Urbaine &nbsp;·&nbsp; Lyon &nbsp;·&nbsp; Communication &nbsp;·&nbsp; Violoncelle &nbsp;·&nbsp; Transports 2050 &nbsp;·&nbsp; Parlement des Étudiants &nbsp;·&nbsp; Piano &nbsp;·&nbsp;
+              {t} &nbsp;·&nbsp;
             </p>
           ))}
         </div>
@@ -118,13 +126,9 @@ export default function Home() {
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
           </div>
           <div className="grid sm:grid-cols-3 gap-4">
-            {[
-              { icon: "⚖️", titre: "Droit", desc: "Licence à l'Université Jean Moulin Lyon 3 — passion pour le droit constitutionnel et public.", delay: "1" },
-              { icon: "🚇", titre: "Mobilité 2050", desc: "Passionné par l'avenir des transports en commun et les enjeux de déplacement à horizon 2075.", delay: "2" },
-              { icon: "🎻", titre: "Musique", desc: "Violoncelliste et pianiste — la musique comme discipline et expression personnelle.", delay: "3" },
-            ].map((item, i) => (
+            {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
               <div key={i} className="p-6 rounded-2xl transition-all group" style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg)" }}
-                data-reveal data-delay={item.delay}>
+                data-reveal data-delay={String(i + 1)}>
                 <span className="text-2xl mb-4 block">{item.icon}</span>
                 <h3 className="font-display font-bold text-base mb-2" style={{ color: "var(--text)" }}>{item.titre}</h3>
                 <p className="text-xs leading-relaxed font-light" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
@@ -134,11 +138,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PROJETS ── */}
+      <section id="projets" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+        <div className="max-w-5xl">
+          <div className="flex items-center gap-3 mb-14" data-reveal="fade">
+            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>02 — Projets</span>
+            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
+          </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            {projets.map((p: { titre: string; desc: string; date: string; tag: string; lien: string }, i: number) => (
+              <div key={i} className="group p-6 rounded-2xl flex flex-col gap-4 transition-all" style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg)" }} data-reveal data-delay={String(i + 1)}>
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full" style={{ backgroundColor: "var(--accent-glow)", color: "var(--accent)", border: "1px solid var(--accent-border)" }}>{p.tag}</span>
+                  <span className="text-[10px]" style={{ color: "var(--text-faint)" }}>{p.date}</span>
+                </div>
+                <h3 className="font-display font-bold text-base leading-tight" style={{ color: "var(--text)" }}>{p.titre}</h3>
+                <p className="text-xs leading-relaxed font-light flex-1" style={{ color: "var(--text-muted)" }}>{p.desc}</p>
+                {p.lien && (
+                  <a href={p.lien} target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--accent)" }}>Voir →</a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── STATS ── */}
+      <section className="px-8 md:px-12 py-20" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="max-w-5xl">
+          <div className="grid grid-cols-3 gap-8 text-center">
+            {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
+              <AnimatedCounter key={i} target={s.value} suffix={s.suffix} label={s.label} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── GALLERY ── */}
       <section id="gallery" className="py-28" style={{ borderTop: "1px solid var(--border)", overflow: "hidden" }}>
         <div className="max-w-5xl px-8 md:px-12">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>02 — Galerie</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>03 — Galerie</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
           </div>
         </div>
@@ -193,7 +233,7 @@ export default function Home() {
       <section id="socials" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
         <div className="max-w-5xl">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>03 — Réseaux</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>04 — Réseaux</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
           </div>
           <div className="flex flex-col md:flex-row gap-14 items-start">

@@ -6,9 +6,11 @@ import { useTheme } from "./Providers";
 const links = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/#about" },
-  { label: "Réseaux", href: "/#socials" },
+  { label: "Projets", href: "/#projets" },
   { label: "Galerie", href: "/#gallery" },
+  { label: "Réseaux", href: "/#socials" },
   { label: "CV", href: "/cv" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Menu() {

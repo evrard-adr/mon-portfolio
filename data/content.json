@@ -11,6 +11,44 @@
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
   },
+  "badge": {
+    "visible": true,
+    "text": "Ouvert aux opportunités"
+  },
+  "engagements": [
+    { "icon": "⚖️", "titre": "Droit", "desc": "Licence à l'Université Jean Moulin Lyon 3 — passion pour le droit constitutionnel et public." },
+    { "icon": "🚇", "titre": "Mobilité 2050", "desc": "Passionné par l'avenir des transports en commun et les enjeux de déplacement à horizon 2075." },
+    { "icon": "🎻", "titre": "Musique", "desc": "Violoncelliste et pianiste — la musique comme discipline et expression personnelle." }
+  ],
+  "stats": [
+    { "value": 25, "label": "Sections nationales", "suffix": "" },
+    { "value": 3, "label": "Mandats associatifs", "suffix": "" },
+    { "value": 500, "label": "Étudiants représentés", "suffix": "+" }
+  ],
+  "projets": [
+    {
+      "titre": "Communication nationale PE",
+      "desc": "Pilotage de la stratégie de communication pour les 25 sections du Parlement des Étudiants à l'échelle nationale.",
+      "date": "2025",
+      "tag": "Communication",
+      "lien": ""
+    },
+    {
+      "titre": "Identité visuelle PE Lyon",
+      "desc": "Refonte complète de l'identité visuelle de la section lyonnaise : charte graphique, réseaux sociaux, supports print.",
+      "date": "2025",
+      "tag": "Direction artistique",
+      "lien": ""
+    },
+    {
+      "titre": "Mobilité urbaine 2050",
+      "desc": "Veille et réflexion sur les enjeux de déplacement urbain à horizon 2050-2075 : transports en commun, nouvelles mobilités.",
+      "date": "2024",
+      "tag": "Recherche",
+      "lien": ""
+    }
+  ],
+  "ticker": "Droit  ·  Mobilité Urbaine  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
   "socials": [
     {
       "name": "Instagram",

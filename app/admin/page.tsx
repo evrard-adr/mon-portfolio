@@ -128,7 +128,7 @@ export default function AdminPage() {
     </div>
   );
 
-  const tabs = ["hero", "about", "socials", "gallery", "cv"];
+  const tabs = ["hero", "about", "badge", "engagements", "stats", "projets", "socials", "gallery", "cv"];
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#f0ebe3]">
@@ -136,6 +136,9 @@ export default function AdminPage() {
       <div className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur border-b border-[#1e1e1e] px-8 py-4 flex items-center justify-between">
         <h1 className="font-serif text-xl">Panel Admin</h1>
         <div className="flex items-center gap-4">
+          <a href="/contact" target="_blank" className="text-sm text-[#6b6b6b] hover:text-[#f0ebe3] transition-colors">
+            Contact →
+          </a>
           <a href="/" target="_blank" className="text-sm text-[#6b6b6b] hover:text-[#f0ebe3] transition-colors">
             Voir le site →
           </a>
@@ -176,7 +179,17 @@ export default function AdminPage() {
                 activeTab === tab ? "bg-[#c9a96e]/10 text-[#c9a96e]" : "text-[#6b6b6b] hover:text-[#f0ebe3]"
               }`}
             >
-              {tab === "hero" ? "Accueil" : tab === "about" ? "À propos" : tab === "socials" ? "Réseaux" : tab === "gallery" ? "Galerie" : "CV"}
+              {
+            tab === "hero" ? "Accueil" :
+            tab === "about" ? "À propos" :
+            tab === "badge" ? "Badge" :
+            tab === "engagements" ? "Engagements" :
+            tab === "stats" ? "Statistiques" :
+            tab === "projets" ? "Projets" :
+            tab === "socials" ? "Réseaux" :
+            tab === "gallery" ? "Galerie" :
+            "CV"
+          }
             </button>
           ))}
         </div>
@@ -315,6 +328,140 @@ export default function AdminPage() {
                 className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
               >
                 + Ajouter une photo
+              </button>
+            </div>
+          )}
+
+          {/* Badge */}
+          {activeTab === "badge" && content.badge && (
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Badge</h2>
+              <div className="flex items-center gap-3">
+                <input
+                  type="checkbox"
+                  id="badge-visible"
+                  checked={content.badge.visible}
+                  onChange={e => setContent((prev: any) => { const next = JSON.parse(JSON.stringify(prev)); next.badge.visible = e.target.checked; return next; })}
+                  className="w-4 h-4 accent-[#c9a96e]"
+                />
+                <label htmlFor="badge-visible" className="text-sm text-[#f0ebe3]">Afficher le badge</label>
+              </div>
+              <div>
+                <label className="block text-xs text-[#c9a96e] uppercase tracking-widest mb-2">Texte du badge</label>
+                <input
+                  type="text"
+                  value={content.badge.text}
+                  onChange={e => update(["badge", "text"], e.target.value)}
+                  className="w-full bg-[#111111] border border-[#1e1e1e] text-[#f0ebe3] px-4 py-3 rounded-xl focus:outline-none focus:border-[#c9a96e] transition-colors"
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Engagements */}
+          {activeTab === "engagements" && content.engagements && (
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Engagements</h2>
+              {content.engagements.map((item: any, i: number) => (
+                <div key={i} className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-5 space-y-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[#c9a96e] text-sm font-medium">{item.titre || `Engagement ${i + 1}`}</span>
+                    <button onClick={() => removeItem("engagements", i)} className="text-[#6b6b6b] hover:text-red-400 text-xs transition-colors">Supprimer</button>
+                  </div>
+                  {["icon", "titre", "desc"].map(field => (
+                    <div key={field}>
+                      <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">{field === "icon" ? "Icône" : field === "titre" ? "Titre" : "Description"}</label>
+                      <input
+                        type="text"
+                        value={item[field]}
+                        onChange={e => updateArray("engagements", i, field, e.target.value)}
+                        className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <button
+                onClick={() => addItem("engagements", { icon: "🌟", titre: "Nouvel engagement", desc: "" })}
+                className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
+              >
+                + Ajouter un engagement
+              </button>
+            </div>
+          )}
+
+          {/* Stats */}
+          {activeTab === "stats" && content.stats && (
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Statistiques</h2>
+              {content.stats.map((item: any, i: number) => (
+                <div key={i} className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-5 space-y-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[#c9a96e] text-sm font-medium">{item.label || `Stat ${i + 1}`}</span>
+                    <button onClick={() => removeItem("stats", i)} className="text-[#6b6b6b] hover:text-red-400 text-xs transition-colors">Supprimer</button>
+                  </div>
+                  <div>
+                    <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">Valeur (nombre)</label>
+                    <input
+                      type="number"
+                      value={item.value}
+                      onChange={e => updateArray("stats", i, "value", e.target.value)}
+                      className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                    />
+                  </div>
+                  {["label", "suffix"].map(field => (
+                    <div key={field}>
+                      <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">{field === "label" ? "Libellé" : "Suffixe (ex: +)"}</label>
+                      <input
+                        type="text"
+                        value={item[field]}
+                        onChange={e => updateArray("stats", i, field, e.target.value)}
+                        className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <button
+                onClick={() => addItem("stats", { value: 0, label: "Nouvelle stat", suffix: "" })}
+                className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
+              >
+                + Ajouter une statistique
+              </button>
+            </div>
+          )}
+
+          {/* Projets */}
+          {activeTab === "projets" && content.projets && (
+            <div className="space-y-6">
+              <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Projets</h2>
+              {content.projets.map((item: any, i: number) => (
+                <div key={i} className="bg-[#111111] border border-[#1e1e1e] rounded-2xl p-5 space-y-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[#c9a96e] text-sm font-medium">{item.titre || `Projet ${i + 1}`}</span>
+                    <button onClick={() => removeItem("projets", i)} className="text-[#6b6b6b] hover:text-red-400 text-xs transition-colors">Supprimer</button>
+                  </div>
+                  {["titre", "desc", "date", "tag", "lien"].map(field => (
+                    <div key={field}>
+                      <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">
+                        {field === "titre" ? "Titre" : field === "desc" ? "Description" : field === "date" ? "Date" : field === "tag" ? "Tag" : "Lien (optionnel)"}
+                      </label>
+                      <input
+                        type="text"
+                        value={item[field]}
+                        onChange={e => updateArray("projets", i, field, e.target.value)}
+                        className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                        placeholder={field === "lien" ? "https://..." : ""}
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+              <button
+                onClick={() => addItem("projets", { titre: "Nouveau projet", desc: "", date: "2025", tag: "Projet", lien: "" })}
+                className="w-full border border-dashed border-[#1e1e1e] text-[#6b6b6b] hover:text-[#f0ebe3] hover:border-[#c9a96e] py-3 rounded-2xl text-sm transition-colors"
+              >
+                + Ajouter un projet
               </button>
             </div>
           )}
