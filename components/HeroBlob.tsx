@@ -2,13 +2,13 @@
 
 export default function HeroBlob() {
   return (
-    <div className="hero-blob-wrap" aria-hidden="true">
-      {/* Blob principal — morphing liquide */}
-      <div className="hero-blob hero-blob--main" />
-      {/* Blob secondaire — décalé en phase */}
-      <div className="hero-blob hero-blob--secondary" />
-      {/* Blob accent — petit, rapide */}
-      <div className="hero-blob hero-blob--accent" />
+    <div className="hero-bg-blobs" aria-hidden="true">
+      <div className="hblob hblob--a" />
+      <div className="hblob hblob--b" />
+      <div className="hblob hblob--c" />
+      <div className="hblob hblob--d" />
+      {/* Noise overlay pour texture */}
+      <div className="hblob-noise" />
     </div>
   );
 }

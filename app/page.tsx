@@ -18,22 +18,21 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-12 pt-24 overflow-hidden">
-        <div className="absolute top-0 right-0 w-[700px] h-[700px] rounded-full blur-[180px] pointer-events-none" style={{ backgroundColor: "var(--accent-glow)", opacity: 3 }} />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[130px] pointer-events-none" style={{ backgroundColor: "var(--accent-glow)" }} />
 
-        <div className="max-w-5xl w-full relative">
+        {/* Fond animé derrière tout */}
+        <HeroBlob />
+
+        <div className="max-w-5xl w-full relative" style={{ zIndex: 1 }}>
           <div className="inline-flex items-center gap-2 mb-10 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
             data-reveal="fade">
             <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)", animation: "pulse-dot 2s ease-in-out infinite" }} />
             <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2025</span>
           </div>
 
-          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-0" data-reveal data-delay="1">
+          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-10" data-reveal data-delay="1">
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--accent)" }}>André</span>
           </h1>
-
-          <HeroBlob />
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-6" data-reveal data-delay="2">
             <div className="pl-5 max-w-xs" style={{ borderLeft: "2px solid var(--accent-border)" }}>
