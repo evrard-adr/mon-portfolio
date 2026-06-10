@@ -99,6 +99,12 @@ export default function Home() {
                 <span className="text-[9px] uppercase tracking-widest font-medium" style={{ color: "var(--accent)" }}>Email</span>
                 <span className="text-xs transition-colors" style={{ color: "var(--text-muted)" }}>{about.email} →</span>
               </a>
+              {about.phone && (
+                <a href={`tel:${about.phone.replace(/\s/g, "")}`} className="flex items-center justify-between px-5 py-3.5 rounded-xl transition-all" style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}>
+                  <span className="text-[9px] uppercase tracking-widest font-medium" style={{ color: "var(--accent)" }}>Téléphone</span>
+                  <span className="text-xs" style={{ color: "var(--text-muted)" }}>{about.phone} →</span>
+                </a>
+              )}
             </div>
           </div>
         </div>

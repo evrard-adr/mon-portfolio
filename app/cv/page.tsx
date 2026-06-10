@@ -115,6 +115,11 @@ export default function CVPage() {
               <a href={`mailto:${about.email}`} className="block text-xs transition-colors" style={{ color: "var(--text-muted)" }}>
                 {about.email}
               </a>
+              {about.phone && (
+                <a href={`tel:${about.phone.replace(/\s/g, "")}`} className="block text-xs transition-colors" style={{ color: "var(--text-muted)" }}>
+                  {about.phone}
+                </a>
+              )}
               <p className="text-xs" style={{ color: "var(--text-faint)" }}>{about.location}</p>
             </div>
           </div>
