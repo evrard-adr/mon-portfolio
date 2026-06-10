@@ -2,6 +2,7 @@ import { getContent } from "@/lib/content";
 import SocialIcon from "@/components/SocialIcon";
 import Menu from "@/components/Menu";
 import ScrollReveal from "@/components/ScrollReveal";
+import HeroBlob from "@/components/HeroBlob";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -27,12 +28,14 @@ export default function Home() {
             <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2025</span>
           </div>
 
-          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-10" data-reveal data-delay="1">
+          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-0" data-reveal data-delay="1">
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--accent)" }}>André</span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6 mt-4" data-reveal data-delay="2">
+          <HeroBlob />
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6" data-reveal data-delay="2">
             <div className="pl-5 max-w-xs" style={{ borderLeft: "2px solid var(--accent-border)" }}>
               <p className="text-sm font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{hero.subtitle}</p>
               <p className="text-[10px] uppercase tracking-[0.2em] mt-2 font-medium" style={{ color: "var(--accent)" }}>{hero.title}</p>
