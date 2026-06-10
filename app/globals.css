@@ -29,14 +29,17 @@
   --nav-bg: rgba(247,250,247,0.90);
 }
 
+html { scroll-behavior: smooth; }
+
 body {
   background-color: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-::selection { background: var(--accent); color: var(--bg); }
+::selection { background: var(--accent); color: var(--bg); opacity: 0.9; }
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
@@ -244,7 +247,7 @@ body {
 .menu-overlay.open .menu-link {
   opacity: 1; transform: translateY(0);
 }
-.menu-link:hover { color: var(--accent); }
+.menu-link:hover { color: var(--accent); text-shadow: 0 0 40px var(--accent); }
 .menu-overlay.open .menu-link:nth-child(1) { transition-delay: 0.05s; }
 .menu-overlay.open .menu-link:nth-child(2) { transition-delay: 0.10s; }
 .menu-overlay.open .menu-link:nth-child(3) { transition-delay: 0.15s; }
@@ -266,6 +269,36 @@ body {
   opacity: 0; transition: opacity 0.3s;
 }
 .gallery-item:hover .overlay { opacity: 1; }
+
+/* ── GALLERY MARQUEE ── */
+@keyframes gallery-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.gallery-strip { animation: gallery-scroll 40s linear infinite; }
+.gallery-strip-wrap:hover .gallery-strip { animation-play-state: paused; }
+
+/* ── ACCESSIBILITY ── */
+.a11y-dyslexia body,
+.a11y-dyslexia .font-body {
+  font-family: var(--font-lexend), sans-serif !important;
+  letter-spacing: 0.05em !important;
+  word-spacing: 0.1em !important;
+  line-height: 1.8 !important;
+}
+
+.a11y-large-text body { font-size: 112% !important; }
+.a11y-large-text p, .a11y-large-text li, .a11y-large-text a { font-size: 1.05em !important; }
+
+.a11y-no-motion *, .a11y-no-motion *::before, .a11y-no-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+.a11y-no-motion .hero-bg-blobs { display: none !important; }
+
+.a11y-contrast { --text: #ffffff !important; --text-muted: rgba(255,255,255,0.8) !important; --bg: #000000 !important; --bg2: #0a0a0a !important; }
+.light.a11y-contrast { --text: #000000 !important; --text-muted: rgba(0,0,0,0.75) !important; --bg: #ffffff !important; --bg2: #f0f0f0 !important; }
 
 /* ── PRINT / PDF EXPORT ── */
 @media print {

@@ -10,6 +10,8 @@ export default function AdminPage() {
   const [content, setContent] = useState<any>(null);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [saveError, setSaveError] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
   const [activeTab, setActiveTab] = useState("hero");
   const router = useRouter();
 
@@ -42,14 +44,22 @@ export default function AdminPage() {
 
   const save = async () => {
     setSaving(true);
-    await fetch("/api/content", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(content),
-    });
-    setSaving(false);
-    setSaved(true);
-    setTimeout(() => setSaved(false), 5000);
+    setSaveError(false);
+    try {
+      const res = await fetch("/api/content", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(content),
+      });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      setSaved(true);
+      setShowBanner(true);
+      setTimeout(() => setSaved(false), 5000);
+    } catch {
+      setSaveError(true);
+    } finally {
+      setSaving(false);
+    }
   };
 
   const update = (path: string[], value: string) => {
@@ -138,6 +148,22 @@ export default function AdminPage() {
           </button>
         </div>
       </div>
+
+      {/* Save success banner */}
+      {showBanner && (
+        <div className="flex items-center justify-between px-8 py-3 text-sm" style={{ backgroundColor: "rgba(74,222,128,0.12)", borderBottom: "1px solid rgba(74,222,128,0.25)", color: "#4ade80" }}>
+          <span>✓ Sauvegardé — Le site se mettra à jour dans environ 2 minutes. Rechargez la page du site pour voir les changements.</span>
+          <button onClick={() => setShowBanner(false)} className="ml-6 opacity-60 hover:opacity-100 transition-opacity text-base leading-none">×</button>
+        </div>
+      )}
+
+      {/* Save error banner */}
+      {saveError && (
+        <div className="flex items-center justify-between px-8 py-3 text-sm" style={{ backgroundColor: "rgba(239,68,68,0.12)", borderBottom: "1px solid rgba(239,68,68,0.25)", color: "#f87171" }}>
+          <span>✗ Erreur lors de la sauvegarde. Veuillez réessayer.</span>
+          <button onClick={() => setSaveError(false)} className="ml-6 opacity-60 hover:opacity-100 transition-opacity text-base leading-none">×</button>
+        </div>
+      )}
 
       <div className="flex min-h-[calc(100vh-65px)]">
         {/* Sidebar */}

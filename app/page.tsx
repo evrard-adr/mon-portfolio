@@ -135,19 +135,30 @@ export default function Home() {
       </section>
 
       {/* ── GALLERY ── */}
-      <section id="gallery" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="max-w-5xl">
+      <section id="gallery" className="py-28" style={{ borderTop: "1px solid var(--border)", overflow: "hidden" }}>
+        <div className="max-w-5xl px-8 md:px-12">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>02 — Galerie</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
           </div>
+        </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {gallery.map((item: { url: string; caption: string; source: string }, i: number) => (
-              <div key={i} className="gallery-item aspect-square" data-reveal="scale" data-delay={String((i % 5) + 1)}>
+        {/* Full-width marquee strip */}
+        <div className="gallery-strip-wrap" style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", overflow: "hidden" }}>
+          <div className="gallery-strip" style={{ display: "flex", gap: "12px", width: "max-content" }}>
+            {[...gallery, ...gallery].map((item: { url: string; caption: string; source: string }, i: number) => (
+              <div
+                key={i}
+                className="gallery-item"
+                style={{ width: "280px", height: "360px", flexShrink: 0, borderRadius: "16px", overflow: "hidden", position: "relative" }}
+              >
                 {item.url ? (
                   <>
-                    <img src={item.url} alt={item.caption} className="w-full h-full object-cover" />
+                    <img
+                      src={item.url}
+                      alt={item.caption}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: i % 2 === 0 ? "top" : "center" }}
+                    />
                     <div className="overlay">
                       <div className="absolute bottom-3 left-3 right-3">
                         <p className="text-white text-xs font-medium">{item.caption}</p>
@@ -163,7 +174,9 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
 
+        <div className="max-w-5xl px-8 md:px-12">
           <div className="flex items-center gap-4 mt-8" data-reveal="fade">
             <a href="https://instagram.com/evrard_adr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               Instagram ↗
