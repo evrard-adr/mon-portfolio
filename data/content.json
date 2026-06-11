@@ -67,14 +67,38 @@
     "text": "Ouvert aux opportunités"
   },
   "engagements": [
-    { "icon": "⚖️", "titre": "Droit", "desc": "Licence à l'Université Jean Moulin Lyon 3 — passion pour le droit constitutionnel et public." },
-    { "icon": "🚇", "titre": "Mobilité 2050", "desc": "Passionné par l'avenir des transports en commun et les enjeux de déplacement à horizon 2075." },
-    { "icon": "🎻", "titre": "Musique", "desc": "Violoncelliste et pianiste — la musique comme discipline et expression personnelle." }
+    {
+      "icon": "⚖️",
+      "titre": "Droit",
+      "desc": "Licence à l'Université Jean Moulin Lyon 3 — passion pour le droit constitutionnel et public."
+    },
+    {
+      "icon": "🚇",
+      "titre": "Mobilité 2050",
+      "desc": "Passionné par l'avenir des transports en commun et les enjeux de déplacement à horizon 2075."
+    },
+    {
+      "icon": "🎻",
+      "titre": "Musique",
+      "desc": "Violoncelliste et pianiste — la musique comme discipline et expression personnelle."
+    }
   ],
   "stats": [
-    { "value": 25, "label": "Sections nationales", "suffix": "" },
-    { "value": 3, "label": "Mandats associatifs", "suffix": "" },
-    { "value": 500, "label": "Étudiants représentés", "suffix": "+" }
+    {
+      "value": 25,
+      "label": "Sections nationales",
+      "suffix": ""
+    },
+    {
+      "value": 3,
+      "label": "Mandats associatifs",
+      "suffix": ""
+    },
+    {
+      "value": 500,
+      "label": "Étudiants représentés",
+      "suffix": "+"
+    }
   ],
   "projets": [
     {
@@ -130,42 +154,42 @@
   "gallery": [
     {
       "url": "/gallery/photo1.jpg",
-      "caption": "35e Journée du Livre Politique",
-      "source": "Paris"
+      "caption": "Simulation parlementaire",
+      "source": "PE LYON"
     },
     {
       "url": "/gallery/photo2.jpg",
-      "caption": "Parlement des Étudiants",
-      "source": "PE"
+      "caption": "Concours Jean Jaurès",
+      "source": "PE LYON"
     },
     {
       "url": "/gallery/photo3.jpg",
-      "caption": "Session plénière",
-      "source": "PE"
+      "caption": "Simulation métropolitaine",
+      "source": "PE LYON"
     },
     {
       "url": "/gallery/photo4.jpg",
       "caption": "En séance",
-      "source": "PE"
+      "source": "PE LYON"
     },
     {
       "url": "/gallery/photo5.jpg",
-      "caption": "Parlement des Étudiants",
-      "source": "PE"
+      "caption": "Organisateur - Simulation",
+      "source": "PE LYON"
     },
     {
       "url": "/gallery/photo6.jpg",
-      "caption": "Lyon",
+      "caption": "Première expérience en communication - campagne cœur lyonnais",
       "source": "Lyon"
     },
     {
       "url": "/gallery/photo7.jpg",
       "caption": "Assemblée nationale",
-      "source": "Paris"
+      "source": "Paris, PE "
     },
     {
       "url": "/gallery/photo8.jpg",
-      "caption": "35e Journée du Livre Politique",
+      "caption": "Les lyonnaises et lyonnais au natio",
       "source": "Paris"
     }
   ],
