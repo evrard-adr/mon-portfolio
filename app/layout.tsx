@@ -3,7 +3,6 @@ import { Bricolage_Grotesque, DM_Sans, Lexend } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import A11yWidget from "@/components/A11yWidget";
-import CustomCursor from "@/components/CustomCursor";
 import PageTransition from "@/components/PageTransition";
 
 const bricolage = Bricolage_Grotesque({
@@ -51,8 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${bricolage.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
       <body className="font-body antialiased">
         <Providers>
-          <CustomCursor />
-          <PageTransition>
+<PageTransition>
             {children}
           </PageTransition>
           <A11yWidget />
