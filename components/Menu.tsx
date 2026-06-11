@@ -11,7 +11,6 @@ const links = [
   { label: "Galerie", href: "/#gallery" },
   { label: "CV", href: "/cv" },
   { label: "Contact", href: "/contact" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Menu() {
