@@ -23,7 +23,7 @@ export default function Home() {
         {/* Fond animé derrière tout */}
         <HeroBlob />
 
-        <div className="max-w-5xl w-full relative" style={{ zIndex: 1 }}>
+        <div className="max-w-5xl w-full mx-auto relative" style={{ zIndex: 1 }}>
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
             data-reveal="fade">
             <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)", animation: "pulse-dot 2s ease-in-out infinite" }} />
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* ── ABOUT ── */}
       <section id="about" className="px-8 md:px-12 py-28">
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>01 — À propos</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* ── ENGAGEMENTS ── */}
       <section className="px-8 md:px-12 py-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Engagements</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -140,7 +140,7 @@ export default function Home() {
 
       {/* ── PROJETS ── */}
       <section id="projets" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>02 — Projets</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -165,7 +165,7 @@ export default function Home() {
 
       {/* ── STATS ── */}
       <section className="px-8 md:px-12 py-20" style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-3 gap-8 text-center">
             {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
               <AnimatedCounter key={i} target={s.value} suffix={s.suffix} label={s.label} />
@@ -176,7 +176,7 @@ export default function Home() {
 
       {/* ── GALLERY ── */}
       <section id="gallery" className="py-28" style={{ borderTop: "1px solid var(--border)", overflow: "hidden" }}>
-        <div className="max-w-5xl px-8 md:px-12">
+        <div className="max-w-5xl mx-auto px-8 md:px-12">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>03 — Galerie</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -216,7 +216,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-5xl px-8 md:px-12">
+        <div className="max-w-5xl mx-auto px-8 md:px-12">
           <div className="flex items-center gap-4 mt-8" data-reveal="fade">
             <a href="https://instagram.com/evrard_adr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               Instagram ↗
@@ -231,7 +231,7 @@ export default function Home() {
 
       {/* ── SOCIALS ── */}
       <section id="socials" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>04 — Réseaux</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="px-8 md:px-12 py-10 flex items-center justify-between" style={{ borderTop: "1px solid var(--border)" }}>
+      <footer className="px-8 md:px-12 py-10" style={{ borderTop: "1px solid var(--border)" }}>
         <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>Evrard André</span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>© {new Date().getFullYear()}</span>
       </footer>
