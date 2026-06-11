@@ -7,9 +7,10 @@ const links = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/#about" },
   { label: "Projets", href: "/#projets" },
+  { label: "Réflexion", href: "/reflexion" },
   { label: "Galerie", href: "/#gallery" },
-  { label: "Réseaux", href: "/#socials" },
   { label: "CV", href: "/cv" },
+  { label: "Contact", href: "/contact" },
   { label: "Contact", href: "/contact" },
 ];
 

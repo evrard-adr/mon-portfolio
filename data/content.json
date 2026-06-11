@@ -11,6 +11,57 @@
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
   },
+  "reflexion": {
+    "titre": "Se déplacer en 2050 : urgence climatique et refondation de la ville",
+    "date": "Juin 2025",
+    "chapeau": "Dans un contexte de dérèglement climatique accéléré, la question de la mobilité urbaine n'est plus seulement technique ou économique. Elle est politique, sociale — et profondément humaine.",
+    "contenu": [
+      {
+        "type": "paragraph",
+        "text": "Je suis étudiant en droit, pas ingénieur. Pourtant, c'est peut-être précisément ce regard-là — celui du droit, des institutions, du rapport entre l'État et le citoyen — qui me permet d'aborder la question de la mobilité autrement. Quand je pense à la ville de 2050, je ne pense pas d'abord à des technologies. Je pense à des choix collectifs que nous n'avons pas encore faits, et qui deviennent de plus en plus urgents."
+      },
+      {
+        "type": "heading",
+        "text": "Une crise qui redessine tout"
+      },
+      {
+        "text": "Le réchauffement climatique n'est pas un problème parmi d'autres : c'est le contexte dans lequel tous les autres problèmes vont devoir se résoudre. Les canicules à répétition, la montée des eaux, les migrations climatiques — tout cela va remodeler profondément la façon dont les villes fonctionnent, dont les gens vivent, dont ils se déplacent. À l'horizon 2050-2075, les métropoles qui survivront seront celles qui auront eu le courage de se réinventer.",
+        "type": "paragraph"
+      },
+      {
+        "type": "paragraph",
+        "text": "La voiture individuelle thermique, telle qu'elle a structuré nos villes depuis les années 1950, est une impasse. Non pas parce qu'elle est moralement condamnable, mais parce qu'elle est physiquement incompatible avec les contraintes qui arrivent : espace urbain limité, ressources énergétiques sous tension, qualité de l'air à préserver. Ce n'est pas une opinion militante. C'est une réalité que les chiffres imposent."
+      },
+      {
+        "type": "heading",
+        "text": "La ville courte, dense et désirable"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ma conviction, c'est que la ville de demain doit être courte — dans le sens où les distances à parcourir doivent diminuer. Non pas par contrainte, mais par conception. Si mon boulanger, mon médecin, mon lieu de travail et mon parc sont accessibles à pied ou à vélo, je n'ai plus besoin de deux heures de transport quotidien. C'est ce qu'on appelle la ville du quart d'heure, théorisée par Carlos Moreno, et c'est selon moi l'une des pistes les plus concrètes pour réconcilier qualité de vie et sobriété carbone."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mais pour que cette ville existe, il faut des transports en commun massifs, fiables, attractifs. Pas des bus en retard sur des axes engorgés. Des réseaux de tramways, de métros, de trains express régionaux qui donnent envie d'y monter. Des fréquences qui respectent le temps des gens. Des tarifications solidaires qui n'excluent personne. Et en amont, une planification urbaine qui cesse de produire des zones pavillonnaires à 40 kilomètres des centres, accessibles uniquement en voiture."
+      },
+      {
+        "type": "heading",
+        "text": "Le rôle du droit dans cette transition"
+      },
+      {
+        "type": "paragraph",
+        "text": "C'est là que ma formation prend tout son sens. La transition écologique des mobilités ne se fera pas uniquement par l'innovation technologique — elle se fera par le droit. Par des normes d'urbanisme qui imposent la mixité fonctionnelle. Par des règlements qui conditionnent les permis de construire à la desserte en transports. Par des politiques fiscales qui internalisent le coût carbone du déplacement. Par des droits nouveaux — comme un éventuel droit à la mobilité durable, distinct du simple droit de circuler."
+      },
+      {
+        "type": "paragraph",
+        "text": "Je ne prétends pas avoir les réponses. Je suis étudiant, et ces questions me fascinent précisément parce qu'elles n'ont pas encore de réponses définitives. Mais je crois fermement qu'elles méritent d'être posées maintenant — à ma génération, qui sera celle qui devra à la fois subir les conséquences des décisions passées et construire les solutions pour l'avenir."
+      },
+      {
+        "type": "quote",
+        "text": "La ville de 2050 ne sera pas celle que nous héritons. Ce sera celle que nous choisissons de bâtir — ou que nous aurons échoué à imaginer."
+      }
+    ]
+  },
   "badge": {
     "visible": true,
     "text": "Ouvert aux opportunités"

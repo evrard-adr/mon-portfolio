@@ -4,6 +4,7 @@ import Menu from "@/components/Menu";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroBlob from "@/components/HeroBlob";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import HeroPDFButton from "@/components/HeroPDFButton";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -47,9 +48,12 @@ export default function Home() {
               <p className="text-sm font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{hero.subtitle}</p>
               <p className="text-[10px] uppercase tracking-[0.2em] mt-2 font-medium" style={{ color: "var(--accent)" }}>{hero.title}</p>
             </div>
-            <Link href="/cv" className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full text-xs uppercase tracking-widest transition-all" style={{ backgroundColor: "var(--accent-glow)", border: "1px solid var(--accent-border)", color: "var(--accent)" }}>
-              Voir le CV →
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link href="/cv" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-widest transition-all" style={{ backgroundColor: "var(--accent-glow)", border: "1px solid var(--accent-border)", color: "var(--accent)" }}>
+                Voir le CV →
+              </Link>
+              <HeroPDFButton />
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,8 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
 import CVPrintButton from "@/components/CVPrintButton";
+import { Suspense } from "react";
+import AutoPrint from "@/components/AutoPrint";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -11,6 +13,7 @@ export default function CVPage() {
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <Suspense><AutoPrint /></Suspense>
       <Menu />
 
       <div className="px-8 md:px-12 pt-36 pb-32 max-w-5xl mx-auto">
