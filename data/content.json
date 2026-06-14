@@ -2,11 +2,11 @@
   "hero": {
     "name": "Evrard André",
     "title": "Étudiant en Droit — Université Jean Moulin Lyon 3",
-    "subtitle": "Passionné par la mobilité de demain, le droit, et l'engagement associatif.",
+    "subtitle": "Droit, mobilité urbaine, vie associative. Lyon.",
     "photo": ""
   },
   "about": {
-    "text": "Étudiant en licence de droit à l'Université Jean Moulin Lyon 3, je m'intéresse profondément aux enjeux de mobilité et de transports en commun — comment nous déplacerons-nous à l'horizon 2050-2075 ? En parallèle, je m'engage activement dans la vie associative étudiante et je pratique le violoncelle et le piano.",
+    "text": "Je suis en licence de droit à Lyon 3. Ce qui m'occupe vraiment en ce moment, c'est la question des transports en commun et de la mobilité urbaine : comment est-ce qu'on se déplacera en 2050, et est-ce qu'on se donnera vraiment les moyens d'y répondre ? À côté de ça, je m'implique dans la vie associative étudiante via le Parlement des Étudiants, et je joue du violoncelle et du piano depuis longtemps.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
@@ -101,23 +101,23 @@
   },
   "badge": {
     "visible": true,
-    "text": "Ouvert aux opportunités"
+    "text": "Disponible"
   },
   "engagements": [
     {
       "icon": "⚖️",
       "titre": "Droit",
-      "desc": "Licence à l'Université Jean Moulin Lyon 3 — passion pour le droit constitutionnel et public."
+      "desc": "Licence à Lyon 3. Droit civil, constitutionnel, public. C'est long, c'est dense, et c'est exactement ce que je voulais faire."
     },
     {
       "icon": "🚇",
-      "titre": "Mobilité 2050",
-      "desc": "Passionné par l'avenir des transports en commun et les enjeux de déplacement à horizon 2075."
+      "titre": "Mobilité urbaine",
+      "desc": "Je prends le métro tous les jours. Je me pose des questions sur ce qu'on va faire des villes d'ici 2050. Je ne suis pas le seul, mais j'en parle peut-être plus que la moyenne."
     },
     {
       "icon": "🎻",
       "titre": "Musique",
-      "desc": "Violoncelliste et pianiste — la musique comme discipline et expression personnelle."
+      "desc": "Violoncelle depuis l'enfance, piano en parallèle. Pas de scène, pas de conservatoire — juste quelque chose qui prend du temps et que j'aime."
     }
   ],
   "stats": [
@@ -140,24 +140,24 @@
   "projets": [
     {
       "titre": "Communication nationale PE",
-      "desc": "Pilotage de la stratégie de communication pour les 25 sections du Parlement des Étudiants à l'échelle nationale.",
+      "desc": "Je coordonne la communication des 25 sections du Parlement des Étudiants en France. Réseaux sociaux, cohérence de l'image, relation avec les sections locales.",
       "date": "2025",
       "tag": "Communication",
       "lien": ""
     },
     {
       "titre": "Identité visuelle PE Lyon",
-      "desc": "Refonte complète de l'identité visuelle de la section lyonnaise : charte graphique, réseaux sociaux, supports print.",
+      "desc": "Refonte de l'identité visuelle de la section lyonnaise : charte graphique, réseaux, supports. Tout repris de zéro.",
       "date": "2025",
       "tag": "Direction artistique",
       "lien": ""
     },
     {
       "titre": "Mobilité urbaine 2050",
-      "desc": "Veille et réflexion sur les enjeux de déplacement urbain à horizon 2050-2075 : transports en commun, nouvelles mobilités.",
+      "desc": "Lecture, veille, réflexion sur l'avenir des transports en commun et la question de savoir comment nos villes vont s'adapter. L'article Réflexion en est une trace.",
       "date": "2024",
       "tag": "Recherche",
-      "lien": ""
+      "lien": "/reflexion"
     }
   ],
   "ticker": "Droit  ·  Mobilité Urbaine  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
@@ -244,19 +244,19 @@
         "annee": "Juil. 2025 — présent",
         "titre": "Responsable Communication — Bureau National",
         "role": "Parlement des Étudiants — France entière",
-        "description": "Pilotage de la communication pour les 25 sections du Parlement des Étudiants à l'échelle nationale."
+        "description": "Communication des 25 sections à l'échelle nationale. Contenu, cohérence visuelle, coordination avec les bureaux locaux."
       },
       {
         "annee": "Juin 2025 — présent",
         "titre": "Responsable Communication",
         "role": "Parlement des Étudiants de Lyon",
-        "description": "Gestion de la communication de la section lyonnaise : réseaux sociaux, identité visuelle, relations presse."
+        "description": "Réseaux sociaux, identité visuelle, relations presse. Refonte complète de la communication de la section."
       },
       {
-        "annee": "octobre 2025 — présent",
+        "annee": "Oct. 2025 — présent",
         "titre": "Employé Polyvalent",
         "role": "U Express Lyon Saint-Louis",
-        "description": "Mise en rayon, caisse, préparation de commandes en ligne."
+        "description": "Mise en rayon, caisse, préparation de commandes. À côté des études."
       }
     ],
     "competences": [
