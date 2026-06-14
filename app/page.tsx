@@ -39,12 +39,16 @@ export default function Home() {
             </div>
           )}
 
-          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-10" data-reveal data-delay="1">
+          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-6" data-reveal data-delay="1">
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--accent)" }}>André</span>
           </h1>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6" data-reveal data-delay="2">
+          <div className="mb-10" data-reveal data-delay="2">
+            <Typewriter />
+          </div>
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6" data-reveal data-delay="3">
             <div className="pl-5 max-w-xs" style={{ borderLeft: "2px solid var(--accent-border)" }}>
               <p className="text-sm font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{hero.subtitle}</p>
               <p className="text-[10px] uppercase tracking-[0.2em] mt-2 font-medium" style={{ color: "var(--accent)" }}>{hero.title}</p>
@@ -86,7 +90,6 @@ export default function Home() {
                 <span style={{ color: "var(--accent)" }}>Mobilités.</span><br />
                 <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
               </h2>
-              <Typewriter />
             </div>
 
             <div className="space-y-2" data-reveal data-delay="2">
