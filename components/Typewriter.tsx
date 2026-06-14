@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 
 const words = [
   "le droit.",
-  "les mobilités.",
-  "l'environnement.",
+  "les mobilités urbaines.",
   "l'urbanisme.",
   "les politiques publiques.",
-  "le piano.",
-  "la muscu.",
+  "les transports en commun.",
+  "l'environnement.",
+  "le droit public.",
+  "la ville de demain.",
+  "les collectivités.",
   "Lyon.",
 ];
 
