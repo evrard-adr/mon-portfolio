@@ -90,6 +90,7 @@ export default function Home() {
                 <span style={{ color: "var(--accent)" }}>Mobilités.</span><br />
                 <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
               </h2>
+              <p className="font-light text-sm leading-loose text-justify" style={{ color: "var(--text-muted)" }}>{about.text}</p>
             </div>
 
             <div className="space-y-2" data-reveal data-delay="2">
