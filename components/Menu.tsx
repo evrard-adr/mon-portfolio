@@ -33,7 +33,7 @@ export default function Menu() {
       {/* Nav */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-5 backdrop-blur-sm" style={{ backgroundColor: "var(--nav-bg)", borderBottom: "1px solid var(--border)" }}>
         <Link href="/" className="font-display font-extrabold text-sm tracking-tight" style={{ color: "var(--text)" }} onClick={() => setOpen(false)}>
-          Evrard<span style={{ color: "var(--accent)" }}>.</span>
+          <span className="hidden sm:inline">Evrard</span><span style={{ color: "var(--accent)" }}>.</span>
         </Link>
 
         <div className="flex items-center gap-4">

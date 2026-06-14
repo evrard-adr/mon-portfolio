@@ -24,7 +24,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Evrard André — Étudiant en Droit & Communication",
+  title: "Evrard André",
   description: "Portfolio d'Evrard André, étudiant en licence de droit à Lyon 3, responsable communication au Parlement des Étudiants.",
   keywords: ["Evrard André", "droit", "Lyon", "Parlement des Étudiants", "communication", "portfolio"],
   authors: [{ name: "Evrard André" }],

@@ -20,8 +20,8 @@ export default function ContactPage() {
             <h1 className="font-display font-extrabold text-6xl md:text-7xl leading-none mb-8" style={{ color: "var(--text)" }}>
               Écrire
             </h1>
-            <p className="text-sm font-light leading-loose mb-10 text-justify" style={{ color: "var(--text-muted)" }}>
-              Par mail, sur LinkedIn ou sur Instagram. Pas de formulaire, pas d&apos;intermédiaire.
+            <p className="text-sm font-light leading-loose mb-10" style={{ color: "var(--text-muted)" }}>
+              Par mail, sur LinkedIn ou sur Instagram.
             </p>
 
             <div className="space-y-3">
