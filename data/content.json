@@ -14,15 +14,16 @@
   "reflexion": {
     "titre": "Nos villes en 2050 : se donner les moyens ou continuer à faire semblant",
     "date": "Juin 2025",
-    "chapeau": "Je prends le métro et le tramway tous les jours à Lyon. Pas par militantisme — par nécessité, et par choix. Et c'est justement parce que je les utilise chaque jour que je me pose des questions sur ce qu'on en fait, ce qu'on pourrait en faire, et ce qu'on va devoir faire si on veut encore habiter des villes vivables en 2050.",
+    "tag": "Municipales 2026",
+    "chapeau": "Je prends le métro et le tramway tous les jours à Lyon. Pas par militantisme. Par nécessité, et par choix. Et c'est justement parce que je les utilise chaque jour que je me pose des questions sur ce qu'on en fait, ce qu'on pourrait en faire, et ce qu'on va devoir faire si on veut encore habiter des villes vivables en 2050.",
     "contenu": [
       {
         "type": "paragraph",
-        "text": "Je connais le réseau TCL par cœur. Les correspondances, les temps d'attente, les rames bondées à 8h30, les pannes sur la ligne D un mercredi sur deux. Je sais ce que ça coûte à l'usager, je sais à peu près ce que ça coûte à la collectivité. Et surtout, je vois comment ça fonctionne concrètement : un tramway qui roule, c'est des rails dans la chaussée, des caténaires, du personnel, une infrastructure entretenue, des arbitrages budgétaires permanents. Ce n'est pas magique. C'est le résultat de décisions politiques et financières, prises sur des années."
+        "text": "Je connais le réseau TCL par cœur. Les correspondances, les temps d'attente, les rames bondées à 8h30, les pannes sur la ligne B tous les deux jours. Je sais ce que ça coûte à l'usager, je sais à peu près ce que ça coûte à la collectivité. Et surtout, je vois comment ça fonctionne concrètement : un tramway qui roule, c'est des rails dans la chaussée, des caténaires, du personnel, une infrastructure entretenue, des arbitrages budgétaires permanents. Ce n'est pas magique. C'est le résultat de décisions prises sur des années, souvent loin des projecteurs."
       },
       {
         "type": "paragraph",
-        "text": "Ce qui m'intéresse et ce qui me préoccupe, c'est la question de savoir si on va se donner les moyens de faire pareil à l'échelle qu'il faudra pour 2050. Pas juste étendre une ligne ici ou là. Vraiment repenser la mobilité dans toutes les villes, y compris celles qui n'ont ni métro ni tram, ni la masse critique pour en créer."
+        "text": "Ce qui m'intéresse et ce qui me préoccupe, c'est de savoir si on va se donner les moyens de faire pareil à l'échelle qu'il faudra pour 2050. Pas juste étendre une ligne ici ou là, mais vraiment repenser la mobilité dans toutes les villes, y compris celles qui n'ont ni métro ni tram, ni la masse critique pour en créer."
       },
       {
         "type": "heading",
@@ -30,35 +31,35 @@
       },
       {
         "type": "paragraph",
-        "text": "J'habite Lyon. L'été 2022, il a fait 40 degrés plusieurs jours d'affilée. Le bitume stockait la chaleur la nuit. Les espaces sans arbres étaient devenus hostiles. Et ce que j'ai observé, c'est que les transports en commun jouent un rôle essentiel : ils permettent de se déplacer sans rajouter de chaleur, sans occuper l'espace public avec des tonnes de métal en stationnement. Une ville avec un bon réseau collectif est une ville mieux armée face aux canicules. Pas parce que c'est un gadget vert, mais parce que ça change structurellement l'occupation de l'espace."
+        "text": "J'habite Lyon. L'été dernier, il a fait 40 degrés plusieurs jours d'affilée. Le bitume stockait la chaleur la nuit. Les espaces sans arbres étaient devenus hostiles. Et ce que j'ai observé, c'est que les transports en commun jouent un rôle concret : ils permettent de se déplacer sans rajouter de chaleur, sans occuper l'espace public avec des tonnes de métal en stationnement. Une ville avec un bon réseau collectif est une ville mieux armée face aux canicules. Pas parce que c'est vertueux sur le papier, mais parce que ça change structurellement l'occupation de l'espace."
       },
       {
         "type": "paragraph",
-        "text": "Les projections pour les prochaines décennies sur l'Europe du Sud sont sérieuses. Canicules plus fréquentes, plus longues, épisodes climatiques extrêmes. Les villes qui ont misé à 100 % sur la voiture individuelle vont souffrir deux fois : d'abord parce qu'elles sont physiquement inadaptées à la chaleur, ensuite parce qu'elles n'auront pas les alternatives pour se déplacer autrement quand l'usage de la voiture deviendra intenable. Ce n'est pas une hypothèse lointaine. C'est une trajectoire visible."
+        "text": "Les projections pour les prochaines décennies sur l'Europe sont sérieuses. Canicules plus fréquentes, plus longues, épisodes climatiques extrêmes. Les villes qui ont misé à 100 % sur la voiture individuelle vont souffrir deux fois : d'abord parce qu'elles sont physiquement inadaptées à la chaleur, ensuite parce qu'elles n'auront pas les alternatives quand l'usage de la voiture deviendra intenable. Ce n'est pas une hypothèse lointaine. C'est une trajectoire déjà visible."
       },
       {
         "type": "heading",
-        "text": "Le problème, c'est le financement — et la continuité des projets"
+        "text": "Le problème, c'est le financement et la continuité des projets"
       },
       {
         "type": "paragraph",
-        "text": "Construire une ligne de tramway, ça coûte entre 20 et 30 millions d'euros par kilomètre. Un métro, entre 100 et 200 millions. Ce sont des chiffres qui font peur, qui font reculer. Mais si on les rapporte à ce que coûte collectivement la congestion, la pollution, les maladies respiratoires, les accidents, les heures perdues — le calcul change. Le problème, c'est qu'on ne fait jamais vraiment ce calcul global. On compare le coût d'un investissement en transport avec le vide budgétaire immédiat, sans mesurer ce que l'inaction coûte sur le long terme."
+        "text": "Construire une ligne de tramway, ça coûte entre 20 et 30 millions d'euros par kilomètre. Un métro, c'est autrement plus élevé : le projet de ligne E à Lyon, voté en 2020, est estimé à plus d'un milliard d'euros pour une quinzaine de kilomètres. Ce sont des chiffres qui font peur, qui font reculer. Mais si on les rapporte à ce que coûte collectivement la congestion, la pollution, les maladies respiratoires, les accidents, les heures perdues... le calcul change. Le problème, c'est qu'on ne fait jamais vraiment ce calcul global. On regarde le coût de l'investissement, pas le coût de l'inaction."
       },
       {
         "type": "paragraph",
-        "text": "Ce qui complique les choses, c'est que ces projets s'étendent sur des décennies, alors que les équipes municipales et les majorités changent. Un projet de ligne décidé aujourd'hui sera livré sous d'autres mandats, dans un autre contexte. Les outils juridiques existent — les collectivités ont des compétences en matière de mobilité, les versements mobilité permettent de financer les réseaux, les schémas régionaux peuvent orienter les investissements. Mais tout ça demande une continuité dans les priorités que le calendrier électoral ne facilite pas naturellement."
+        "text": "Ce qui complique les choses, c'est que ces projets s'étendent sur des décennies, alors que les majorités changent. Une ligne décidée aujourd'hui sera livrée sous d'autres mandats, dans un autre contexte. À Lyon, c'est la Métropole qui a la main sur ces questions de mobilité. Les outils existent : versements mobilité, schémas régionaux, compétences d'autorité organisatrice. Mais tout ça demande une continuité dans les priorités que le calendrier électoral ne garantit pas."
       },
       {
         "type": "heading",
-        "text": "Ma conviction : le métro, pas le tram"
+        "text": "Ma conviction : le métro plutôt que le tram"
       },
       {
         "type": "paragraph",
-        "text": "J'ai une conviction assez ferme là-dessus, même si elle est coûteuse à défendre : le métro est structurellement supérieur au tramway. Pas parce que c'est plus beau ou plus impressionnant. Parce que c'est plus fiable, plus fréquent, et complètement indépendant de la circulation en surface. Un tram peut être bloqué par une voiture mal garée, ralenti par un feu rouge, rendu inconfortable par les travaux. Un métro, non. Et cette fiabilité, c'est exactement ce qui fait que les gens y font confiance, qu'ils abandonnent leur voiture sans avoir l'impression de se sacrifier. Pour décrocher les gens de leur voiture, il faut leur proposer quelque chose qui soit objectivement aussi pratique — voire meilleur. Le métro peut y prétendre. Le tramway, dans bien des cas, peine à convaincre ceux qui ne sont pas déjà acquis à la cause."
+        "text": "Je vais être direct : le métro est structurellement supérieur au tramway. Pas parce que c'est plus spectaculaire. Parce que c'est fiable, fréquent, et totalement indépendant de ce qui se passe en surface. Un tram peut être bloqué par une voiture mal garée, ralenti par un feu rouge, mis en difficulté par des travaux. Un métro, non. Et c'est exactement cette fiabilité qui fait que les gens lui font confiance, qu'ils finissent par laisser leur voiture sans avoir l'impression de se pénaliser. Pour que les gens lâchent leur voiture, il faut leur proposer quelque chose d'objectivement aussi pratique. Le métro peut prétendre à ça. Le tram, dans bien des cas, convainc surtout ceux qui étaient déjà convaincus."
       },
       {
         "type": "paragraph",
-        "text": "Oui, ça coûte plus cher. Beaucoup plus cher. Mais un réseau de métro dense dans une grande agglomération, c'est un investissement sur 50 ans qui structure la ville pour des générations. Les projets qui font peur au budget d'un mandat sont souvent ceux qui font le plus de bien sur la durée. Et parfois, une ligne de tram posée faute de mieux, c'est une occasion manquée d'aller plus loin — parce qu'une fois les crédits consommés, on ne revient pas en arrière."
+        "text": "Oui, ça coûte beaucoup plus cher. Mais un réseau de métro dans une grande agglomération, c'est un investissement sur 50 ans qui structure la ville pour des générations. Les projets qui font peur au budget d'un mandat sont souvent ceux qui font le plus de bien sur la durée. Et une ligne de tram posée faute de mieux, c'est parfois une occasion manquée d'aller plus loin, parce qu'une fois les crédits consommés, on ne refait pas le choix."
       },
       {
         "type": "heading",
@@ -66,31 +67,31 @@
       },
       {
         "type": "paragraph",
-        "text": "Des transports performants, c'est nécessaire. Mais ce n'est pas suffisant. Pour que les gens se détachent vraiment de la voiture, la ville entière doit devenir un endroit où il fait bon circuler autrement. Des espaces verts accessibles, des arbres, de l'air respirable — pas des trottoirs entre deux files de voitures. Des pistes cyclables continues, sécurisées, qui permettent de faire du vélo sans risquer sa vie à chaque carrefour. Une ville qui donne envie de marcher, de s'arrêter, de flâner. C'est tout ça ensemble qui crée l'alternative crédible à la voiture individuelle. Pas un seul mode de transport isolé, mais un écosystème complet où chaque déplacement a une solution adaptée."
+        "text": "Des transports performants, c'est nécessaire. Mais pas suffisant. Pour que les gens se détachent vraiment de la voiture, la ville entière doit devenir un endroit où on circule autrement sans se battre. Des espaces verts accessibles, des arbres, de l'air qu'on peut respirer sans que ça pique, pas des trottoirs coincés entre deux files de voitures. Des pistes cyclables continues et sécurisées, pas des bandes peintes sur le bitume qui disparaissent aux carrefours. Une ville où marcher ou pédaler n'est pas un exploit. C'est tout ça ensemble qui crée une vraie alternative à la voiture. Pas un mode de transport isolé, mais un écosystème où chaque déplacement a une réponse."
       },
       {
         "type": "heading",
-        "text": "Pourquoi ça se joue dans le droit, pas dans la technologie"
+        "text": "Les parkings relais : le chaînon qu'on oublie"
       },
       {
         "type": "paragraph",
-        "text": "On parle beaucoup de voiture électrique, de vélos cargo, de nouvelles mobilités. C'est bien. Mais ça ne règle pas le problème de fond : une ville étalée, sans densité, sans mixité fonctionnelle, restera dépendante de la voiture — électrique ou thermique. Ce qui change la structure de la ville, ce sont les règles d'urbanisme. Un PLU qui interdit de construire des zones commerciales en entrée de ville. Un SCOT qui impose de densifier autour des gares. Une délibération de métropole qui supprime des places de stationnement pour créer une voie de tram. Ce sont des textes, des délibérations, des décisions administratives. Rébarbatifs. Invisibles. Et pourtant décisifs."
+        "text": "Il y a un élément qu'on mentionne rarement dans ce débat : les parkings relais. Pour les gens qui habitent loin, qui ont besoin de leur voiture pour le premier tronçon mais qui prendraient les transports ensuite si c'était simple, le parking relais est la pièce manquante. Encore faut-il qu'il soit gratuit, propre, sécurisé, et agréable à utiliser. Pas un vague parking bituminé sous une bretelle d'autoroute. Je pense au parking relais de Saint-Genis-Laval, côté hôpital Lyon Sud. Il fonctionne, les gens l'utilisent. Mais on pourrait faire tellement mieux : des structures végétalisées, des panneaux solaires en toiture, des espaces verts intégrés. Un parking relais bien pensé, c'est une porte d'entrée vers les transports en commun, pas une punition pour ceux qui arrivent de la périphérie."
+      },
+      {
+        "type": "paragraph",
+        "text": "C'est aussi une façon de réconcilier des gens qui ne se sentent pas concernés par les transports collectifs parce qu'il n'y en a pas chez eux. Leur montrer que le système peut venir à eux aussi, que ce n'est pas réservé aux gens du centre. Pour beaucoup, le parking relais serait le premier pas vers autre chose."
       },
       {
         "type": "heading",
-        "text": "Et les parkings relais — le chaînon manquant"
+        "text": "Et le droit dans tout ça"
       },
       {
         "type": "paragraph",
-        "text": "Il y a un élément qu'on oublie souvent dans ce débat : les parkings relais. Pour les gens qui habitent loin du centre, qui ont besoin de leur voiture pour le premier tronçon mais qui pourraient prendre les transports en commun ensuite, le parking relais est la pièce manquante. Encore faut-il qu'il soit gratuit, sécurisé, propre, et agréable — pas un vague parking bituminé sous une bretelle d'autoroute. Je pense par exemple au parking relais de Saint-Genis-Laval, côté hôpital Lyon Sud. Il fonctionne, il est utilisé, mais il pourrait aller beaucoup plus loin. On pourrait imaginer des structures végétalisées, avec des panneaux solaires en toiture, des espaces verts intégrés, peut-être des étages dédiés à des usages partagés. Un parking relais bien conçu, c'est une porte d'entrée vers les transports en commun, pas une punition pour ceux qui arrivent de la périphérie."
+        "text": "On parle beaucoup de technologie : voiture électrique, vélos cargo, applications de mobilité. C'est bien. Mais ça ne change pas la structure de la ville. Une ville étalée sans densité restera dépendante de la voiture, électrique ou pas. Ce qui change la structure, ce sont les règles. Un PLU qui interdit les zones commerciales en entrée de ville sans accès TC. Un SCOT qui impose de densifier autour des gares. Une délibération de Métropole qui supprime des places de stationnement pour créer une voie de tram. Ce sont des textes que personne ne lit, des délibérations que personne ne suit. Et pourtant, c'est là que ça se décide vraiment."
       },
       {
         "type": "paragraph",
-        "text": "C'est aussi une manière de réconcilier des gens qui ne se sentent pas concernés par les transports collectifs parce qu'ils habitent là où il n'y en a pas. Leur montrer que le système peut s'adapter à eux aussi — que ce n'est pas une question de confort urbain réservé aux centres-villes. Le parking relais, ça peut être le premier geste concret vers la transition, pour des millions de gens qui ne peuvent pas encore se passer totalement de leur voiture."
-      },
-      {
-        "type": "paragraph",
-        "text": "Je ne sais pas encore exactement quel chemin je vais prendre. Le droit public, l'urbanisme, les collectivités territoriales m'attirent parce que c'est là que ces décisions se prennent vraiment — loin des grandes déclarations, dans des salles de conseil municipal que personne ne suit. Ma génération va hériter de villes façonnées par des décennies de mauvais arbitrages. Autant comprendre les outils qui permettent de les transformer."
+        "text": "Je ne sais pas encore exactement vers quoi je vais. Le droit public, l'urbanisme, les collectivités m'attirent parce que c'est là que ces décisions se prennent, loin des grandes annonces. Ma génération va hériter de villes bâties sur des décennies de mauvais arbitrages. Autant apprendre à utiliser les outils qui permettent de les changer."
       },
       {
         "type": "quote",

@@ -27,11 +27,21 @@ export default function ReflexionPage() {
             </span>
           </div>
 
-          <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full"
-            style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>
-              {reflexion.date}
-            </span>
+          <div className="flex items-center gap-3 mb-6 flex-wrap">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
+              style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
+              <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>
+                {reflexion.date}
+              </span>
+            </div>
+            {reflexion.tag && (
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
+                style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+                <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--text-muted)" }}>
+                  {reflexion.tag}
+                </span>
+              </div>
+            )}
           </div>
 
           <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-8"
