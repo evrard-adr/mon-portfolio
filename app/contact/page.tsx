@@ -21,7 +21,7 @@ export default function ContactPage() {
       <Menu />
       <ScrollReveal />
 
-      <section className="px-8 md:px-12 pt-36 pb-28">
+      <section className="px-8 md:px-16 lg:px-24 pt-36 pb-28">
         <div className="max-w-5xl">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Contact</span>
@@ -140,7 +140,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="px-8 md:px-12 py-10 flex items-center justify-between" style={{ borderTop: "1px solid var(--border)" }}>
+      <footer className="px-8 md:px-16 lg:px-24 py-10 flex items-center justify-between" style={{ borderTop: "1px solid var(--border)" }}>
         <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>Evrard André</span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>© {new Date().getFullYear()}</span>
       </footer>

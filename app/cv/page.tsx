@@ -16,7 +16,7 @@ export default function CVPage() {
       <Suspense><AutoPrint /></Suspense>
       <Menu />
 
-      <div className="px-8 md:px-12 pt-36 pb-32 max-w-5xl mx-auto">
+      <div className="px-8 md:px-16 lg:px-24 pt-36 pb-32 max-w-5xl mx-auto">
         <div className="mb-20 pb-16" style={{ borderBottom: "1px solid var(--border)" }}>
           <div className="flex items-center gap-3 mb-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>

@@ -19,7 +19,7 @@ export default function Home() {
       <ScrollReveal />
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-12 pt-24 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-24 overflow-hidden">
 
         {/* Fond animé derrière tout */}
         <HeroBlob />
@@ -71,7 +71,7 @@ export default function Home() {
       </div>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="px-8 md:px-12 py-28">
+      <section id="about" className="px-8 md:px-16 lg:px-24 py-28">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>01 — À propos</span>
@@ -82,19 +82,19 @@ export default function Home() {
             <div data-reveal>
               <h2 className="font-display font-extrabold text-4xl md:text-5xl leading-tight mb-8" style={{ color: "var(--text)" }}>
                 Droit.<br />
-                <span style={{ color: "var(--accent)" }}>Mobilité.</span><br />
+                <span style={{ color: "var(--accent)" }}>Mobilités.</span><br />
                 <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
               </h2>
-              <p className="font-light text-sm leading-loose" style={{ color: "var(--text-muted)" }}>{about.text}</p>
+              <p className="font-light text-sm leading-loose text-justify" style={{ color: "var(--text-muted)" }}>{about.text}</p>
             </div>
 
             <div className="space-y-2" data-reveal data-delay="2">
               {[
                 { label: "Formation", value: "Licence de Droit", sub: "Université Jean Moulin Lyon 3" },
                 { label: "Localisation", value: "Lyon, France", sub: null },
-                { label: "Rôle national", value: "Resp. Communication", sub: "Parlement des Étudiants — 25 sections" },
+                { label: "Rôle national", value: "Resp. Communication", sub: "Parlement des Étudiants · 25 sections" },
                 { label: "Rôle local", value: "Resp. Communication", sub: "Parlement des Étudiants de Lyon" },
-                { label: "Passions", value: "Mobilité & transports 2050", sub: "Violoncelle · Piano" },
+                { label: "Passions", value: "Mobilités & transports 2050", sub: "Violoncelle · Piano" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 px-5 py-3.5 rounded-xl transition-colors" style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}>
                   <span className="text-[9px] uppercase tracking-widest font-medium pt-0.5 w-20 shrink-0" style={{ color: "var(--accent)" }}>{item.label}</span>
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* ── ENGAGEMENTS ── */}
-      <section className="px-8 md:px-12 py-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+      <section className="px-8 md:px-16 lg:px-24 py-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Engagements</span>
@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
       {/* ── PROJETS ── */}
-      <section id="projets" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+      <section id="projets" className="px-8 md:px-16 lg:px-24 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>02 — Projets</span>
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* ── STATS ── */}
-      <section className="px-8 md:px-12 py-20" style={{ borderTop: "1px solid var(--border)" }}>
+      <section className="px-8 md:px-16 lg:px-24 py-20" style={{ borderTop: "1px solid var(--border)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-3 gap-8 text-center">
             {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* ── GALLERY ── */}
       <section id="gallery" className="py-28" style={{ borderTop: "1px solid var(--border)", overflow: "hidden" }}>
-        <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <div className="max-w-5xl mx-auto px-8 md:px-16 lg:px-24">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>03 — Galerie</span>
             <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
@@ -217,7 +217,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-8 md:px-12">
+        <div className="max-w-5xl mx-auto px-8 md:px-16 lg:px-24">
           <div className="flex items-center gap-4 mt-8" data-reveal="fade">
             <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               Instagram ↗
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* ── SOCIALS ── */}
-      <section id="socials" className="px-8 md:px-12 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+      <section id="socials" className="px-8 md:px-16 lg:px-24 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-14" data-reveal="fade">
             <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>04 — Réseaux</span>
@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="px-8 md:px-12 py-10" style={{ borderTop: "1px solid var(--border)" }}>
+      <footer className="px-8 md:px-16 lg:px-24 py-10" style={{ borderTop: "1px solid var(--border)" }}>
         <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>Evrard André</span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>© {new Date().getFullYear()}</span>
       </footer>

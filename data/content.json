@@ -111,7 +111,7 @@
     },
     {
       "icon": "🚇",
-      "titre": "Mobilité urbaine",
+      "titre": "Mobilités urbaines",
       "desc": "Je prends le métro tous les jours. Je me pose des questions sur ce qu'on va faire des villes d'ici 2050. Je ne suis pas le seul, mais j'en parle peut-être plus que la moyenne."
     },
     {
@@ -153,14 +153,14 @@
       "lien": ""
     },
     {
-      "titre": "Mobilité urbaine 2050",
+      "titre": "Mobilités urbaines 2050",
       "desc": "Lecture, veille, réflexion sur l'avenir des transports en commun et la question de savoir comment nos villes vont s'adapter. L'article Réflexion en est une trace.",
       "date": "2024",
       "tag": "Recherche",
       "lien": "/reflexion"
     }
   ],
-  "ticker": "Droit  ·  Mobilité Urbaine  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
+  "ticker": "Droit  ·  Mobilités Urbaines  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
   "socials": [
     {
       "name": "Instagram",
@@ -171,11 +171,6 @@
       "name": "LinkedIn",
       "url": "https://linkedin.com/in/evrardandre",
       "handle": "Evrard André"
-    },
-    {
-      "name": "TikTok",
-      "url": "https://www.tiktok.com/@evrard.adr",
-      "handle": "@evrard.adr"
     },
     {
       "name": "Twitter / X",
@@ -270,7 +265,7 @@
       "Piano"
     ],
     "interets": [
-      "Mobilité & transports en commun",
+      "Mobilités & transports en commun",
       "Prospective urbaine (2050–2075)",
       "Droit public",
       "Musique classique",

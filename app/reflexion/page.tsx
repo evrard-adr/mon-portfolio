@@ -12,7 +12,7 @@ export default function ReflexionPage() {
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Menu />
 
-      <article className="px-8 md:px-12 pt-36 pb-32 max-w-3xl mx-auto">
+      <article className="px-8 md:px-16 lg:px-24 pt-36 pb-32 max-w-3xl mx-auto">
 
         {/* En-tête */}
         <div className="mb-16">
@@ -88,7 +88,7 @@ export default function ReflexionPage() {
               );
             }
             return (
-              <p key={i} className="text-base font-light leading-[1.9]"
+              <p key={i} className="text-base font-light leading-[1.9] text-justify"
                 style={{ color: "var(--text-muted)" }}>
                 {bloc.text}
               </p>
@@ -105,7 +105,7 @@ export default function ReflexionPage() {
             </p>
             <p className="font-display font-bold text-sm" style={{ color: "var(--text)" }}>Evrard André</p>
             <p className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-              Étudiant en Droit — Lyon 3
+              Étudiant en Droit · Lyon 3
             </p>
           </div>
           <Link href="/contact"
