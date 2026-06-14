@@ -57,9 +57,6 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 right-12 font-display font-extrabold text-[100px] leading-none select-none pointer-events-none" style={{ color: "var(--text-faint)" }}>
-          01
-        </div>
       </section>
 
       {/* ── TICKER ── */}
@@ -84,9 +81,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-14 items-start">
             <div data-reveal>
               <h2 className="font-display font-extrabold text-4xl md:text-5xl leading-tight mb-8" style={{ color: "var(--text)" }}>
-                Étudiant.<br />
-                <span style={{ color: "var(--accent)" }}>Engagé.</span><br />
-                <span style={{ color: "var(--text-muted)" }}>Curieux.</span>
+                Droit.<br />
+                <span style={{ color: "var(--accent)" }}>Mobilité.</span><br />
+                <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
               </h2>
               <p className="font-light text-sm leading-loose" style={{ color: "var(--text-muted)" }}>{about.text}</p>
             </div>
@@ -222,7 +219,7 @@ export default function Home() {
 
         <div className="max-w-5xl mx-auto px-8 md:px-12">
           <div className="flex items-center gap-4 mt-8" data-reveal="fade">
-            <a href="https://instagram.com/evrard_adr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
+            <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
               Instagram ↗
             </a>
             <span style={{ color: "var(--border)" }}>·</span>
@@ -245,7 +242,6 @@ export default function Home() {
               <h2 className="font-display font-extrabold text-4xl md:text-5xl leading-tight" style={{ color: "var(--text)" }}>
                 Me<br />retrouver
               </h2>
-              <p className="text-xs mt-4 max-w-[160px] font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>Suivez mon actualité sur les réseaux</p>
             </div>
             <div className="flex-1 grid sm:grid-cols-2 gap-2 w-full max-w-lg" data-reveal data-delay="2">
               {socials.map((s: { name: string; url: string; handle: string }) => (

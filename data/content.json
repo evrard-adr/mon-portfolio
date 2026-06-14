@@ -1,7 +1,7 @@
 {
   "hero": {
     "name": "Evrard André",
-    "title": "Étudiant en Droit — Université Jean Moulin Lyon 3",
+    "title": "Étudiant en Droit · Université Jean Moulin Lyon 3",
     "subtitle": "Droit, mobilité urbaine, vie associative. Lyon.",
     "photo": ""
   },
@@ -117,7 +117,7 @@
     {
       "icon": "🎻",
       "titre": "Musique",
-      "desc": "Violoncelle depuis l'enfance, piano en parallèle. Pas de scène, pas de conservatoire — juste quelque chose qui prend du temps et que j'aime."
+      "desc": "Violoncelle depuis l'enfance, piano en parallèle. Pas de scène, pas de conservatoire · juste quelque chose qui prend du temps et que j'aime."
     }
   ],
   "stats": [
@@ -233,7 +233,7 @@
   "cv": {
     "formations": [
       {
-        "annee": "2024 — présent",
+        "annee": "2024 · présent",
         "titre": "Licence de Droit",
         "etablissement": "Université Jean Moulin Lyon 3",
         "description": "Droit civil, droit constitutionnel, droit des obligations, introduction au droit public."
@@ -241,19 +241,19 @@
     ],
     "experiences": [
       {
-        "annee": "Juil. 2025 — présent",
-        "titre": "Responsable Communication — Bureau National",
-        "role": "Parlement des Étudiants — France entière",
+        "annee": "Juil. 2025 · présent",
+        "titre": "Responsable Communication · Bureau National",
+        "role": "Parlement des Étudiants · France entière",
         "description": "Communication des 25 sections à l'échelle nationale. Contenu, cohérence visuelle, coordination avec les bureaux locaux."
       },
       {
-        "annee": "Juin 2025 — présent",
+        "annee": "Juin 2025 · présent",
         "titre": "Responsable Communication",
         "role": "Parlement des Étudiants de Lyon",
         "description": "Réseaux sociaux, identité visuelle, relations presse. Refonte complète de la communication de la section."
       },
       {
-        "annee": "Oct. 2025 — présent",
+        "annee": "Oct. 2025 · présent",
         "titre": "Employé Polyvalent",
         "role": "U Express Lyon Saint-Louis",
         "description": "Mise en rayon, caisse, préparation de commandes. À côté des études."
