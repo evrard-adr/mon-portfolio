@@ -29,7 +29,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
             data-reveal="fade">
             <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)", animation: "pulse-dot 2s ease-in-out infinite" }} />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2025</span>
+            <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2026</span>
           </div>
 
           {badge?.visible && (
