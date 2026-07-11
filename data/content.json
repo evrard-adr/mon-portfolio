@@ -11,7 +11,9 @@
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
   },
-  "reflexion": {
+  "reflexions": [
+  {
+    "slug": "mobilites-2050",
     "titre": "Nos villes en 2050 : se donner les moyens ou continuer à faire semblant",
     "date": "Juin 2025",
     "tag": "Municipales 2026",
@@ -99,6 +101,72 @@
       }
     ]
   },
+  {
+    "slug": "fulgur-orages",
+    "titre": "Orages, supercellules et intelligence artificielle : pourquoi j'ai commencé à coder Fulgur",
+    "date": "Juillet 2025",
+    "tag": "Météo · Tech",
+    "chapeau": "Je ne suis pas météorologiste. Mais depuis quelques années, je suis les orages de près — très près. Et à force de regarder des cartes radar à 23h en espérant voir une supercellule se former au-dessus de la Bourgogne, j'ai fini par me demander : est-ce qu'on ne pourrait pas faire mieux que ce qu'on a aujourd'hui ?",
+    "contenu": [
+      {
+        "type": "paragraph",
+        "text": "Tout a commencé par une fascination assez simple : les orages sont beaux, violents, imprévisibles, et ils tuent des gens. Pas des millions, mais des dizaines chaque année en France. Des agriculteurs pris par la grêle, des randonneurs foudroyés, des inondations soudaines qui emportent des voitures. Des événements qui arrivent vite, très vite, et pour lesquels le délai d'alerte est souvent trop court ou trop vague. \"Risque orageux sur le quart nord-est\" — c'est l'information qu'on reçoit. Ce n'est pas une information, c'est une approximation."
+      },
+      {
+        "type": "heading",
+        "text": "Ce qu'un orage violent, ça veut dire concrètement"
+      },
+      {
+        "type": "paragraph",
+        "text": "Il faut distinguer l'orage ordinaire de l'orage violent. Un orage ordinaire, c'est de la pluie, du tonnerre, parfois un peu de vent. Un orage violent, c'est autre chose : des rafales à plus de 90 km/h, de la grêle grosse comme des billes de golf, des tornades dans les cas les plus extrêmes. En Europe, les phénomènes les plus dangereux sont les supercellules — des systèmes orageux organisés autour d'une rotation atmosphérique persistante. Elles peuvent parcourir des centaines de kilomètres tout en maintenant leur structure. Ce sont elles qui produisent les grêlons les plus gros, les rafales les plus violentes, et les tornades."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ce qui rend ces phénomènes difficiles à anticiper, c'est la vitesse à laquelle ils évoluent. Une supercellule peut se former en moins d'une heure dans des conditions d'instabilité atmosphérique favorables. Les modèles météo globaux — comme ceux d'ECMWF ou de Météo-France — fonctionnent à des résolutions de plusieurs kilomètres et sur des pas de temps de plusieurs heures. Ils voient venir la masse d'air instable. Ils ne voient pas la cellule orageuse individuelle."
+      },
+      {
+        "type": "heading",
+        "text": "Ce qu'on a aujourd'hui — et ce qui manque"
+      },
+      {
+        "type": "paragraph",
+        "text": "Il existe des outils de suivi en temps réel : les réseaux de foudroiement comme Blitzortung, les radars météo de Météo-France, les données de radiosondage. Des applications comme Windy ou RadarScope permettent d'accéder à tout ça. C'est bien. Mais c'est de la réaction, pas de l'anticipation. Tu vois l'orage quand il est déjà là. Tu ne sais pas encore où il va aller, avec quelle intensité, ni si la cellule va se renforcer ou se dissiper."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ce qui manque, c'est un outil qui croise en temps réel les données de foudroiement, les données radar, les paramètres d'instabilité atmosphérique (CAPE, cisaillement du vent, indice LI...) et qui soit capable de dire : cette cellule est en train de s'organiser, elle a les caractéristiques d'une supercellule, dans 45 minutes elle sera là. Ce n'est pas de la science-fiction. C'est ce que les storm chasers américains font à la main depuis des années, avec des spreadsheets et de l'expérience. La question, c'est d'automatiser ça."
+      },
+      {
+        "type": "heading",
+        "text": "Fulgur — ce que je construis"
+      },
+      {
+        "type": "paragraph",
+        "text": "J'ai commencé à coder Fulgur pour répondre à cette question. C'est une application desktop — pour l'instant en développement — qui agrège des données météo en temps réel et utilise de l'intelligence artificielle pour identifier les signatures d'orages violents avant qu'ils soient pleinement formés. Le nom vient du latin : fulgur, l'éclair. L'idée, c'est d'avoir quelques minutes — voire quelques dizaines de minutes — d'avance sur un phénomène potentiellement dangereux."
+      },
+      {
+        "type": "paragraph",
+        "text": "Je ne suis pas développeur de formation. Je suis étudiant en droit. Mais j'apprends, et ce projet m'a forcé à comprendre des choses que je n'aurais jamais touchées autrement : les APIs météo, le traitement de données géospatiales, les modèles de classification. Ce que l'IA apporte ici, c'est la capacité à reconnaître des patterns dans des volumes de données que personne ne peut analyser manuellement en temps réel. Un modèle entraîné sur des milliers d'événements orageux passés peut apprendre à reconnaître les signes avant-coureurs d'une supercellule bien avant qu'un radiosondage ou qu'un radar la confirme."
+      },
+      {
+        "type": "heading",
+        "text": "Anticiper les dégâts, pas seulement l'orage"
+      },
+      {
+        "type": "paragraph",
+        "text": "La prévision de l'orage, c'est une chose. Ce qui est encore moins développé, c'est la prévision des dégâts. Un orage de grêle au-dessus d'une forêt, c'est une chose. Le même orage au-dessus de vignes en plein été ou d'une zone urbaine dense, c'est autre chose. Croiser les données de trajectoire prévisionnelle avec les données d'occupation des sols, les infrastructures critiques, les zones à risque d'inondation — ça permettrait d'envoyer des alertes ciblées, localisées, utiles. Pas \"risque orageux sur le quart nord-est\". Mais \"dans 30 minutes, grêle probable sur le secteur de Mâcon-Nord, vitesse estimée 80 km/h\"."
+      },
+      {
+        "type": "paragraph",
+        "text": "C'est ambitieux pour un projet solo mené en dehors des études. Mais c'est exactement le genre de problème qui m'intéresse : à l'intersection entre la donnée, la technologie, et un enjeu concret pour les gens."
+      },
+      {
+        "type": "quote",
+        "text": "Un orage, ça ne prévient pas. Mais avec les bonnes données et les bons outils, on peut apprendre à le lire avant qu'il frappe."
+      }
+    ]
+  }
+  ],
   "badge": {
     "visible": true,
     "text": "Disponible"
@@ -157,7 +225,7 @@
       "desc": "Lecture, veille, réflexion sur l'avenir des transports en commun et la question de savoir comment nos villes vont s'adapter. L'article Réflexion en est une trace.",
       "date": "2024",
       "tag": "Recherche",
-      "lien": "/reflexion"
+      "lien": "/reflexion/mobilites-2050"
     }
   ],
   "ticker": "Droit  ·  Mobilités Urbaines  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
