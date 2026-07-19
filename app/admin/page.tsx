@@ -224,11 +224,20 @@ export default function AdminPage() {
             <div className="space-y-6">
               <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">À propos</h2>
               <div>
-                <label className="block text-xs text-[#c9a96e] uppercase tracking-widest mb-2">Texte de présentation</label>
+                <label className="block text-xs text-[#c9a96e] uppercase tracking-widest mb-2">Teaser (page d'accueil)</label>
+                <textarea
+                  value={content.about.teaser}
+                  onChange={e => update(["about", "teaser"], e.target.value)}
+                  rows={2}
+                  className="w-full bg-[#111111] border border-[#1e1e1e] text-[#f0ebe3] px-4 py-3 rounded-xl focus:outline-none focus:border-[#c9a96e] transition-colors resize-none"
+                />
+              </div>
+              <div>
+                <label className="block text-xs text-[#c9a96e] uppercase tracking-widest mb-2">Texte complet (page /about, séparer les paragraphes par une ligne vide)</label>
                 <textarea
                   value={content.about.text}
                   onChange={e => update(["about", "text"], e.target.value)}
-                  rows={5}
+                  rows={10}
                   className="w-full bg-[#111111] border border-[#1e1e1e] text-[#f0ebe3] px-4 py-3 rounded-xl focus:outline-none focus:border-[#c9a96e] transition-colors resize-none"
                 />
               </div>

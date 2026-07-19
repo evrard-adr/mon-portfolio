@@ -5,7 +5,7 @@ import { useTheme } from "./Providers";
 
 const links = [
   { label: "Accueil", href: "/" },
-  { label: "À propos", href: "/#about" },
+  { label: "À propos", href: "/about" },
   { label: "Projets", href: "/#projets" },
   { label: "Réflexion", href: "/reflexion" },
   { label: "Galerie", href: "/#gallery" },

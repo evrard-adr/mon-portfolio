@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 export default function Home() {
   const content = getContent();
-  const { hero, about, socials, gallery, badge, engagements, stats, projets } = content as any;
+  const { hero, about, socials, gallery, engagements, stats, projets } = content as any;
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
@@ -26,19 +26,6 @@ export default function Home() {
         <HeroBlob />
 
         <div className="max-w-5xl w-full mx-auto relative" style={{ zIndex: 1 }}>
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}
-            data-reveal="fade">
-            <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)", animation: "pulse-dot 2s ease-in-out infinite" }} />
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>Portfolio 2026</span>
-          </div>
-
-          {badge?.visible && (
-            <div className="inline-flex items-center gap-2 mb-10 ml-3 px-3 py-1.5 rounded-full" style={{ border: "1px solid var(--accent-border)", backgroundColor: "var(--accent-glow)" }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "var(--accent)" }} />
-              <span className="text-[10px] uppercase tracking-[0.25em] font-medium" style={{ color: "var(--accent)" }}>{badge.text}</span>
-            </div>
-          )}
-
           <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-6" data-reveal data-delay="1">
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
             <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--accent)" }}>André</span>
@@ -83,10 +70,15 @@ export default function Home() {
               <span style={{ color: "var(--accent)" }}>Mobilités.</span><br />
               <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
             </h2>
-            <p className="font-light text-sm leading-loose text-justify mb-8" style={{ color: "var(--text-muted)" }}>{about.text}</p>
-            <a href={`mailto:${about.email}`} className="text-sm transition-colors" style={{ color: "var(--accent)" }}>
-              {about.email} →
-            </a>
+            <p className="font-light text-sm leading-loose mb-6" style={{ color: "var(--text-muted)" }}>{about.teaser}</p>
+            <div className="flex items-center gap-6 flex-wrap">
+              <Link href="/about" className="text-sm transition-colors" style={{ color: "var(--accent)" }}>
+                En savoir plus →
+              </Link>
+              <a href={`mailto:${about.email}`} className="text-sm transition-colors" style={{ color: "var(--text-muted)" }}>
+                {about.email}
+              </a>
+            </div>
           </div>
         </div>
       </section>

@@ -6,7 +6,8 @@
     "photo": ""
   },
   "about": {
-    "text": "Je suis en licence de droit à Lyon 3. Ce qui m'occupe vraiment en ce moment, c'est la question des transports en commun et de la mobilité urbaine : comment est-ce qu'on se déplacera en 2050, et est-ce qu'on se donnera vraiment les moyens d'y répondre ? À côté de ça, je m'implique dans la vie associative étudiante via le Parlement des Étudiants, et je joue du violoncelle et du piano depuis longtemps.",
+    "teaser": "Étudiant en droit à Lyon 3, engagé dans la vie associative, curieux de tout ce qui touche à la chose publique, à la ville et au ciel.",
+    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
@@ -174,18 +175,18 @@
   "engagements": [
     {
       "icon": "⚖️",
-      "titre": "Droit",
-      "desc": "Licence à Lyon 3. Droit civil, constitutionnel, public. C'est long, c'est dense, et c'est exactement ce que je voulais faire."
+      "titre": "Droit & science po",
+      "desc": "Licence à Lyon 3. Ce qui m'intéresse vraiment, c'est la chose publique : comment une décision se construit et ce qu'elle change pour les gens."
     },
     {
-      "icon": "🚇",
-      "titre": "Mobilités urbaines",
-      "desc": "Je prends le métro tous les jours. Je me pose des questions sur ce qu'on va faire des villes d'ici 2050. Je ne suis pas le seul, mais j'en parle peut-être plus que la moyenne."
+      "icon": "📣",
+      "titre": "Engagement associatif",
+      "desc": "Responsable communication au Parlement des Étudiants de Lyon, puis à l'échelle nationale. Porter un message, faire vivre une institution."
     },
     {
-      "icon": "🎻",
-      "titre": "Musique",
-      "desc": "Violoncelle depuis l'enfance, piano en parallèle. Pas de scène, pas de conservatoire · juste quelque chose qui prend du temps et que j'aime."
+      "icon": "🌩️",
+      "titre": "Mobilités & ciel",
+      "desc": "Mobilité urbaine, orages, un peu de photo. Et le violoncelle et le piano à côté de tout ça."
     }
   ],
   "stats": [
@@ -209,7 +210,7 @@
     {
       "titre": "Communication nationale PE",
       "desc": "Je coordonne la communication des 25 sections du Parlement des Étudiants en France. Réseaux sociaux, cohérence de l'image, relation avec les sections locales.",
-      "date": "2025",
+      "date": "2026",
       "tag": "Communication",
       "lien": ""
     },
@@ -228,7 +229,7 @@
       "lien": "/reflexion/mobilites-2050"
     }
   ],
-  "ticker": "Droit  ·  Mobilités Urbaines  ·  Lyon  ·  Communication  ·  Violoncelle  ·  Transports 2050  ·  Parlement des Étudiants  ·  Piano",
+  "ticker": "Droit  ·  Science Politique  ·  Chose Publique  ·  Droit Public  ·  Institutions  ·  Mobilité Urbaine  ·  Transports en Commun  ·  Météorologie  ·  Orages  ·  Photographie  ·  Vie Associative  ·  Engagement Étudiant  ·  Communication  ·  Violoncelle  ·  Piano  ·  Lyon",
   "socials": [
     {
       "name": "Instagram",
@@ -304,7 +305,7 @@
     ],
     "experiences": [
       {
-        "annee": "Juil. 2025 · présent",
+        "annee": "Juin 2026 · présent",
         "titre": "Responsable Communication · Bureau National",
         "role": "Parlement des Étudiants · France entière",
         "description": "Communication des 25 sections à l'échelle nationale. Contenu, cohérence visuelle, coordination avec les bureaux locaux."
@@ -324,9 +325,10 @@
     ],
     "competences": [
       "Droit civil",
-      "Droit constitutionnel",
-      "Communication digitale",
-      "Gestion de projet",
+      "Droit public",
+      "Analyse des politiques publiques",
+      "Communication institutionnelle",
+      "Gestion de projet associatif",
       "Rédaction juridique",
       "Anglais",
       "Violoncelle",
