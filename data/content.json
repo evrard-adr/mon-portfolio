@@ -295,6 +295,10 @@
     }
   ],
   "cv": {
+    "infosPersonnelles": {
+      "adresse": "114 Rue Montesquieu, 69007 Lyon",
+      "dateNaissance": "26 juin 2006"
+    },
     "formations": [
       {
         "annee": "2024 · présent",

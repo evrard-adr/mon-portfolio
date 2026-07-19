@@ -123,7 +123,12 @@ export default function CVPage() {
                   {about.phone}
                 </a>
               )}
-              <p className="text-xs" style={{ color: "var(--text-faint)" }}>{about.location}</p>
+              {cv.infosPersonnelles?.adresse && (
+                <p className="text-xs" style={{ color: "var(--text-faint)" }}>{cv.infosPersonnelles.adresse}</p>
+              )}
+              {cv.infosPersonnelles?.dateNaissance && (
+                <p className="text-xs" style={{ color: "var(--text-faint)" }}>Né le {cv.infosPersonnelles.dateNaissance}</p>
+              )}
             </div>
           </div>
         </div>

@@ -480,6 +480,31 @@ export default function AdminPage() {
             <div className="space-y-10">
               <h2 className="font-serif text-2xl text-[#f0ebe3] mb-8">Curriculum Vitae</h2>
 
+              {/* Informations personnelles */}
+              <div>
+                <h3 className="text-[#c9a96e] text-sm uppercase tracking-widest mb-4">Informations personnelles</h3>
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">Adresse</label>
+                    <input
+                      type="text"
+                      value={content.cv.infosPersonnelles?.adresse ?? ""}
+                      onChange={e => update(["cv", "infosPersonnelles", "adresse"], e.target.value)}
+                      className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs text-[#6b6b6b] uppercase tracking-widest mb-1">Date de naissance</label>
+                    <input
+                      type="text"
+                      value={content.cv.infosPersonnelles?.dateNaissance ?? ""}
+                      onChange={e => update(["cv", "infosPersonnelles", "dateNaissance"], e.target.value)}
+                      className="w-full bg-[#0a0a0a] border border-[#1e1e1e] text-[#f0ebe3] px-3 py-2 rounded-lg text-sm focus:outline-none focus:border-[#c9a96e] transition-colors"
+                    />
+                  </div>
+                </div>
+              </div>
+
               {/* Formations */}
               <div>
                 <h3 className="text-[#c9a96e] text-sm uppercase tracking-widest mb-4">Formations</h3>
