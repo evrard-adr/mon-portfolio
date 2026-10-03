@@ -181,7 +181,7 @@
     {
       "icon": "📣",
       "titre": "Communication & réseaux sociaux",
-      "desc": "Responsable communication du Parlement des Étudiants (Lyon, puis national) : réseaux sociaux (plus de 1 800 abonnés sur PE Lyon), identité visuelle, relations presse. Chargé de communication de la campagne Cœur Lyonnais / Grand Cœur Lyonnais, où j'ai travaillé les éléments de langage."
+      "desc": "Responsable communication du Parlement des Étudiants (Lyon, puis national) : réseaux sociaux (4 600 abonnés Instagram pour le national, 1 800 pour Lyon), identité visuelle, relations presse. Chargé de communication de la campagne Cœur Lyonnais / Grand Cœur Lyonnais, où j'ai travaillé les éléments de langage."
     },
     {
       "icon": "🚋",
@@ -196,23 +196,23 @@
   ],
   "stats": [
     {
+      "value": 4600,
+      "label": "Abonnés Instagram · PE national",
+      "suffix": "+"
+    },
+    {
+      "value": 3200,
+      "label": "Abonnés LinkedIn · PE national",
+      "suffix": "+"
+    },
+    {
       "value": 1800,
       "label": "Abonnés Instagram · PE Lyon",
       "suffix": "+"
     },
     {
       "value": 25,
-      "label": "Sections nationales",
-      "suffix": ""
-    },
-    {
-      "value": 500,
-      "label": "Étudiants représentés",
-      "suffix": "+"
-    },
-    {
-      "value": 3,
-      "label": "Mandats associatifs",
+      "label": "Sections coordonnées",
       "suffix": ""
     }
   ],
@@ -223,6 +223,13 @@
       "date": "2026",
       "tag": "Campagne",
       "lien": ""
+    },
+    {
+      "titre": "Livre blanc du Parlement des Étudiants",
+      "desc": "Communication autour de la sortie du Livre blanc, édition 2026 (mandat 2026-2027) : bilan de l'année écoulée et projection du mandat. Annonce publiée sur LinkedIn.",
+      "date": "2026",
+      "tag": "Publication",
+      "lien": "https://fr.linkedin.com/posts/le-parlement-des-etudiants_livre-blanc-edition-2026-2027-activity-7511762103150497792-qYJa"
     },
     {
       "titre": "Communication nationale PE",
@@ -330,7 +337,7 @@
         "annee": "Juin 2026 · présent",
         "titre": "Responsable Communication · Bureau National",
         "role": "Parlement des Étudiants · France entière",
-        "description": "Communication des 25 sections à l'échelle nationale. Contenu, cohérence visuelle, coordination avec les bureaux locaux."
+        "description": "Communication des 25 sections à l'échelle nationale. Contenu, cohérence visuelle, coordination avec les bureaux locaux. Lancements nationaux : Livre blanc 2026, journal Quorum, refonte du site."
       },
       {
         "annee": "Juin 2025 · présent",
@@ -386,43 +393,51 @@
   },
   "creations": [
     {
+      "img": "/creations/livre-blanc.jpg",
+      "tag": "National",
+      "titre": "Livre blanc · édition 2026",
+      "desc": "Visuel d'annonce de la publication, mandat 2026-2027",
+      "lien": "https://fr.linkedin.com/posts/le-parlement-des-etudiants_livre-blanc-edition-2026-2027-activity-7511762103150497792-qYJa"
+    },
+    {
+      "img": "/creations/presidentielle-2027.jpg",
+      "tag": "National",
+      "titre": "Présidentielle 2027",
+      "desc": "Visuel de la simulation de l'élection présidentielle"
+    },
+    {
+      "img": "/creations/quorum.jpg",
+      "tag": "National",
+      "titre": "Quorum, le journal du PE",
+      "desc": "Annonce du lancement du journal"
+    },
+    {
+      "img": "/creations/refonte-site.jpg",
+      "tag": "National",
+      "titre": "Refonte du site internet",
+      "desc": "Annonce du nouveau site du Parlement des Étudiants"
+    },
+    {
+      "img": "/creations/nouvelle-section-orleans.jpg",
+      "tag": "National",
+      "titre": "Nouvelle section · Orléans",
+      "desc": "Bienvenue à la section orléanaise"
+    },
+    {
       "img": "/creations/simulation-historique.jpg",
+      "tag": "Lyon",
       "titre": "Simulation historique · Lois Ferry",
-      "desc": "Affiche de la simulation nationale délocalisée à Lyon"
+      "desc": "Simulation nationale délocalisée à Lyon"
     },
     {
       "img": "/creations/nuit-du-debat.jpg",
+      "tag": "Lyon",
       "titre": "Nuit du Débat · 4e édition",
       "desc": "Annonce de l'événement, Hôtel du département"
-    },
-    {
-      "img": "/creations/simulation-parlementaire.jpg",
-      "titre": "Simulation parlementaire",
-      "desc": "Ouverture de la billetterie, Hôtel de Région"
-    },
-    {
-      "img": "/creations/deroule-simulation.jpg",
-      "titre": "Le déroulé d'une simulation",
-      "desc": "Infographie pédagogique pour les participants"
-    },
-    {
-      "img": "/creations/adhesions.jpg",
-      "titre": "Adhésions 2026-2027",
-      "desc": "Campagne de rentrée du PE de Lyon"
-    },
-    {
-      "img": "/creations/recrutement.jpg",
-      "titre": "Le PE de Lyon recrute",
-      "desc": "Post de recrutement, saison 2026-2027"
-    },
-    {
-      "img": "/creations/octobre-rose.jpg",
-      "titre": "Octobre rose",
-      "desc": "Post de sensibilisation"
     }
   ],
   "creationsLien": {
-    "url": "https://instagram.com/pe.lyon",
-    "label": "@pe.lyon"
+    "url": "https://instagram.com/parlementdesetudiants",
+    "label": "@parlementdesetudiants"
   }
 }

@@ -116,7 +116,7 @@ export default function Home() {
               );
               return (
                 <div key={i} data-reveal data-delay={String(Math.min(i + 1, 5))}>
-                  {p.lien ? <a href={p.lien} className="block">{inner}</a> : inner}
+                  {p.lien ? <a href={p.lien} className="block" {...(p.lien.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{inner}</a> : inner}
                 </div>
               );
             })}
@@ -133,19 +133,29 @@ export default function Home() {
             <span className="mask-line"><span><span className="hl-mark">donnent envie.</span></span></span>
           </h2>
           <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            Affiches, infographies et posts que je conçois pour le Parlement des Étudiants de Lyon : identité visuelle, animation des réseaux, mobilisation autour des événements.
+            Affiches et posts que je conçois pour le Parlement des Étudiants, au national comme à Lyon : annonces de publications, lancements, événements, identité visuelle.
           </p>
           <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4">
-            {creations.map((c: { img: string; titre: string; desc: string }, i: number) => (
-              <figure key={i} className="card-brut group overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }} data-reveal data-delay={String((i % 4) + 1)}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.img} alt={`${c.titre} — ${c.desc}`} loading="lazy" className="block aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <figcaption className="p-4" style={{ background: "var(--card)", borderTop: "2px solid var(--ink)" }}>
-                  <p className="font-display text-base leading-tight md:text-lg">{c.titre}</p>
-                  <p className="mt-1 text-xs font-medium leading-snug" style={{ color: "var(--text-muted)" }}>{c.desc}</p>
-                </figcaption>
-              </figure>
-            ))}
+            {creations.map((c: { img: string; tag?: string; titre: string; desc: string; lien?: string }, i: number) => {
+              const fig = (
+                <figure className="card-brut group relative h-full overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }}>
+                  {c.tag && (
+                    <span className="sticker absolute left-3 top-3 z-[1] px-3 py-1 text-[10px] uppercase tracking-widest">{c.tag}</span>
+                  )}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.img} alt={`${c.titre} — ${c.desc}`} loading="lazy" className="block aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <figcaption className="p-4" style={{ background: "var(--card)", borderTop: "2px solid var(--ink)" }}>
+                    <p className="font-display text-base leading-tight md:text-lg">{c.titre}{c.lien ? " ↗" : ""}</p>
+                    <p className="mt-1 text-xs font-medium leading-snug" style={{ color: "var(--text-muted)" }}>{c.desc}</p>
+                  </figcaption>
+                </figure>
+              );
+              return (
+                <div key={i} data-reveal data-delay={String((i % 4) + 1)}>
+                  {c.lien ? <a href={c.lien} target="_blank" rel="noopener noreferrer" className="block h-full">{fig}</a> : fig}
+                </div>
+              );
+            })}
             <a href={creationsLien.url} target="_blank" rel="noopener noreferrer" className="card-brut flex aspect-[4/5] flex-col justify-between p-5 md:p-6 lg:aspect-auto" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "1deg" }}>
               <span className="font-display text-2xl leading-tight md:text-3xl">Tous les posts sur {creationsLien.label}</span>
               <span className="text-4xl">↗</span>
