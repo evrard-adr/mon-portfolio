@@ -49,7 +49,7 @@ export default function AnimatedCounter({ target, suffix = "", label }: Animated
         className="font-display text-6xl md:text-8xl tabular-nums"
         style={{ color: "var(--accent)" }}
       >
-        {count}{suffix}
+        {count.toLocaleString("fr-FR")}{suffix}
       </span>
       <span
         className="text-[11px] uppercase tracking-[0.2em] font-medium"

@@ -7,7 +7,7 @@
   },
   "about": {
     "teaser": "Étudiant en droit à Lyon 3, passionné de droit public et de science politique. Responsable communication du Parlement des Étudiants, je sais construire un message et animer des réseaux sociaux. Usager quotidien des transports en commun, je m'intéresse aussi à la manière dont on les pense et les fait évoluer. Je veux mettre ces compétences au service des élus et de l'action publique.",
-    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image d'une organisation. Ce qui me permet d'être à l'aise aussi bien pour rédiger et analyser un texte que pour faire passer un message au grand public.\n\nUn jour, j'aimerais travailler aux côtés d'un élu, voir de l'intérieur comment se prennent les décisions, et pourquoi pas porter moi-même des projets pour mon territoire. En attendant, j'apprends sur le terrain, au service du collectif.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
+    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, montage vidéo (Canva, CapCut, Premiere Pro). J'ai aussi été chargé de communication pendant la campagne « Cœur Lyonnais » de Jean-Michel Aulas et « Grand Cœur Lyonnais » de Véronique Sarselli, aujourd'hui présidente de la Métropole de Lyon : j'y ai travaillé les éléments de langage. Je peux rédiger un discours ou un argumentaire, et je suis très à l'aise en anglais (niveau C1 Cambridge).\n\nJ'ai été président de groupe lors des simulations parlementaires du Parlement des Étudiants : même fictif, on y apprend les rouages du travail parlementaire. Un jour, j'aimerais travailler aux côtés d'un élu, voir de l'intérieur comment se prennent les décisions, et pourquoi pas porter moi-même des projets pour mon territoire.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
@@ -181,7 +181,7 @@
     {
       "icon": "📣",
       "titre": "Communication & réseaux sociaux",
-      "desc": "Responsable communication du Parlement des Étudiants, à Lyon puis au national : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image sur 25 sections."
+      "desc": "Responsable communication du Parlement des Étudiants (Lyon, puis national) : réseaux sociaux (plus de 1 800 abonnés sur PE Lyon), identité visuelle, relations presse. Chargé de communication de la campagne Cœur Lyonnais / Grand Cœur Lyonnais, où j'ai travaillé les éléments de langage."
     },
     {
       "icon": "🚋",
@@ -191,27 +191,39 @@
     {
       "icon": "🏛️",
       "titre": "Terrain & engagement",
-      "desc": "Vie associative, organisation de simulations parlementaires, coordination d'équipes de bénévoles. Le goût du concret et du collectif."
+      "desc": "Président de groupe aux simulations parlementaires : argumentaire, discours, débat en séance. Je connais les rouages du travail parlementaire, et le goût du concret et du collectif."
     }
   ],
   "stats": [
+    {
+      "value": 1800,
+      "label": "Abonnés Instagram · PE Lyon",
+      "suffix": "+"
+    },
     {
       "value": 25,
       "label": "Sections nationales",
       "suffix": ""
     },
     {
-      "value": 3,
-      "label": "Mandats associatifs",
-      "suffix": ""
-    },
-    {
       "value": 500,
       "label": "Étudiants représentés",
       "suffix": "+"
+    },
+    {
+      "value": 3,
+      "label": "Mandats associatifs",
+      "suffix": ""
     }
   ],
   "projets": [
+    {
+      "titre": "Campagne Cœur Lyonnais & Grand Cœur Lyonnais",
+      "desc": "Chargé de communication auprès des listes de Jean-Michel Aulas (Lyon) et de Véronique Sarselli (Métropole) : éléments de langage et communication de campagne. Véronique Sarselli a ensuite été élue présidente de la Métropole de Lyon.",
+      "date": "2026",
+      "tag": "Campagne",
+      "lien": ""
+    },
     {
       "titre": "Communication nationale PE",
       "desc": "Je coordonne la communication des 25 sections du Parlement des Étudiants en France. Réseaux sociaux, cohérence de l'image, relation avec les sections locales.",
@@ -305,6 +317,12 @@
         "titre": "Licence de Droit",
         "etablissement": "Université Jean Moulin Lyon 3",
         "description": "Droit civil, droit constitutionnel, droit des obligations, introduction au droit public."
+      },
+      {
+        "annee": "Certification",
+        "titre": "Certificat Cambridge · niveau C1",
+        "etablissement": "Cambridge English",
+        "description": "Anglais courant, à l'écrit comme à l'oral."
       }
     ],
     "experiences": [
@@ -321,6 +339,18 @@
         "description": "Réseaux sociaux, identité visuelle, relations presse. Refonte complète de la communication de la section."
       },
       {
+        "annee": "Municipales 2026",
+        "titre": "Chargé de communication · Campagne",
+        "role": "Cœur Lyonnais (Jean-Michel Aulas) · Grand Cœur Lyonnais (Véronique Sarselli)",
+        "description": "Éléments de langage et communication de campagne pour deux listes soutenues ensemble. Véronique Sarselli a été élue présidente de la Métropole de Lyon."
+      },
+      {
+        "annee": "Parlement des Étudiants",
+        "titre": "Président de groupe · Simulations parlementaires",
+        "role": "Parlement des Étudiants de Lyon",
+        "description": "Conduite d'un groupe parlementaire (fictif) : argumentaire, discours, débat en séance, selon les règles et les rouages du travail parlementaire."
+      },
+      {
         "annee": "Oct. 2025 · présent",
         "titre": "Employé Polyvalent",
         "role": "U Express Lyon Saint-Louis",
@@ -331,13 +361,17 @@
       "Droit public",
       "Communication institutionnelle",
       "Réseaux sociaux & identité visuelle",
+      "Éléments de langage & discours",
       "Transports en commun & mobilité urbaine",
       "Relations presse",
       "Rédaction juridique",
       "Analyse des politiques publiques",
       "Gestion de projet associatif",
+      "Canva",
+      "CapCut",
+      "Adobe Premiere Pro",
       "Droit civil",
-      "Anglais",
+      "Anglais · C1 (Cambridge)",
       "Violoncelle",
       "Piano"
     ],
@@ -349,5 +383,46 @@
       "Musique classique",
       "Engagement associatif"
     ]
+  },
+  "creations": [
+    {
+      "img": "/creations/simulation-historique.jpg",
+      "titre": "Simulation historique · Lois Ferry",
+      "desc": "Affiche de la simulation nationale délocalisée à Lyon"
+    },
+    {
+      "img": "/creations/nuit-du-debat.jpg",
+      "titre": "Nuit du Débat · 4e édition",
+      "desc": "Annonce de l'événement, Hôtel du département"
+    },
+    {
+      "img": "/creations/simulation-parlementaire.jpg",
+      "titre": "Simulation parlementaire",
+      "desc": "Ouverture de la billetterie, Hôtel de Région"
+    },
+    {
+      "img": "/creations/deroule-simulation.jpg",
+      "titre": "Le déroulé d'une simulation",
+      "desc": "Infographie pédagogique pour les participants"
+    },
+    {
+      "img": "/creations/adhesions.jpg",
+      "titre": "Adhésions 2026-2027",
+      "desc": "Campagne de rentrée du PE de Lyon"
+    },
+    {
+      "img": "/creations/recrutement.jpg",
+      "titre": "Le PE de Lyon recrute",
+      "desc": "Post de recrutement, saison 2026-2027"
+    },
+    {
+      "img": "/creations/octobre-rose.jpg",
+      "titre": "Octobre rose",
+      "desc": "Post de sensibilisation"
+    }
+  ],
+  "creationsLien": {
+    "url": "https://instagram.com/pe.lyon",
+    "label": "@pe.lyon"
   }
 }

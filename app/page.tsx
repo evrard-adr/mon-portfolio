@@ -29,7 +29,7 @@ const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
-  const { about, socials, gallery, engagements, stats, projets } = content as any;
+  const { about, socials, gallery, engagements, stats, projets, creations, creationsLien } = content as any;
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -124,13 +124,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CRÉATIONS ── */}
+      <section id="creations" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Label letter="D" color="var(--l-d)" text="Mes créations" />
+          <h2 className={`${H2} mb-6`} data-mask>
+            <span className="mask-line"><span>Des posts qui</span></span>
+            <span className="mask-line"><span><span className="hl-mark">donnent envie.</span></span></span>
+          </h2>
+          <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
+            Affiches, infographies et posts que je conçois pour le Parlement des Étudiants de Lyon : identité visuelle, animation des réseaux, mobilisation autour des événements.
+          </p>
+          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4">
+            {creations.map((c: { img: string; titre: string; desc: string }, i: number) => (
+              <figure key={i} className="card-brut group overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }} data-reveal data-delay={String((i % 4) + 1)}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={c.img} alt={`${c.titre} — ${c.desc}`} loading="lazy" className="block aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <figcaption className="p-4" style={{ background: "var(--card)", borderTop: "2px solid var(--ink)" }}>
+                  <p className="font-display text-base leading-tight md:text-lg">{c.titre}</p>
+                  <p className="mt-1 text-xs font-medium leading-snug" style={{ color: "var(--text-muted)" }}>{c.desc}</p>
+                </figcaption>
+              </figure>
+            ))}
+            <a href={creationsLien.url} target="_blank" rel="noopener noreferrer" className="card-brut flex aspect-[4/5] flex-col justify-between p-5 md:p-6 lg:aspect-auto" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "1deg" }}>
+              <span className="font-display text-2xl leading-tight md:text-3xl">Tous les posts sur {creationsLien.label}</span>
+              <span className="text-4xl">↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* ── STATS ── */}
       <section
         className="px-6 py-24 md:px-14 lg:px-20"
         style={{ background: "var(--navy)", color: "#f5f1e8", ["--accent" as string]: "#ffd6a5", ["--text-muted" as string]: "rgba(245,241,232,0.7)" }}
       >
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4 md:gap-6">
             {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
               <AnimatedCounter key={i} target={s.value} suffix={s.suffix} label={s.label} />
             ))}
@@ -141,7 +171,7 @@ export default function Home() {
       {/* ── GALLERY ── */}
       <section id="gallery" className="overflow-hidden py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
-          <Label letter="D" color="var(--l-d)" text="Galerie" />
+          <Label letter="E" color="var(--l-b)" text="Galerie" />
         </div>
         <div className="py-6">
           <Marquee duration={90} slowOnHover>
