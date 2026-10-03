@@ -241,7 +241,8 @@ body {
   position: fixed; inset: 0; z-index: 100;
   background-color: var(--bg);
   display: flex; flex-direction: column; justify-content: center;
-  padding: 3rem;
+  padding: 6.5rem 3rem 3rem;
+  overflow-y: auto;
   opacity: 0; pointer-events: none;
   transition: opacity 0.35s cubic-bezier(0.16,1,0.3,1);
 }

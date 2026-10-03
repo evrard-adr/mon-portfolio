@@ -73,7 +73,7 @@ export default function Footer() {
 
       {/* ── Propriété intellectuelle ── */}
       <div style={{ background: "rgba(0,0,0,0.25)", borderTop: "1px solid rgba(245,241,232,0.14)" }}>
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-7 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
+        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 pb-24 pt-7 md:pb-7 md:flex-row md:items-center md:justify-between md:px-14 lg:px-20">
           <p className="max-w-3xl text-xs leading-relaxed" style={{ color: "rgba(245,241,232,0.75)" }}>
             © {year} Evrard André — Tous droits réservés. Ce site (conception, textes, design et développement) a été réalisé par Evrard André ;
             son motion design a été propulsé par l&apos;IA. Toute reproduction sans autorisation est interdite.

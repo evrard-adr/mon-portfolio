@@ -32,13 +32,13 @@ export default function Menu() {
   return (
     <>
       {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 md:px-12 py-5 backdrop-blur-sm" style={{ backgroundColor: "var(--nav-bg)", borderBottom: "1px solid var(--border)" }}>
+      <nav className="fixed top-0 left-0 right-0 z-[110] flex items-center justify-between px-8 md:px-12 py-5 backdrop-blur-sm" style={{ backgroundColor: "var(--nav-bg)", borderBottom: "1px solid var(--border)" }}>
         <Link href="/" className="font-display text-lg tracking-tight" style={{ color: "var(--text)" }} onClick={() => setOpen(false)}>
           <span>Evrard</span><span style={{ color: "var(--accent)" }}>.</span>
         </Link>
 
         <div className="flex items-center gap-3 md:gap-4">
-          <a href="mailto:evrard.andre@aol.com" className="btn-pill hidden sm:inline-flex" style={{ padding: ".45rem 1.1rem", fontSize: ".8rem" }}>✉ Me contacter</a>
+          <span className="hidden sm:block"><a href="mailto:evrard.andre@aol.com" className="btn-pill" style={{ padding: ".45rem 1.1rem", fontSize: ".8rem" }}>✉ Me contacter</a></span>
           {/* Theme toggle */}
           <button onClick={toggle} className="w-8 h-8 flex items-center justify-center rounded-full transition-all" style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }} aria-label="Thème">
             {theme === "dark" ? (
@@ -81,6 +81,7 @@ export default function Menu() {
             </div>
           ))}
         </div>
+        <a href="mailto:evrard.andre@aol.com" className="btn-pill mb-6 self-start">✉ Me contacter</a>
         <div className="flex items-center gap-4 mt-4">
           <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>Instagram</a>
           
