@@ -59,15 +59,15 @@ export default function Home() {
           <ScrubText
             className={`${H2} mb-14`}
             parts={[
-              { t: "Le droit pour comprendre," },
-              { t: "la chose publique", hl: true },
-              { t: "pour agir. À Lyon." },
+              { t: "Le droit public pour comprendre," },
+              { t: "la communication", hl: true },
+              { t: "pour convaincre." },
             ]}
           />
           <div className="grid gap-10 md:grid-cols-[1fr_1fr]" data-reveal>
             <p className="max-w-lg text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>{about.teaser}</p>
             <div className="flex flex-wrap items-start gap-4 md:justify-end">
-              <Magnetic><Link href="/about" className="btn-pill">En savoir plus →</Link></Magnetic>
+              <Magnetic><Link href="/contact" className="btn-pill">Me contacter →</Link></Magnetic>
               <Magnetic><a href={`mailto:${about.email}`} className="btn-pill btn-ghost">{about.email}</a></Magnetic>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
       {/* ── ENGAGEMENTS ── */}
       <section className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="B" color="var(--l-b)" text="Ce qui m'occupe" />
+          <Label letter="B" color="var(--l-b)" text="Ce que j'apporte" />
           <div className="grid gap-8 md:grid-cols-3">
             {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
               <div
@@ -180,8 +180,8 @@ export default function Home() {
           <Label letter="A" color="var(--l-a)" text="Réseaux" />
           <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
             <h2 className="font-display leading-[0.95] text-[clamp(2.3rem,6vw,5.4rem)]" data-mask>
-              <span className="mask-line"><span>Une idée,</span></span>
-              <span className="mask-line"><span>un projet ?</span></span>
+              <span className="mask-line"><span>Un collaborateur</span></span>
+              <span className="mask-line"><span>pour votre équipe ?</span></span>
               <span className="mask-line"><em className="hl-mark whitespace-nowrap" style={{ color: "var(--accent)" }}>Parlons-en.</em></span>
             </h2>
             <div className="grid gap-3" data-reveal>

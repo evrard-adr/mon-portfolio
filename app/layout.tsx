@@ -26,12 +26,12 @@ const lexend = Lexend({
 
 export const metadata: Metadata = {
   title: "Evrard André",
-  description: "Portfolio d'Evrard André, étudiant en licence de droit à Lyon 3, responsable communication au Parlement des Étudiants.",
+  description: "Evrard André, étudiant en droit public à Lyon 3 et responsable communication du Parlement des Étudiants. Recherche un poste d'assistant parlementaire.",
   keywords: ["Evrard André", "droit", "Lyon", "Parlement des Étudiants", "communication", "portfolio"],
   authors: [{ name: "Evrard André" }],
   openGraph: {
-    title: "Evrard André — Portfolio",
-    description: "Étudiant en Droit · Responsable Communication · Parlement des Étudiants",
+    title: "Evrard André — Droit public & communication",
+    description: "Droit public · Communication · Recherche un poste d'assistant parlementaire",
     url: "https://evrard-andre.vercel.app",
     siteName: "Evrard André",
     images: [{ url: "https://evrard-andre.vercel.app/gallery/profile.jpg", width: 1200, height: 630, alt: "Evrard André" }],
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evrard André — Portfolio",
-    description: "Étudiant en Droit · Responsable Communication · Parlement des Étudiants",
+    title: "Evrard André — Droit public & communication",
+    description: "Droit public · Communication · Recherche un poste d'assistant parlementaire",
     images: ["https://evrard-andre.vercel.app/gallery/profile.jpg"],
   },
 };

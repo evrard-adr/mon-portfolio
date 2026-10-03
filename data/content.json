@@ -1,192 +1,192 @@
 {
   "hero": {
     "name": "Evrard André",
-    "title": "Étudiant en Droit · Université Jean Moulin Lyon 3",
-    "subtitle": "Droit, mobilité urbaine, vie associative. Lyon.",
+    "title": "Étudiant en droit public · Lyon 3 · Recherche un poste d'assistant parlementaire",
+    "subtitle": "Droit public, communication, vie associative. Lyon.",
     "photo": ""
   },
   "about": {
-    "teaser": "Étudiant en droit à Lyon 3, engagé dans la vie associative, curieux de tout ce qui touche à la chose publique, à la ville et au ciel.",
-    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
+    "teaser": "Étudiant en droit à Lyon 3, passionné de droit public et de science politique. Responsable communication du Parlement des Étudiants (Lyon, puis national), je sais construire un message, animer des réseaux sociaux et faire vivre une institution. J'aimerais mettre ces deux atouts au service d'un parlementaire.",
+    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image d'une organisation. C'est ce qui me permet d'être à l'aise aussi bien pour rédiger, analyser un texte que pour faire passer un message au grand public.\n\nMon objectif aujourd'hui : devenir assistant parlementaire, et mettre le droit public et la communication au service d'un élu et de son équipe.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
   },
   "reflexions": [
-  {
-    "slug": "mobilites-2050",
-    "titre": "Nos villes en 2050 : se donner les moyens ou continuer à faire semblant",
-    "date": "Juin 2025",
-    "tag": "Municipales 2026",
-    "chapeau": "Je prends le métro et le tramway tous les jours à Lyon, pas par militantisme, juste parce que j'en ai besoin. Et à force de les utiliser, je me pose des questions assez simples : qu'est-ce qu'on en fait, qu'est-ce qu'on pourrait en faire, et qu'est-ce qu'il faudra faire pour que nos villes restent vivables en 2050.",
-    "contenu": [
-      {
-        "type": "paragraph",
-        "text": "Je connais le réseau TCL par cœur, les correspondances, les temps d'attente, les rames bondées à 8h30. Je sais à peu près ce que ça coûte à l'usager et je me doute que ça coûte cher à la collectivité. Ce que je vois surtout, c'est comment ça tient debout au quotidien : des rails, des caténaires, du personnel, une infrastructure qu'il faut entretenir en permanence, et derrière tout ça des choix budgétaires qui se prennent des années à l'avance. Rien de tout ça n'est magique, c'est le résultat de décisions prises loin des projecteurs."
-      },
-      {
-        "type": "paragraph",
-        "text": "Ce qui m'intéresse, c'est de savoir si on va se donner les moyens de faire la même chose à l'échelle qu'il faudra d'ici 2050. Pas juste rallonger une ligne ici ou là, mais repenser la mobilité dans toutes les villes, y compris celles qui n'ont ni métro ni tram et qui n'auront probablement jamais la taille critique pour en avoir un."
-      },
-      {
-        "type": "heading",
-        "text": "Ce que le changement climatique va imposer"
-      },
-      {
-        "type": "paragraph",
-        "text": "J'habite Lyon. On a déjà connu des étés avec plusieurs jours à 40 degrés d'affilée, et à chaque fois c'est le même constat : le bitume garde la chaleur la nuit, les rues sans arbres deviennent difficiles à vivre. Ce que j'ai remarqué, c'est que les transports en commun jouent un rôle assez concret dans ces moments-là. Ils permettent de se déplacer sans ajouter de chaleur et sans transformer l'espace public en parking géant. Une ville qui a un bon réseau de transport est mieux armée face aux canicules, pas parce que c'est bien vu, mais parce que ça change concrètement la façon dont l'espace est occupé."
-      },
-      {
-        "type": "paragraph",
-        "text": "Les projections pour les prochaines décennies en Europe ne sont pas franchement rassurantes : canicules plus fréquentes, plus longues, épisodes extrêmes plus intenses. Les villes qui ont tout misé sur la voiture individuelle risquent de payer double, d'abord parce qu'elles sont mal équipées pour supporter la chaleur, ensuite parce qu'elles n'auront pas d'alternative le jour où rouler en voiture deviendra vraiment compliqué."
-      },
-      {
-        "type": "heading",
-        "text": "Le problème, c'est le financement et la continuité des projets"
-      },
-      {
-        "type": "paragraph",
-        "text": "Construire une ligne de tramway coûte de l'ordre de plusieurs dizaines de millions d'euros par kilomètre. Un métro, c'est nettement plus cher : le projet de ligne E à Lyon, par exemple, se chiffre en centaines de millions d'euros pour une quinzaine de kilomètres. Ce sont des montants qui font hésiter n'importe quel élu. Mais si on les compare à ce que coûte, année après année, la congestion, la pollution, les problèmes respiratoires ou les heures perdues dans les transports, le calcul n'est plus le même. Le problème, c'est qu'on regarde presque toujours le coût de l'investissement, jamais le coût de ne rien faire."
-      },
-      {
-        "type": "paragraph",
-        "text": "Ce qui complique encore les choses, c'est que ces projets se déroulent sur des décennies alors que les équipes municipales changent tous les six ans. Une ligne décidée aujourd'hui sera livrée sous un autre mandat, parfois une autre majorité. À Lyon, c'est la Métropole qui a la compétence sur ces sujets de mobilité. Les outils juridiques et financiers existent déjà, mais ils demandent une continuité politique que le calendrier électoral ne facilite pas vraiment."
-      },
-      {
-        "type": "heading",
-        "text": "Ma conviction : le métro plutôt que le tram"
-      },
-      {
-        "type": "paragraph",
-        "text": "Sur ce point j'ai un avis assez tranché : le métro me semble structurellement meilleur que le tramway. Pas parce que c'est plus impressionnant, mais parce que c'est plus fiable et plus fréquent, et surtout parce que ça circule sous terre, à l'écart de tout ce qui se passe en surface. Un tram peut être bloqué par une voiture mal garée ou ralenti par des travaux. Un métro non. Cette fiabilité compte énormément si on veut que les gens laissent leur voiture sans avoir l'impression de perdre en confort."
-      },
-      {
-        "type": "paragraph",
-        "text": "Oui, ça coûte beaucoup plus cher, mais un métro dans une grande agglomération, c'est un investissement pensé sur 50 ans qui structure la ville pour plusieurs générations. Les projets qui font peur au budget d'un seul mandat sont souvent ceux qui rapportent le plus sur la durée. Et parfois, poser une ligne de tram faute de moyens pour un métro, c'est une occasion manquée d'aller plus loin, parce qu'une fois les crédits engagés, on ne refait pas le choix derrière."
-      },
-      {
-        "type": "heading",
-        "text": "Ce qu'il faut vraiment pour que les gens lâchent leur voiture"
-      },
-      {
-        "type": "paragraph",
-        "text": "Des transports performants, c'est nécessaire mais ça ne suffit pas. Pour que les gens se détachent vraiment de la voiture, il faut que toute la ville donne envie de circuler autrement : des espaces verts accessibles, de l'air qu'on peut respirer sans avoir mal aux poumons, des trottoirs qui ne longent pas juste deux files de voitures. Des pistes cyclables continues et sécurisées, pas des bandes peintes qui disparaissent au premier carrefour. Une ville où marcher ou faire du vélo n'est pas un effort. C'est l'ensemble qui fait la différence, pas un seul mode de transport isolé."
-      },
-      {
-        "type": "heading",
-        "text": "Les parkings relais, la solution qu'on oublie"
-      },
-      {
-        "type": "paragraph",
-        "text": "Un élément qu'on mentionne assez peu dans ce débat, ce sont les parkings relais. Pour les gens qui habitent loin et qui ont besoin de leur voiture sur le premier tronçon du trajet, c'est souvent la pièce qui manque pour finir en transports en commun. Encore faut-il que ce soit gratuit, propre, sécurisé et un minimum agréable, pas juste un parking bitumé sous une bretelle d'autoroute. Il en existe à Lyon, avec des résultats inégaux selon les endroits. Un parking relais bien pensé, avec un peu de végétalisation et pourquoi pas des panneaux solaires en toiture, c'est une vraie porte d'entrée vers les transports en commun plutôt qu'une contrainte pour ceux qui viennent de la périphérie."
-      },
-      {
-        "type": "paragraph",
-        "text": "C'est aussi une façon de parler à des gens qui ne se sentent pas concernés par les transports collectifs parce qu'il n'y en a pas près de chez eux. Leur montrer que le système peut venir à eux aussi, pas seulement aux habitants du centre-ville."
-      },
-      {
-        "type": "heading",
-        "text": "Et le droit dans tout ça"
-      },
-      {
-        "type": "paragraph",
-        "text": "On parle beaucoup de technologie, voiture électrique, vélos cargo, applications de mobilité. C'est utile mais ça ne change pas la structure de la ville. Une ville étalée sans densité reste dépendante de la voiture, électrique ou non. Ce qui change vraiment la structure, ce sont les règles : un PLU qui limite les zones commerciales mal desservies en périphérie, un SCOT qui impose de densifier autour des gares, une délibération de métropole qui remplace des places de stationnement par une voie de tram. Des textes que personne ne lit, des délibérations que personne ne suit, et pourtant c'est là que ça se joue vraiment."
-      },
-      {
-        "type": "paragraph",
-        "text": "Je ne sais pas encore précisément vers quel métier je vais aller, mais le droit public, l'urbanisme et les collectivités m'attirent parce que c'est à cet endroit que les décisions concrètes se prennent, loin des grandes annonces. Ma génération va hériter de villes construites sur des décennies de choix pas toujours réfléchis. Autant comprendre les outils qui permettent de les corriger."
-      },
-      {
-        "type": "quote",
-        "text": "On ne transforme pas une ville avec de bonnes intentions, mais avec des délibérations, des budgets, et des règles qu'on accepte enfin de faire respecter."
-      }
-    ]
-  },
-  {
-    "slug": "fulgur-orages",
-    "titre": "Orages, supercellules et intelligence artificielle : pourquoi j'ai commencé à coder Fulgur",
-    "date": "Juillet 2025",
-    "tag": "Météo · Tech",
-    "chapeau": "Je ne suis pas météorologue. Mais depuis quelques années je suis les orages de près, vraiment de près, au point de regarder des cartes radar à 23h en espérant voir une cellule se former quelque part. Et à force, je me suis dit qu'on pouvait sûrement faire mieux que ce qui existe aujourd'hui pour les anticiper.",
-    "contenu": [
-      {
-        "type": "paragraph",
-        "text": "Tout est parti d'une fascination assez simple : les orages sont impressionnants, imprévisibles, et parfois dangereux. Chaque année en France, des gens sont blessés ou tués par la foudre, la grêle ou des inondations soudaines liées à des orages violents. Ce sont des événements qui arrivent vite, et le niveau d'information qu'on reçoit reste souvent assez vague : un risque orageux annoncé sur une grande partie du pays, sans grand-chose de plus précis."
-      },
-      {
-        "type": "heading",
-        "text": "Ce qu'un orage violent veut dire concrètement"
-      },
-      {
-        "type": "paragraph",
-        "text": "Il y a une vraie différence entre un orage ordinaire (de la pluie, du tonnerre, un peu de vent) et un orage violent, avec des rafales fortes, de la grosse grêle, et parfois des tornades dans les cas extrêmes. En Europe, les phénomènes les plus dangereux sont souvent liés aux supercellules, des orages organisés autour d'une rotation qui peut se maintenir sur de longues distances. Ce sont elles qui produisent la grêle la plus grosse et les rafales les plus fortes."
-      },
-      {
-        "type": "paragraph",
-        "text": "Ce qui rend ces phénomènes difficiles à anticiper, c'est la vitesse à laquelle ils se forment, parfois en moins d'une heure quand les conditions atmosphériques s'y prêtent. Les modèles météo classiques travaillent à une échelle plus large et sur des pas de temps plus longs : ils voient venir la masse d'air instable, mais ils ne voient pas forcément la cellule individuelle se développer."
-      },
-      {
-        "type": "heading",
-        "text": "Ce qu'on a aujourd'hui, et ce qui manque"
-      },
-      {
-        "type": "paragraph",
-        "text": "Il existe déjà de bons outils de suivi en temps réel : réseaux de détection de la foudre, radars météo, données de sondages atmosphériques, applications grand public qui affichent tout ça. C'est utile, mais c'est surtout de la réaction : on voit l'orage quand il est déjà là, sans forcément savoir où il va aller ni s'il va se renforcer ou s'essouffler."
-      },
-      {
-        "type": "paragraph",
-        "text": "Ce qui manque, à mon avis, c'est un outil qui croise en temps réel plusieurs types de données (foudre, radar, paramètres d'instabilité atmosphérique) pour repérer une cellule en train de s'organiser avant qu'elle soit pleinement formée. C'est un peu ce que font à la main les passionnés de chasse aux orages depuis des années, avec de l'expérience et beaucoup d'attention. L'idée, c'est d'essayer d'automatiser une partie de ce travail."
-      },
-      {
-        "type": "heading",
-        "text": "Fulgur, ce que je construis"
-      },
-      {
-        "type": "paragraph",
-        "text": "J'ai commencé à développer Fulgur pour explorer cette idée. C'est une application desktop, encore en développement, pensée pour suivre les orages en temps réel et, à terme, aider à repérer plus tôt les signes d'un phénomène qui devient dangereux. Le nom vient du latin fulgur, l'éclair. Concrètement, je suis encore sur les briques de base : récupération et affichage des données météo en temps réel, avant d'aller plus loin sur la partie détection et anticipation."
-      },
-      {
-        "type": "paragraph",
-        "text": "Je ne suis pas développeur de formation, je suis étudiant en droit, et ce projet m'a obligé à apprendre des choses que je n'aurais jamais touchées autrement : les API météo, le traitement de données géographiques, les bases du machine learning appliqué à la classification. C'est un projet solo, fait sur mon temps libre, qui avance par étapes plutôt que d'un coup."
-      },
-      {
-        "type": "heading",
-        "text": "Anticiper les dégâts, pas seulement l'orage"
-      },
-      {
-        "type": "paragraph",
-        "text": "La prévision de l'orage en elle-même, c'est une chose. Ce qui m'intéresse aussi, c'est la prévision des dégâts qu'il peut causer. Un orage de grêle au-dessus d'une forêt n'a pas le même impact que le même orage au-dessus de vignes ou d'une zone urbaine dense. Croiser une trajectoire prévisionnelle avec des données sur l'occupation des sols permettrait, en théorie, d'envoyer des alertes plus précises et plus utiles que le classique risque orageux sur une grande région."
-      },
-      {
-        "type": "paragraph",
-        "text": "C'est un projet ambitieux pour quelqu'un qui le mène seul à côté de ses études. Mais c'est exactement le genre de sujet qui m'intéresse : de la donnée, un peu de technique, et un enjeu concret pour des gens qui n'ont souvent que quelques minutes pour se mettre à l'abri."
-      },
-      {
-        "type": "quote",
-        "text": "Un orage ne prévient pas vraiment. Mais avec les bonnes données, on peut apprendre à le lire un peu avant qu'il n'arrive."
-      }
-    ]
-  }
+    {
+      "slug": "mobilites-2050",
+      "titre": "Nos villes en 2050 : se donner les moyens ou continuer à faire semblant",
+      "date": "Juin 2025",
+      "tag": "Municipales 2026",
+      "chapeau": "Je prends le métro et le tramway tous les jours à Lyon, pas par militantisme, juste parce que j'en ai besoin. Et à force de les utiliser, je me pose des questions assez simples : qu'est-ce qu'on en fait, qu'est-ce qu'on pourrait en faire, et qu'est-ce qu'il faudra faire pour que nos villes restent vivables en 2050.",
+      "contenu": [
+        {
+          "type": "paragraph",
+          "text": "Je connais le réseau TCL par cœur, les correspondances, les temps d'attente, les rames bondées à 8h30. Je sais à peu près ce que ça coûte à l'usager et je me doute que ça coûte cher à la collectivité. Ce que je vois surtout, c'est comment ça tient debout au quotidien : des rails, des caténaires, du personnel, une infrastructure qu'il faut entretenir en permanence, et derrière tout ça des choix budgétaires qui se prennent des années à l'avance. Rien de tout ça n'est magique, c'est le résultat de décisions prises loin des projecteurs."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce qui m'intéresse, c'est de savoir si on va se donner les moyens de faire la même chose à l'échelle qu'il faudra d'ici 2050. Pas juste rallonger une ligne ici ou là, mais repenser la mobilité dans toutes les villes, y compris celles qui n'ont ni métro ni tram et qui n'auront probablement jamais la taille critique pour en avoir un."
+        },
+        {
+          "type": "heading",
+          "text": "Ce que le changement climatique va imposer"
+        },
+        {
+          "type": "paragraph",
+          "text": "J'habite Lyon. On a déjà connu des étés avec plusieurs jours à 40 degrés d'affilée, et à chaque fois c'est le même constat : le bitume garde la chaleur la nuit, les rues sans arbres deviennent difficiles à vivre. Ce que j'ai remarqué, c'est que les transports en commun jouent un rôle assez concret dans ces moments-là. Ils permettent de se déplacer sans ajouter de chaleur et sans transformer l'espace public en parking géant. Une ville qui a un bon réseau de transport est mieux armée face aux canicules, pas parce que c'est bien vu, mais parce que ça change concrètement la façon dont l'espace est occupé."
+        },
+        {
+          "type": "paragraph",
+          "text": "Les projections pour les prochaines décennies en Europe ne sont pas franchement rassurantes : canicules plus fréquentes, plus longues, épisodes extrêmes plus intenses. Les villes qui ont tout misé sur la voiture individuelle risquent de payer double, d'abord parce qu'elles sont mal équipées pour supporter la chaleur, ensuite parce qu'elles n'auront pas d'alternative le jour où rouler en voiture deviendra vraiment compliqué."
+        },
+        {
+          "type": "heading",
+          "text": "Le problème, c'est le financement et la continuité des projets"
+        },
+        {
+          "type": "paragraph",
+          "text": "Construire une ligne de tramway coûte de l'ordre de plusieurs dizaines de millions d'euros par kilomètre. Un métro, c'est nettement plus cher : le projet de ligne E à Lyon, par exemple, se chiffre en centaines de millions d'euros pour une quinzaine de kilomètres. Ce sont des montants qui font hésiter n'importe quel élu. Mais si on les compare à ce que coûte, année après année, la congestion, la pollution, les problèmes respiratoires ou les heures perdues dans les transports, le calcul n'est plus le même. Le problème, c'est qu'on regarde presque toujours le coût de l'investissement, jamais le coût de ne rien faire."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce qui complique encore les choses, c'est que ces projets se déroulent sur des décennies alors que les équipes municipales changent tous les six ans. Une ligne décidée aujourd'hui sera livrée sous un autre mandat, parfois une autre majorité. À Lyon, c'est la Métropole qui a la compétence sur ces sujets de mobilité. Les outils juridiques et financiers existent déjà, mais ils demandent une continuité politique que le calendrier électoral ne facilite pas vraiment."
+        },
+        {
+          "type": "heading",
+          "text": "Ma conviction : le métro plutôt que le tram"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sur ce point j'ai un avis assez tranché : le métro me semble structurellement meilleur que le tramway. Pas parce que c'est plus impressionnant, mais parce que c'est plus fiable et plus fréquent, et surtout parce que ça circule sous terre, à l'écart de tout ce qui se passe en surface. Un tram peut être bloqué par une voiture mal garée ou ralenti par des travaux. Un métro non. Cette fiabilité compte énormément si on veut que les gens laissent leur voiture sans avoir l'impression de perdre en confort."
+        },
+        {
+          "type": "paragraph",
+          "text": "Oui, ça coûte beaucoup plus cher, mais un métro dans une grande agglomération, c'est un investissement pensé sur 50 ans qui structure la ville pour plusieurs générations. Les projets qui font peur au budget d'un seul mandat sont souvent ceux qui rapportent le plus sur la durée. Et parfois, poser une ligne de tram faute de moyens pour un métro, c'est une occasion manquée d'aller plus loin, parce qu'une fois les crédits engagés, on ne refait pas le choix derrière."
+        },
+        {
+          "type": "heading",
+          "text": "Ce qu'il faut vraiment pour que les gens lâchent leur voiture"
+        },
+        {
+          "type": "paragraph",
+          "text": "Des transports performants, c'est nécessaire mais ça ne suffit pas. Pour que les gens se détachent vraiment de la voiture, il faut que toute la ville donne envie de circuler autrement : des espaces verts accessibles, de l'air qu'on peut respirer sans avoir mal aux poumons, des trottoirs qui ne longent pas juste deux files de voitures. Des pistes cyclables continues et sécurisées, pas des bandes peintes qui disparaissent au premier carrefour. Une ville où marcher ou faire du vélo n'est pas un effort. C'est l'ensemble qui fait la différence, pas un seul mode de transport isolé."
+        },
+        {
+          "type": "heading",
+          "text": "Les parkings relais, la solution qu'on oublie"
+        },
+        {
+          "type": "paragraph",
+          "text": "Un élément qu'on mentionne assez peu dans ce débat, ce sont les parkings relais. Pour les gens qui habitent loin et qui ont besoin de leur voiture sur le premier tronçon du trajet, c'est souvent la pièce qui manque pour finir en transports en commun. Encore faut-il que ce soit gratuit, propre, sécurisé et un minimum agréable, pas juste un parking bitumé sous une bretelle d'autoroute. Il en existe à Lyon, avec des résultats inégaux selon les endroits. Un parking relais bien pensé, avec un peu de végétalisation et pourquoi pas des panneaux solaires en toiture, c'est une vraie porte d'entrée vers les transports en commun plutôt qu'une contrainte pour ceux qui viennent de la périphérie."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est aussi une façon de parler à des gens qui ne se sentent pas concernés par les transports collectifs parce qu'il n'y en a pas près de chez eux. Leur montrer que le système peut venir à eux aussi, pas seulement aux habitants du centre-ville."
+        },
+        {
+          "type": "heading",
+          "text": "Et le droit dans tout ça"
+        },
+        {
+          "type": "paragraph",
+          "text": "On parle beaucoup de technologie, voiture électrique, vélos cargo, applications de mobilité. C'est utile mais ça ne change pas la structure de la ville. Une ville étalée sans densité reste dépendante de la voiture, électrique ou non. Ce qui change vraiment la structure, ce sont les règles : un PLU qui limite les zones commerciales mal desservies en périphérie, un SCOT qui impose de densifier autour des gares, une délibération de métropole qui remplace des places de stationnement par une voie de tram. Des textes que personne ne lit, des délibérations que personne ne suit, et pourtant c'est là que ça se joue vraiment."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je ne sais pas encore précisément vers quel métier je vais aller, mais le droit public, l'urbanisme et les collectivités m'attirent parce que c'est à cet endroit que les décisions concrètes se prennent, loin des grandes annonces. Ma génération va hériter de villes construites sur des décennies de choix pas toujours réfléchis. Autant comprendre les outils qui permettent de les corriger."
+        },
+        {
+          "type": "quote",
+          "text": "On ne transforme pas une ville avec de bonnes intentions, mais avec des délibérations, des budgets, et des règles qu'on accepte enfin de faire respecter."
+        }
+      ]
+    },
+    {
+      "slug": "fulgur-orages",
+      "titre": "Orages, supercellules et intelligence artificielle : pourquoi j'ai commencé à coder Fulgur",
+      "date": "Juillet 2025",
+      "tag": "Météo · Tech",
+      "chapeau": "Je ne suis pas météorologue. Mais depuis quelques années je suis les orages de près, vraiment de près, au point de regarder des cartes radar à 23h en espérant voir une cellule se former quelque part. Et à force, je me suis dit qu'on pouvait sûrement faire mieux que ce qui existe aujourd'hui pour les anticiper.",
+      "contenu": [
+        {
+          "type": "paragraph",
+          "text": "Tout est parti d'une fascination assez simple : les orages sont impressionnants, imprévisibles, et parfois dangereux. Chaque année en France, des gens sont blessés ou tués par la foudre, la grêle ou des inondations soudaines liées à des orages violents. Ce sont des événements qui arrivent vite, et le niveau d'information qu'on reçoit reste souvent assez vague : un risque orageux annoncé sur une grande partie du pays, sans grand-chose de plus précis."
+        },
+        {
+          "type": "heading",
+          "text": "Ce qu'un orage violent veut dire concrètement"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il y a une vraie différence entre un orage ordinaire (de la pluie, du tonnerre, un peu de vent) et un orage violent, avec des rafales fortes, de la grosse grêle, et parfois des tornades dans les cas extrêmes. En Europe, les phénomènes les plus dangereux sont souvent liés aux supercellules, des orages organisés autour d'une rotation qui peut se maintenir sur de longues distances. Ce sont elles qui produisent la grêle la plus grosse et les rafales les plus fortes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce qui rend ces phénomènes difficiles à anticiper, c'est la vitesse à laquelle ils se forment, parfois en moins d'une heure quand les conditions atmosphériques s'y prêtent. Les modèles météo classiques travaillent à une échelle plus large et sur des pas de temps plus longs : ils voient venir la masse d'air instable, mais ils ne voient pas forcément la cellule individuelle se développer."
+        },
+        {
+          "type": "heading",
+          "text": "Ce qu'on a aujourd'hui, et ce qui manque"
+        },
+        {
+          "type": "paragraph",
+          "text": "Il existe déjà de bons outils de suivi en temps réel : réseaux de détection de la foudre, radars météo, données de sondages atmosphériques, applications grand public qui affichent tout ça. C'est utile, mais c'est surtout de la réaction : on voit l'orage quand il est déjà là, sans forcément savoir où il va aller ni s'il va se renforcer ou s'essouffler."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce qui manque, à mon avis, c'est un outil qui croise en temps réel plusieurs types de données (foudre, radar, paramètres d'instabilité atmosphérique) pour repérer une cellule en train de s'organiser avant qu'elle soit pleinement formée. C'est un peu ce que font à la main les passionnés de chasse aux orages depuis des années, avec de l'expérience et beaucoup d'attention. L'idée, c'est d'essayer d'automatiser une partie de ce travail."
+        },
+        {
+          "type": "heading",
+          "text": "Fulgur, ce que je construis"
+        },
+        {
+          "type": "paragraph",
+          "text": "J'ai commencé à développer Fulgur pour explorer cette idée. C'est une application desktop, encore en développement, pensée pour suivre les orages en temps réel et, à terme, aider à repérer plus tôt les signes d'un phénomène qui devient dangereux. Le nom vient du latin fulgur, l'éclair. Concrètement, je suis encore sur les briques de base : récupération et affichage des données météo en temps réel, avant d'aller plus loin sur la partie détection et anticipation."
+        },
+        {
+          "type": "paragraph",
+          "text": "Je ne suis pas développeur de formation, je suis étudiant en droit, et ce projet m'a obligé à apprendre des choses que je n'aurais jamais touchées autrement : les API météo, le traitement de données géographiques, les bases du machine learning appliqué à la classification. C'est un projet solo, fait sur mon temps libre, qui avance par étapes plutôt que d'un coup."
+        },
+        {
+          "type": "heading",
+          "text": "Anticiper les dégâts, pas seulement l'orage"
+        },
+        {
+          "type": "paragraph",
+          "text": "La prévision de l'orage en elle-même, c'est une chose. Ce qui m'intéresse aussi, c'est la prévision des dégâts qu'il peut causer. Un orage de grêle au-dessus d'une forêt n'a pas le même impact que le même orage au-dessus de vignes ou d'une zone urbaine dense. Croiser une trajectoire prévisionnelle avec des données sur l'occupation des sols permettrait, en théorie, d'envoyer des alertes plus précises et plus utiles que le classique risque orageux sur une grande région."
+        },
+        {
+          "type": "paragraph",
+          "text": "C'est un projet ambitieux pour quelqu'un qui le mène seul à côté de ses études. Mais c'est exactement le genre de sujet qui m'intéresse : de la donnée, un peu de technique, et un enjeu concret pour des gens qui n'ont souvent que quelques minutes pour se mettre à l'abri."
+        },
+        {
+          "type": "quote",
+          "text": "Un orage ne prévient pas vraiment. Mais avec les bonnes données, on peut apprendre à le lire un peu avant qu'il n'arrive."
+        }
+      ]
+    }
   ],
   "badge": {
     "visible": true,
-    "text": "Disponible"
+    "text": "Recherche un poste d'assistant parlementaire"
   },
   "engagements": [
     {
       "icon": "⚖️",
-      "titre": "Droit & science po",
-      "desc": "Licence à Lyon 3. Ce qui m'intéresse vraiment, c'est la chose publique : comment une décision se construit et ce qu'elle change pour les gens."
+      "titre": "Droit public & institutions",
+      "desc": "Licence de droit à Lyon 3. Ce qui m'intéresse : comment une décision publique se construit, se justifie, et ce qu'elle change pour les gens. Rigueur juridique et goût pour la rédaction."
     },
     {
       "icon": "📣",
-      "titre": "Engagement associatif",
-      "desc": "Responsable communication au Parlement des Étudiants de Lyon, puis à l'échelle nationale. Porter un message, faire vivre une institution."
+      "titre": "Communication & réseaux sociaux",
+      "desc": "Responsable communication du Parlement des Étudiants, à Lyon puis à l'échelle nationale : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image sur 25 sections."
     },
     {
-      "icon": "🌩️",
-      "titre": "Mobilités & ciel",
-      "desc": "Mobilité urbaine, orages, un peu de photo. Et le violoncelle et le piano à côté de tout ça."
+      "icon": "🏛️",
+      "titre": "Terrain & engagement",
+      "desc": "Vie associative, organisation de simulations parlementaires, coordination d'équipes de bénévoles. Le goût du concret, du collectif et de la politique vue de l'intérieur."
     }
   ],
   "stats": [
@@ -229,7 +229,7 @@
       "lien": "/reflexion/mobilites-2050"
     }
   ],
-  "ticker": "Droit  ·  Science Politique  ·  Chose Publique  ·  Droit Public  ·  Institutions  ·  Mobilité Urbaine  ·  Transports en Commun  ·  Météorologie  ·  Orages  ·  Photographie  ·  Vie Associative  ·  Engagement Étudiant  ·  Communication  ·  Violoncelle  ·  Piano  ·  Lyon",
+  "ticker": "Droit public  ·  Institutions  ·  Science politique  ·  Communication politique  ·  Réseaux sociaux  ·  Politiques publiques  ·  Rédaction  ·  Vie associative  ·  Simulations parlementaires  ·  Lyon",
   "socials": [
     {
       "name": "Instagram",
@@ -328,20 +328,23 @@
       }
     ],
     "competences": [
-      "Droit civil",
       "Droit public",
-      "Analyse des politiques publiques",
       "Communication institutionnelle",
-      "Gestion de projet associatif",
+      "Réseaux sociaux & identité visuelle",
+      "Relations presse",
       "Rédaction juridique",
+      "Analyse des politiques publiques",
+      "Gestion de projet associatif",
+      "Droit civil",
       "Anglais",
       "Violoncelle",
       "Piano"
     ],
     "interets": [
+      "Droit public & institutions",
+      "Vie politique et parlementaire",
       "Mobilités & transports en commun",
       "Prospective urbaine (2050–2075)",
-      "Droit public",
       "Musique classique",
       "Engagement associatif"
     ]

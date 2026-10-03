@@ -2,15 +2,13 @@
 import { useEffect, useState } from "react";
 
 const words = [
-  "le droit.",
-  "les mobilités urbaines.",
-  "l'urbanisme.",
-  "les politiques publiques.",
-  "les transports en commun.",
-  "l'environnement.",
   "le droit public.",
-  "la ville de demain.",
-  "les collectivités.",
+  "les institutions.",
+  "le travail parlementaire.",
+  "la communication politique.",
+  "les politiques publiques.",
+  "les réseaux sociaux.",
+  "la vie démocratique.",
   "Lyon.",
 ];
 
