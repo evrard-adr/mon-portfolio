@@ -20,7 +20,7 @@ export default function ReflexionListPage() {
             <span className="text-[11px] uppercase tracking-[0.28em]" style={{ color: "var(--text-muted)" }}>Réflexions</span>
           </div>
 
-          <h1 className="font-display italic text-[clamp(3.5rem,10vw,7rem)] leading-none mb-16" style={{ color: "var(--text)" }}>
+          <h1 className="font-display text-[clamp(3.5rem,10vw,7rem)] leading-none mb-16" style={{ color: "var(--text)" }}>
             Notes
           </h1>
 
@@ -36,7 +36,7 @@ export default function ReflexionListPage() {
                   <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>{r.date}</span>
                   {r.tag && <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--accent)" }}>{r.tag}</span>}
                 </div>
-                <h2 className="font-display text-2xl md:text-4xl leading-tight mb-4 group-hover:text-[var(--accent)] transition-colors" style={{ color: "var(--text)" }}>
+                <h2 className="font-display font-bold text-2xl md:text-4xl leading-tight mb-4 group-hover:text-[var(--accent)] transition-colors" style={{ color: "var(--text)" }}>
                   {r.titre}
                 </h2>
                 <p className="text-sm font-light leading-relaxed line-clamp-2" style={{ color: "var(--text-muted)" }}>

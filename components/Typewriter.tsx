@@ -38,11 +38,11 @@ export default function Typewriter() {
   }, [displayed, deleting, index]);
 
   return (
-    <p className="font-display text-2xl md:text-3xl leading-snug" style={{ color: "var(--text-muted)" }}>
+    <p className="font-body text-lg md:text-2xl font-medium leading-snug" style={{ color: "var(--text)" }}>
       J&apos;aime{" "}
-      <span className="italic" style={{ color: "var(--text)" }}>
+      <span className="font-bold" style={{ color: "var(--accent)" }}>
         {displayed}
-        <span className="animate-pulse" style={{ color: "var(--accent)" }}>|</span>
+        <span className="animate-pulse" style={{ color: "var(--ink)" }}>|</span>
       </span>
     </p>
   );

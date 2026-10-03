@@ -13,7 +13,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none" style={{ backgroundColor: "var(--accent-glow)" }} />
 
       <p className="text-[10px] uppercase tracking-[0.3em] mb-6" style={{ color: "var(--accent)" }}>Erreur inattendue</p>
-      <h1 className="font-display italic text-6xl md:text-8xl mb-4" style={{ color: "var(--text)" }}>Oops.</h1>
+      <h1 className="font-display text-6xl md:text-8xl mb-4" style={{ color: "var(--text)" }}>Oops.</h1>
       <p className="text-sm font-light text-center max-w-xs mb-10" style={{ color: "var(--text-muted)" }}>
         Une erreur s&apos;est produite. Vous pouvez réessayer ou revenir à l&apos;accueil.
       </p>

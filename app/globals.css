@@ -3,38 +3,77 @@
 @tailwind utilities;
 
 /* ── THEMES ── */
-:root, .dark {
-  --bg: #090e1c;
-  --bg2: #0e1528;
-  --border: #1d2845;
-  --text: #f3eee4;
-  --text-muted: rgba(243,238,228,0.58);
-  --text-faint: rgba(243,238,228,0.14);
-  --accent: #dca94a;
-  --accent-glow: rgba(220,169,74,0.09);
-  --accent-border: rgba(220,169,74,0.30);
-  --nav-bg: rgba(9,14,28,0.82);
-  --arch-from: #1b2b63;
-  --arch-to: #0d1533;
+:root {
+  --bg: #f5f1e8;
+  --bg2: #ece6d9;
+  --card: #ffffff;
+  --ink: #0b1b4d;
+  --border: rgba(11,27,77,0.16);
+  --text: #0b1b4d;
+  --text-muted: rgba(11,27,77,0.68);
+  --text-faint: rgba(11,27,77,0.1);
+  --accent: #d62850;
+  --accent-glow: rgba(214,40,80,0.07);
+  --accent-border: rgba(214,40,80,0.3);
+  --nav-bg: rgba(245,241,232,0.84);
+  --hl: #cfe0ff;
+  --pink: #ffc2d1;
+  --sky: #bcd7ff;
+  --peach: #ffd6a5;
+  --navy: #0b1b4d;
+  --l-a: #e63462;
+  --l-b: #2f6bff;
+  --l-c: #ff9d2e;
+  --l-d: #17b26a;
 }
 
-.light {
-  --bg: #f5f0e6;
-  --bg2: #ece5d6;
-  --border: #d9cfbb;
-  --text: #0b1530;
-  --text-muted: rgba(11,21,48,0.64);
-  --text-faint: rgba(11,21,48,0.14);
-  --accent: #8a5a0b;
-  --accent-glow: rgba(138,90,11,0.07);
-  --accent-border: rgba(138,90,11,0.30);
-  --nav-bg: rgba(245,240,230,0.88);
-  --arch-from: #22357a;
-  --arch-to: #0b1530;
+.dark {
+  --bg: #0a1128;
+  --bg2: #101a3a;
+  --card: #15204a;
+  --ink: #f5f1e8;
+  --border: rgba(245,241,232,0.16);
+  --text: #f5f1e8;
+  --text-muted: rgba(245,241,232,0.68);
+  --text-faint: rgba(245,241,232,0.1);
+  --accent: #ff7a98;
+  --accent-glow: rgba(255,122,152,0.08);
+  --accent-border: rgba(255,122,152,0.3);
+  --nav-bg: rgba(10,17,40,0.84);
+  --hl: #23378a;
 }
 
-.font-display { font-weight: 500 !important; letter-spacing: -0.02em; font-variation-settings: "SOFT" 30; }
-.font-display em, em.font-display { font-style: italic; }
+:where(.font-display) { font-weight: 600; letter-spacing: -0.025em; font-variation-settings: "SOFT" 40; }
+
+/* ── Système « ligne de métro » : pastilles, traits, stations ── */
+.badge-line { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; flex: none; border-radius: 50%; background: var(--c, var(--l-a)); color: #fff; font-family: var(--font-dm), sans-serif; font-weight: 800; font-size: .8em; line-height: 1; box-shadow: 0 0 0 2px var(--card); }
+.stationline { position: relative; display: inline-block; height: 4px; width: 6.5rem; border-radius: 4px; background: linear-gradient(var(--c, var(--l-a)), var(--c, var(--l-a))) left / 0% 100% no-repeat; transition: background-size 1s cubic-bezier(.16,1,.3,1) .25s; }
+.stationline::after { content: ""; position: absolute; right: -7px; top: -5px; width: 14px; height: 14px; border-radius: 50%; background: var(--card); border: 3px solid var(--c, var(--l-a)); opacity: 0; transform: scale(0); transition: opacity .3s 1s, transform .5s cubic-bezier(.34,1.56,.64,1) 1s; }
+.revealed .stationline, .stationline.on { background-size: 100% 100%; }
+.revealed .stationline::after, .stationline.on::after { opacity: 1; transform: scale(1); }
+
+/* ── Briques de style ── */
+.sticker { display: inline-flex; align-items: center; gap: .55em; background: var(--card); color: var(--ink); border: 2px solid var(--ink); border-radius: 999px; box-shadow: 4px 4px 0 var(--ink); font-family: var(--font-dm), sans-serif; font-weight: 700; }
+.card-brut { background: var(--card); border: 2px solid var(--ink); border-radius: 22px; box-shadow: 6px 6px 0 var(--ink); transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s cubic-bezier(.16,1,.3,1); }
+.card-brut:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--ink); }
+.btn-pill { display: inline-flex; align-items: center; gap: .5rem; border-radius: 999px; padding: .85rem 1.6rem; font-weight: 700; font-size: .9rem; background: var(--ink); color: var(--bg); border: 2px solid var(--ink); transition: transform .3s cubic-bezier(.16,1,.3,1), background .3s, color .3s; }
+.btn-pill:hover { transform: translateY(-2px); background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-ghost { background: transparent; color: var(--text); }
+.btn-ghost:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.hl-mark { background: linear-gradient(var(--hl), var(--hl)) 0 88% / 0% 0.5em no-repeat; padding: 0 .06em; transition: background-size 1s cubic-bezier(.16,1,.3,1) .35s; }
+.revealed .hl-mark, .hl-mark.on { background-size: 100% 0.5em; }
+
+/* ── Taches pastel animées (fond du hero) ── */
+.blob { position: absolute; border-radius: 50%; filter: blur(70px); pointer-events: none; will-change: transform; }
+@keyframes blob-a { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(6vw,4vw) scale(1.12);} }
+@keyframes blob-b { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(-5vw,6vw) scale(1.1);} }
+@keyframes blob-c { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(4vw,-5vw) scale(1.15);} }
+.dark .blob { opacity: .35; }
+
+/* ── Lenis ── */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: clip; }
 
 html { scroll-behavior: smooth; }
 
@@ -209,7 +248,8 @@ body {
   opacity: 1; pointer-events: all;
 }
 .menu-link {
-  font-family: var(--font-fraunces), sans-serif;
+  text-transform: uppercase;
+  font-family: var(--font-archivo), sans-serif;
   font-weight: 800;
   font-size: clamp(2.5rem, 8vw, 5rem);
   line-height: 1;
@@ -219,6 +259,7 @@ body {
   transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1), color 0.2s;
 }
 .menu-overlay.open .menu-link {
+  text-transform: uppercase;
   opacity: 1; transform: translateY(0);
 }
 .menu-link:hover { color: var(--accent); }
@@ -230,8 +271,10 @@ body {
 
 /* Gallery hover */
 .gallery-item {
-  overflow: hidden; border-radius: 160px 160px 14px 14px; position: relative;
+  overflow: hidden; border-radius: 22px; position: relative; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
 }
+.gallery-item:nth-child(even) { transform: rotate(2deg) translateY(14px); }
+.gallery-item:nth-child(odd) { transform: rotate(-1.5deg); }
 .gallery-item img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
@@ -271,8 +314,8 @@ body {
 }
 .a11y-no-motion .hero-bg-blobs { display: none !important; }
 
-.a11y-contrast { --text: #ffffff !important; --text-muted: rgba(255,255,255,0.8) !important; --bg: #000000 !important; --bg2: #0a0a0a !important; }
-.light.a11y-contrast { --text: #000000 !important; --text-muted: rgba(0,0,0,0.75) !important; --bg: #ffffff !important; --bg2: #f0f0f0 !important; }
+.dark.a11y-contrast { --text: #ffffff !important; --text-muted: rgba(255,255,255,0.8) !important; --bg: #000000 !important; --bg2: #0a0a0a !important; }
+.a11y-contrast { --text: #000000 !important; --text-muted: rgba(0,0,0,0.75) !important; --bg: #ffffff !important; --bg2: #f0f0f0 !important; }
 
 /* ── PRINT / PDF EXPORT ── */
 @media print {
@@ -405,11 +448,12 @@ body {
 [data-mask].revealed .mask-line:nth-child(3) > span { transition-delay: 0.24s; }
 
 /* ── LIGNES ÉDITORIALES (projets) ── */
-.row-link { position: relative; transition: padding-left .5s cubic-bezier(0.16,1,0.3,1); }
-.row-link::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .6s cubic-bezier(0.16,1,0.3,1); }
-.row-link:hover { padding-left: 14px; }
-.row-link:hover::after { transform: scaleX(1); }
-.row-link:hover .row-arrow { transform: translate(4px,-4px); color: var(--accent); }
+.row-link { position: relative; isolation: isolate; transition: padding .5s cubic-bezier(0.16,1,0.3,1); }
+.row-link::before { content: ""; position: absolute; inset: 0 -12px; background: var(--hl); border-radius: 14px; transform: scaleY(0); transform-origin: bottom; transition: transform .5s cubic-bezier(0.16,1,0.3,1); z-index: -1; }
+.row-link:hover::before { transform: scaleY(1); }
+.row-link:hover, .row-link:hover * { color: var(--text) !important; }
+.row-link:hover .row-arrow { transform: translate(4px,-4px); }
+.row-arrow { transition: transform .4s cubic-bezier(0.16,1,0.3,1); }
 .row-arrow { transition: transform .4s cubic-bezier(0.16,1,0.3,1), color .3s; }
 
 @media (prefers-reduced-motion: reduce) {

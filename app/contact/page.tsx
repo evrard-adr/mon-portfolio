@@ -18,8 +18,8 @@ export default function ContactPage() {
           </div>
 
           <div data-reveal>
-            <h1 className="font-display text-[clamp(3.5rem,11vw,8.5rem)] leading-[0.95] mb-8" style={{ color: "var(--text)" }}>
-              <em style={{ color: "var(--accent)" }}>Écrire</em> <span style={{ color: "var(--text)" }}>à Evrard.</span>
+            <h1 className="font-display text-[clamp(3rem,10vw,8rem)] leading-[0.95] mb-8" style={{ color: "var(--text)" }}>
+              <span className="hl-mark on">Écrire</span><br />à Evrard.
             </h1>
             <p className="text-base font-light leading-loose mb-12 max-w-md" style={{ color: "var(--text-muted)" }}>
               Par mail, sur LinkedIn ou sur Instagram.

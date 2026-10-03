@@ -4,12 +4,13 @@ import "./globals.css";
 import Providers from "@/components/Providers";
 import A11yWidget from "@/components/A11yWidget";
 import PageTransition from "@/components/PageTransition";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   style: ["normal", "italic"],
-  axes: ["opsz"],
+  axes: ["opsz", "SOFT"],
 });
 
 const dmSans = DM_Sans({
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
       <body className="font-body antialiased">
         <Providers>
+          <SmoothScroll />
 <PageTransition>
             {children}
           </PageTransition>

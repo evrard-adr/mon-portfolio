@@ -47,12 +47,12 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
             )}
           </div>
 
-          <h1 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-8"
+          <h1 className="font-display text-3xl md:text-5xl leading-[1.05] tracking-tight mb-8"
             style={{ color: "var(--text)" }}>
             {reflexion.titre}
           </h1>
 
-          <p className="font-display italic text-xl md:text-2xl leading-relaxed border-l-2 pl-6"
+          <p className="font-body font-medium text-lg md:text-xl leading-relaxed border-l-4 pl-6"
             style={{ color: "var(--text-muted)", borderColor: "var(--accent-border)" }}>
             {reflexion.chapeau}
           </p>
@@ -69,7 +69,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
           {reflexion.contenu.map((bloc: { type: string; text: string }, i: number) => {
             if (bloc.type === "heading") {
               return (
-                <h2 key={i} className="font-display text-2xl md:text-3xl pt-8"
+                <h2 key={i} className="font-display text-xl md:text-2xl pt-8"
                   style={{ color: "var(--text)" }}>
                   {bloc.text}
                 </h2>
@@ -78,10 +78,10 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
             if (bloc.type === "quote") {
               return (
                 <blockquote key={i} className="relative px-8 py-6 rounded-2xl my-10"
-                  style={{ backgroundColor: "var(--accent-glow)", border: "1px solid var(--accent-border)" }}>
+                  style={{ backgroundColor: "var(--hl)", color: "var(--text)", border: "2px solid var(--ink)", boxShadow: "6px 6px 0 var(--ink)" }}>
                   <span className="absolute top-4 left-6 font-display text-5xl leading-none select-none"
                     style={{ color: "var(--accent)", opacity: 0.4 }}>"</span>
-                  <p className="font-display italic text-xl md:text-2xl leading-snug relative z-10"
+                  <p className="font-display font-bold text-xl md:text-2xl leading-snug relative z-10"
                     style={{ color: "var(--text)" }}>
                     {bloc.text}
                   </p>

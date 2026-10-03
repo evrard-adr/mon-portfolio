@@ -27,11 +27,11 @@ export default function CVPage() {
 
           <div className="flex items-end gap-8">
             <div>
-              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-1" style={{ color: "var(--text)" }}>
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-1" style={{ color: "var(--text)" }}>
                 Evrard
               </h1>
-              <h1 className="font-display italic text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-6" style={{ color: "var(--accent)" }}>
-                André
+              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-6" style={{ color: "var(--text)" }}>
+                <span className="hl-mark on">André</span>
               </h1>
               <p className="text-sm font-light" style={{ color: "var(--text-muted)" }}>{hero.title}</p>
             </div>
@@ -39,7 +39,7 @@ export default function CVPage() {
             {/* Photo de profil ronde */}
             <div className="shrink-0 ml-auto print-profile">
               <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden"
-                style={{ border: "2px solid var(--accent-border)", boxShadow: "0 0 0 4px var(--accent-glow)", background: "radial-gradient(120% 90% at 50% 10%, var(--arch-from), var(--arch-to))" }}>
+                style={{ border: "2px solid var(--accent-border)", boxShadow: "0 0 0 4px var(--accent-glow)", background: "var(--hl)" }}>
                 <img
                   src="/gallery/evrard-portrait.webp"
                   alt="Evrard André"

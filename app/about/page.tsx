@@ -1,7 +1,6 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
 import Link from "next/link";
-import ArchPortrait from "@/components/ArchPortrait";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const dynamic = "force-dynamic";
@@ -25,9 +24,9 @@ export default function AboutPage() {
             <span className="text-[11px] uppercase tracking-[0.28em]" style={{ color: "var(--text-muted)" }}>À propos</span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-7xl leading-[0.98] mb-12" style={{ color: "var(--text)" }}>
+          <h1 className="font-display text-5xl md:text-7xl leading-[0.95] mb-12" style={{ color: "var(--text)" }}>
             Droit.<br />
-            <em style={{ color: "var(--accent)" }}>Mobilités.</em><br />
+            <span className="hl-mark on">Mobilités.</span><br />
             <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
           </h1>
 
@@ -49,7 +48,11 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="lg:sticky lg:top-28" data-reveal="scale">
-          <ArchPortrait className="mx-auto max-w-[440px]" />
+          <div className="relative mx-auto max-w-[440px]">
+            <div className="absolute inset-x-[6%] bottom-0 top-[18%] rounded-[2.5rem]" style={{ background: "var(--hl)", border: "2px solid var(--ink)", boxShadow: "8px 8px 0 var(--ink)", transform: "rotate(-3deg)" }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/gallery/evrard-portrait.webp" alt="Evrard André en costume" width={1080} height={1350} className="relative block h-auto w-full" />
+          </div>
         </div>
         </div>
       </section>

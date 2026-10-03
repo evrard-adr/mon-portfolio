@@ -13,13 +13,10 @@ const icons: Record<string, React.ReactNode> = {
 export default function SocialIcon({ name, url, handle }: Props) {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer"
-      className="group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200"
-      style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}
-      onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--accent-border)"; el.style.backgroundColor = "var(--accent-glow)"; }}
-      onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = "var(--border)"; el.style.backgroundColor = "var(--bg2)"; }}
+      className="card-brut flex items-center gap-3 px-5 py-3.5" style={{ borderRadius: "999px", boxShadow: "4px 4px 0 var(--ink)" }}
     >
       <span style={{ color: "var(--text-muted)" }}>{icons[name] ?? null}</span>
-      <span className="text-sm font-medium" style={{ color: "var(--text)" }}>{name}</span>
+      <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{name}</span>
       <span className="text-xs ml-auto" style={{ color: "var(--text-muted)" }}>{handle}</span>
     </a>
   );
