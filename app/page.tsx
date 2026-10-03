@@ -12,7 +12,7 @@ import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
-const PASTELS = ["var(--pink)", "var(--sky)", "var(--peach)"];
+const PASTELS = ["var(--pink)", "var(--sky)", "var(--peach)", "#bfeccf"];
 
 function Label({ letter, color, text }: { letter: string; color: string; text: string }) {
   return (
@@ -61,7 +61,7 @@ export default function Home() {
             parts={[
               { t: "Le droit public pour comprendre," },
               { t: "la communication", hl: true },
-              { t: "pour convaincre." },
+              { t: "pour convaincre, les transports en commun pour avancer." },
             ]}
           />
           <div className="grid gap-10 md:grid-cols-[1fr_1fr]" data-reveal>
@@ -78,17 +78,17 @@ export default function Home() {
       <section className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
           <Label letter="B" color="var(--l-b)" text="Ce que j'apporte" />
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
               <div
                 key={i}
                 className="card-brut flex flex-col gap-5 p-8"
-                style={{ background: PASTELS[i % 3], color: "#0b1b4d", rotate: `${[-1.2, 0.8, -0.6][i % 3]}deg` }}
+                style={{ background: PASTELS[i % 4], color: "#0b1b4d", rotate: `${[-1.2, 0.8, -0.6, 1][i % 4]}deg` }}
                 data-reveal
                 data-delay={String(i + 1)}
               >
                 <span className="font-display text-7xl leading-none">0{i + 1}</span>
-                <h3 className="font-display text-3xl leading-tight">{item.titre}</h3>
+                <h3 className="font-display text-2xl leading-tight">{item.titre}</h3>
                 <p className="text-sm font-medium leading-relaxed" style={{ color: "rgba(11,27,77,0.75)" }}>{item.desc}</p>
               </div>
             ))}

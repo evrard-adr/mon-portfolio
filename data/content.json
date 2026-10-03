@@ -1,13 +1,13 @@
 {
   "hero": {
     "name": "Evrard André",
-    "title": "Étudiant en droit public · Lyon 3 · Recherche un poste d'assistant parlementaire",
-    "subtitle": "Droit public, communication, vie associative. Lyon.",
+    "title": "Étudiant en droit public · Université Jean Moulin Lyon 3",
+    "subtitle": "Droit public, communication, transports en commun. Lyon.",
     "photo": ""
   },
   "about": {
-    "teaser": "Étudiant en droit à Lyon 3, passionné de droit public et de science politique. Responsable communication du Parlement des Étudiants (Lyon, puis national), je sais construire un message, animer des réseaux sociaux et faire vivre une institution. J'aimerais mettre ces deux atouts au service d'un parlementaire.",
-    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image d'une organisation. C'est ce qui me permet d'être à l'aise aussi bien pour rédiger, analyser un texte que pour faire passer un message au grand public.\n\nMon objectif aujourd'hui : devenir assistant parlementaire, et mettre le droit public et la communication au service d'un élu et de son équipe.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
+    "teaser": "Étudiant en droit à Lyon 3, passionné de droit public et de science politique. Responsable communication du Parlement des Étudiants, je sais construire un message et animer des réseaux sociaux. Usager quotidien des transports en commun, je m'intéresse aussi à la manière dont on les pense et les fait évoluer. Je veux mettre ces compétences au service des élus et de l'action publique.",
+    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image d'une organisation. Ce qui me permet d'être à l'aise aussi bien pour rédiger et analyser un texte que pour faire passer un message au grand public.\n\nUn jour, j'aimerais travailler aux côtés d'un élu, voir de l'intérieur comment se prennent les décisions, et pourquoi pas porter moi-même des projets pour mon territoire. En attendant, j'apprends sur le terrain, au service du collectif.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
@@ -169,24 +169,29 @@
     }
   ],
   "badge": {
-    "visible": true,
-    "text": "Recherche un poste d'assistant parlementaire"
+    "visible": false,
+    "text": ""
   },
   "engagements": [
     {
       "icon": "⚖️",
       "titre": "Droit public & institutions",
-      "desc": "Licence de droit à Lyon 3. Ce qui m'intéresse : comment une décision publique se construit, se justifie, et ce qu'elle change pour les gens. Rigueur juridique et goût pour la rédaction."
+      "desc": "Licence de droit à Lyon 3. Comprendre comment une décision publique se construit, se justifie, et ce qu'elle change pour les gens. Rigueur juridique et goût pour la rédaction."
     },
     {
       "icon": "📣",
       "titre": "Communication & réseaux sociaux",
-      "desc": "Responsable communication du Parlement des Étudiants, à Lyon puis à l'échelle nationale : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image sur 25 sections."
+      "desc": "Responsable communication du Parlement des Étudiants, à Lyon puis au national : réseaux sociaux, identité visuelle, relations presse, cohérence de l'image sur 25 sections."
+    },
+    {
+      "icon": "🚋",
+      "titre": "Transports en commun & mobilité",
+      "desc": "Usager quotidien du réseau lyonnais, je m'intéresse à la façon dont les transports en commun se pensent, se financent et se gèrent, et à ce que sera la ville en 2050. Une note de réflexion est en ligne."
     },
     {
       "icon": "🏛️",
       "titre": "Terrain & engagement",
-      "desc": "Vie associative, organisation de simulations parlementaires, coordination d'équipes de bénévoles. Le goût du concret, du collectif et de la politique vue de l'intérieur."
+      "desc": "Vie associative, organisation de simulations parlementaires, coordination d'équipes de bénévoles. Le goût du concret et du collectif."
     }
   ],
   "stats": [
@@ -222,14 +227,14 @@
       "lien": ""
     },
     {
-      "titre": "Mobilités urbaines 2050",
+      "titre": "Transports en commun : la ville de 2050",
       "desc": "Lecture, veille, réflexion sur l'avenir des transports en commun et la question de savoir comment nos villes vont s'adapter. L'article Réflexion en est une trace.",
       "date": "2024",
       "tag": "Recherche",
       "lien": "/reflexion/mobilites-2050"
     }
   ],
-  "ticker": "Droit public  ·  Institutions  ·  Science politique  ·  Communication politique  ·  Réseaux sociaux  ·  Politiques publiques  ·  Rédaction  ·  Vie associative  ·  Simulations parlementaires  ·  Lyon",
+  "ticker": "Droit public  ·  Institutions  ·  Science politique  ·  Communication  ·  Réseaux sociaux  ·  Transports en commun  ·  Mobilité urbaine  ·  Politiques publiques  ·  Vie associative  ·  Simulations parlementaires  ·  Lyon",
   "socials": [
     {
       "name": "Instagram",
@@ -331,6 +336,7 @@
       "Droit public",
       "Communication institutionnelle",
       "Réseaux sociaux & identité visuelle",
+      "Transports en commun & mobilité urbaine",
       "Relations presse",
       "Rédaction juridique",
       "Analyse des politiques publiques",
@@ -341,9 +347,9 @@
       "Piano"
     ],
     "interets": [
+      "Transports en commun & mobilité urbaine",
       "Droit public & institutions",
       "Vie politique et parlementaire",
-      "Mobilités & transports en commun",
       "Prospective urbaine (2050–2075)",
       "Musique classique",
       "Engagement associatif"

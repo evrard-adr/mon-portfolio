@@ -118,19 +118,13 @@ export default function HeroStage() {
 
       {/* ── Accroche ── */}
       <div className="hero-ui absolute inset-x-0 top-[5.6rem] z-[2] px-6 text-center lg:top-[6.2rem]">
-        <div className="hero-fade flex flex-col items-center gap-2">
-          <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-bold md:text-xs" style={{ background: "var(--card)", border: "2px solid var(--ink)", color: "var(--ink)" }}>
-            <i className="block h-2 w-2 animate-pulse rounded-full" style={{ background: "var(--l-d)" }} />
-            Recherche un poste d&apos;assistant parlementaire
-          </span>
-          <Typewriter />
-        </div>
+        <div className="hero-fade"><Typewriter /></div>
       </div>
 
       {/* ── Nom : empilé sur mobile, de part et d'autre de la tête sur desktop ── */}
       <div
         data-depth="-26"
-        className="absolute inset-x-0 top-[9.6rem] z-[1] flex flex-col items-center lg:top-[calc(100svh-var(--ph)*0.8)] lg:-translate-y-1/2 lg:grid lg:grid-cols-[1fr_var(--sp)_1fr] lg:items-center"
+        className="absolute inset-x-0 top-[8.4rem] z-[1] flex flex-col items-center lg:top-[calc(100svh-var(--ph)*0.8)] lg:-translate-y-1/2 lg:grid lg:grid-cols-[1fr_var(--sp)_1fr] lg:items-center"
       >
         <h1 className="contents">
           <span className="w1 block font-display leading-[0.88] text-[min(21vw,13.5svh)] lg:col-start-1 lg:justify-self-end lg:text-[min(13vw,23svh)]" style={{ color: "var(--text)" }}>
@@ -168,8 +162,9 @@ export default function HeroStage() {
       {/* ── Autocollants ── */}
       <div data-depth="40" className="pointer-events-none absolute inset-0 z-[3]">
         <div className="absolute left-3 top-[50%] -rotate-6 lg:left-[7%] lg:top-[52%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-a)" }}>A</b>Droit public · Lyon 3</span></div>
-        <div className="absolute right-3 top-[55%] rotate-6 lg:right-[6%] lg:top-[44%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-b)" }}>B</b>Parlement des Étudiants</span></div>
-        <div className="absolute left-[8%] top-[66%] rotate-3 lg:left-[15%] lg:top-[72%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-c)" }}>C</b>Réseaux sociaux & com</span></div>
+        <div className="absolute right-3 top-[55%] rotate-6 lg:right-[6%] lg:top-[44%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-b)" }}>B</b>Communication & réseaux</span></div>
+        <div className="absolute right-[6%] top-[70%] -rotate-3 lg:right-[13%] lg:top-[74%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-d)" }}>D</b>Parlement des Étudiants</span></div>
+        <div className="absolute left-[8%] top-[66%] rotate-3 lg:left-[15%] lg:top-[72%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-c)" }}>C</b>Transports en commun</span></div>
       </div>
 
       {/* ── Boutons ── */}
