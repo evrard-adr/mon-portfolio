@@ -170,8 +170,9 @@ export default function HeroStage() {
       {/* ── Boutons ── */}
       <div className="hero-ui absolute inset-x-0 bottom-[4.6rem] z-[4] px-6 md:bottom-6">
         <div className="hero-fade flex flex-wrap items-center justify-center gap-3">
-          <Magnetic><Link href="/cv" className="btn-pill">Voir le CV →</Link></Magnetic>
-          <Magnetic><span className="[&>button]:bg-[var(--bg)]"><HeroPDFButton /></span></Magnetic>
+          <Magnetic><a href="mailto:evrard.andre@aol.com" className="btn-pill">✉ Me contacter</a></Magnetic>
+          <Magnetic><Link href="/cv" className="btn-pill btn-ghost" style={{ background: "var(--bg)" }}>Voir le CV →</Link></Magnetic>
+          <Magnetic><span className="hidden sm:inline-block [&>button]:bg-[var(--bg)]"><HeroPDFButton /></span></Magnetic>
         </div>
       </div>
     </section>

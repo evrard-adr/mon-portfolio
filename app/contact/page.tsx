@@ -1,4 +1,5 @@
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const dynamic = "force-dynamic";
@@ -56,10 +57,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="px-6 md:px-14 lg:px-20 py-10 flex items-center justify-between" style={{ borderTop: "1px solid var(--border)" }}>
-        <span className="font-display text-sm" style={{ color: "var(--text-muted)" }}>Evrard André</span>
-        <span className="text-xs" style={{ color: "var(--text-muted)" }}>© {new Date().getFullYear()}</span>
-      </footer>
+      <Footer />
     </main>
   );
 }

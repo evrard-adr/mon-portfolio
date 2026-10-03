@@ -9,6 +9,7 @@ import Marquee from "@/components/Marquee";
 import ScrubText from "@/components/ScrubText";
 import Magnetic from "@/components/Magnetic";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 export const dynamic = "force-dynamic";
 
@@ -67,8 +68,8 @@ export default function Home() {
           <div className="grid gap-10 md:grid-cols-[1fr_1fr]" data-reveal>
             <p className="max-w-lg text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>{about.teaser}</p>
             <div className="flex flex-wrap items-start gap-4 md:justify-end">
-              <Magnetic><Link href="/contact" className="btn-pill">Me contacter →</Link></Magnetic>
-              <Magnetic><a href={`mailto:${about.email}`} className="btn-pill btn-ghost">{about.email}</a></Magnetic>
+              <Magnetic><a href={`mailto:${about.email}`} className="btn-pill">✉ Me contacter par mail →</a></Magnetic>
+              <Magnetic><Link href="/about" className="btn-pill btn-ghost">En savoir plus</Link></Magnetic>
             </div>
           </div>
         </div>
@@ -169,7 +170,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
           <div className="mt-10 flex items-center gap-3" data-reveal="fade">
             <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="btn-pill btn-ghost" style={{ padding: ".5rem 1.1rem", fontSize: ".75rem" }}>Instagram ↗</a>
-            <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="btn-pill btn-ghost" style={{ padding: ".5rem 1.1rem", fontSize: ".75rem" }}>VSCO ↗</a>
+            
           </div>
         </div>
       </section>
@@ -191,19 +192,12 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-14">
-            <Magnetic><Link href="/contact" className="btn-pill">Me contacter →</Link></Magnetic>
+            <Magnetic><a href={`mailto:${about.email}`} className="btn-pill">✉ Me contacter par mail →</a></Magnetic>
           </div>
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer className="overflow-hidden px-6 pb-8 pt-16 md:px-14 lg:px-20" style={{ background: "var(--navy)", color: "#f5f1e8" }}>
-        <p className="font-display select-none whitespace-nowrap text-center leading-none text-[clamp(3rem,15vw,15rem)]" style={{ color: "var(--pink)" }} aria-hidden="true">Evrard André</p>
-        <div className="mx-auto mt-10 flex max-w-6xl items-center justify-between text-xs" style={{ color: "rgba(245,241,232,0.7)" }}>
-          <span className="font-display text-base" style={{ color: "#f5f1e8" }}>Evrard André</span>
-          <span>Lyon · {new Date().getFullYear()}</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

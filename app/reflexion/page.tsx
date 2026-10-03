@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
@@ -47,6 +48,7 @@ export default function ReflexionListPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

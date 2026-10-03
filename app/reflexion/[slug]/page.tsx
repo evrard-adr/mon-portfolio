@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -113,6 +114,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
         </div>
 
       </article>
+      <Footer />
     </main>
   );
 }

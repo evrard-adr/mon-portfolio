@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import CVPrintButton from "@/components/CVPrintButton";
 import { Suspense } from "react";
 import AutoPrint from "@/components/AutoPrint";
@@ -134,6 +135,7 @@ export default function CVPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

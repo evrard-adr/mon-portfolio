@@ -37,7 +37,8 @@ export default function Menu() {
           <span>Evrard</span><span style={{ color: "var(--accent)" }}>.</span>
         </Link>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3 md:gap-4">
+          <a href="mailto:evrard.andre@aol.com" className="btn-pill hidden sm:inline-flex" style={{ padding: ".45rem 1.1rem", fontSize: ".8rem" }}>✉ Me contacter</a>
           {/* Theme toggle */}
           <button onClick={toggle} className="w-8 h-8 flex items-center justify-center rounded-full transition-all" style={{ border: "1px solid var(--border)", color: "var(--text-muted)" }} aria-label="Thème">
             {theme === "dark" ? (
@@ -82,8 +83,7 @@ export default function Menu() {
         </div>
         <div className="flex items-center gap-4 mt-4">
           <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>Instagram</a>
-          <span style={{ color: "var(--border)" }}>·</span>
-          <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>VSCO</a>
+          
           <span style={{ color: "var(--border)" }}>·</span>
           <a href="https://linkedin.com/in/evrardandre" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>LinkedIn</a>
         </div>

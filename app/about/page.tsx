@@ -1,5 +1,6 @@
 import { getContent } from "@/lib/content";
 import Menu from "@/components/Menu";
+import Footer from "@/components/Footer";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -56,6 +57,7 @@ export default function AboutPage() {
         </div>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
