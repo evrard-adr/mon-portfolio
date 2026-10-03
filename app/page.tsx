@@ -3,100 +3,88 @@ import SocialIcon from "@/components/SocialIcon";
 import Menu from "@/components/Menu";
 import ScrollReveal from "@/components/ScrollReveal";
 import HeroBlob from "@/components/HeroBlob";
+import HeroStage from "@/components/HeroStage";
+import ScrollProgress from "@/components/ScrollProgress";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import HeroPDFButton from "@/components/HeroPDFButton";
-import Typewriter from "@/components/Typewriter";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
+function Label({ n, text }: { n: string; text: string }) {
+  return (
+    <div className="mb-12 flex items-center gap-4" data-reveal="fade">
+      <span className="font-display text-sm italic" style={{ color: "var(--accent)" }}>{n}</span>
+      <span className="h-px w-10" style={{ backgroundColor: "var(--accent-border)" }} />
+      <span className="text-[11px] uppercase tracking-[0.28em]" style={{ color: "var(--text-muted)" }}>{text}</span>
+    </div>
+  );
+}
+
 export default function Home() {
   const content = getContent();
-  const { hero, about, socials, gallery, engagements, stats, projets } = content as any;
+  const { about, socials, gallery, engagements, stats, projets } = content as any;
 
   return (
-    <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+    <main className="relative min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Menu />
       <ScrollReveal />
+      <ScrollProgress />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[100svh] overflow-hidden"><HeroBlob /></div>
 
       {/* ── HERO ── */}
-      <section className="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-24 overflow-hidden">
-
-        {/* Fond animé derrière tout */}
-        <HeroBlob />
-
-        <div className="max-w-5xl w-full mx-auto relative" style={{ zIndex: 1 }}>
-          <h1 className="font-display font-extrabold leading-[0.9] tracking-tight mb-6" data-reveal data-delay="1">
-            <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--text)" }}>Evrard</span>
-            <span className="block text-7xl md:text-8xl lg:text-9xl" style={{ color: "var(--accent)" }}>André</span>
-          </h1>
-
-          <div className="mb-10" data-reveal data-delay="2">
-            <Typewriter />
-          </div>
-
-          <div className="flex items-center gap-3" data-reveal data-delay="3">
-            <Link href="/cv" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-widest transition-all" style={{ backgroundColor: "var(--accent-glow)", border: "1px solid var(--accent-border)", color: "var(--accent)" }}>
-              Voir le CV →
-            </Link>
-            <HeroPDFButton />
-          </div>
-        </div>
-
-      </section>
+      <HeroStage />
 
       {/* ── TICKER ── */}
-      <div className="py-3 overflow-hidden" style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="flex" style={{ animation: "ticker 30s linear infinite", width: "max-content" }}>
+      <div className="overflow-hidden py-5" style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+        <div className="flex" style={{ animation: "ticker 60s linear infinite", width: "max-content" }}>
           {[content.ticker, content.ticker].map((t: string, i: number) => (
-            <p key={i} className="whitespace-nowrap font-display font-bold text-[11px] uppercase tracking-[0.25em] px-4" style={{ color: "var(--text-faint)" }}>
-              {t} &nbsp;·&nbsp;
+            <p key={i} className="font-display whitespace-nowrap px-4 text-2xl italic md:text-3xl" style={{ color: "var(--text-muted)" }}>
+              {t.split(/\s*·\s*/).filter(Boolean).map((w: string, j: number) => (
+                <span key={j}>
+                  {w}
+                  <span className="mx-5 not-italic" style={{ color: "var(--accent)" }}>✦</span>
+                </span>
+              ))}
             </p>
           ))}
         </div>
       </div>
 
       {/* ── ABOUT ── */}
-      <section id="about" className="px-8 md:px-16 lg:px-24 py-24">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-10" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>À propos</span>
-            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
-          </div>
-
-          <div data-reveal>
-            <h2 className="font-display font-extrabold text-4xl md:text-5xl leading-tight mb-8" style={{ color: "var(--text)" }}>
-              Droit.<br />
-              <span style={{ color: "var(--accent)" }}>Mobilités.</span><br />
-              <span style={{ color: "var(--text-muted)" }}>Lyon.</span>
+      <section id="about" className="px-6 py-28 md:px-14 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <Label n="01" text="À propos" />
+          <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-20">
+            <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-[1.02]" data-mask>
+              <span className="mask-line"><span>Le droit pour comprendre,</span></span>
+              <span className="mask-line"><span><em style={{ color: "var(--accent)" }}>la chose publique</em> pour</span></span>
+              <span className="mask-line"><span>agir. À Lyon.</span></span>
             </h2>
-            <p className="font-light text-sm leading-loose mb-6" style={{ color: "var(--text-muted)" }}>{about.teaser}</p>
-            <div className="flex items-center gap-6 flex-wrap">
-              <Link href="/about" className="text-sm transition-colors" style={{ color: "var(--accent)" }}>
-                En savoir plus →
-              </Link>
-              <a href={`mailto:${about.email}`} className="text-sm transition-colors" style={{ color: "var(--text-muted)" }}>
-                {about.email}
-              </a>
+            <div data-reveal className="lg:pt-4">
+              <p className="mb-8 text-base font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{about.teaser}</p>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+                <Link href="/about" className="group inline-flex items-center gap-2 text-sm" style={{ color: "var(--accent)" }}>
+                  En savoir plus <span className="transition-transform duration-500 group-hover:translate-x-1.5">→</span>
+                </Link>
+                <a href={`mailto:${about.email}`} className="text-sm underline-offset-4 hover:underline" style={{ color: "var(--text-muted)" }}>{about.email}</a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── ENGAGEMENTS ── */}
-      <section className="px-8 md:px-16 lg:px-24 py-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-12" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Ce qui m'occupe</span>
-            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
-          </div>
-          <div className="grid sm:grid-cols-3 gap-4">
+      <section className="px-6 py-24 md:px-14 lg:px-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Label n="02" text="Ce qui m'occupe" />
+          <div className="grid gap-px overflow-hidden rounded-3xl md:grid-cols-3" style={{ backgroundColor: "var(--border)", border: "1px solid var(--border)" }}>
             {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
-              <div key={i} className="p-6 rounded-2xl transition-all group" style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg)" }}
-                data-reveal data-delay={String(i + 1)}>
-                <span className="text-2xl mb-4 block">{item.icon}</span>
-                <h3 className="font-display font-bold text-base mb-2" style={{ color: "var(--text)" }}>{item.titre}</h3>
-                <p className="text-xs leading-relaxed font-light" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
+              <div key={i} className="group flex flex-col gap-6 p-8 transition-colors duration-500 hover:bg-[var(--accent-glow)]" style={{ backgroundColor: "var(--bg)" }} data-reveal data-delay={String(i + 1)}>
+                <div className="flex items-baseline justify-between">
+                  <span className="font-display text-5xl italic" style={{ color: "var(--accent)" }}>0{i + 1}</span>
+                </div>
+                <h3 className="font-display text-2xl leading-tight" style={{ color: "var(--text)" }}>{item.titre}</h3>
+                <p className="text-sm font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -104,33 +92,35 @@ export default function Home() {
       </section>
 
       {/* ── PROJETS ── */}
-      <section id="projets" className="px-8 md:px-16 lg:px-24 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-14" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Projets</span>
-            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
-          </div>
-          <div className="grid md:grid-cols-3 gap-4">
-            {projets.map((p: { titre: string; desc: string; date: string; tag: string; lien: string }, i: number) => (
-              <div key={i} className="group p-6 rounded-2xl flex flex-col gap-4 transition-all" style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg)" }} data-reveal data-delay={String(i + 1)}>
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase tracking-widest px-2 py-1 rounded-full" style={{ backgroundColor: "var(--accent-glow)", color: "var(--accent)", border: "1px solid var(--accent-border)" }}>{p.tag}</span>
-                  <span className="text-[10px]" style={{ color: "var(--text-faint)" }}>{p.date}</span>
+      <section id="projets" className="px-6 py-28 md:px-14 lg:px-20" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Label n="03" text="Projets" />
+          <div style={{ borderTop: "1px solid var(--border)" }}>
+            {projets.map((p: { titre: string; desc: string; date: string; tag: string; lien: string }, i: number) => {
+              const inner = (
+                <div className="row-link grid items-baseline gap-3 py-8 md:grid-cols-[90px_1.2fr_1fr_200px] md:gap-8" style={{ borderBottom: "1px solid var(--border)" }}>
+                  <span className="font-display text-lg italic" style={{ color: "var(--text-muted)" }}>{p.date}</span>
+                  <h3 className="font-display text-2xl leading-tight md:text-3xl" style={{ color: "var(--text)" }}>{p.titre}</h3>
+                  <p className="text-sm font-light leading-relaxed" style={{ color: "var(--text-muted)" }}>{p.desc}</p>
+                  <div className="flex items-center gap-4 md:justify-end">
+                    <span className="rounded-full px-3 py-1 text-[10px] uppercase tracking-widest" style={{ border: "1px solid var(--accent-border)", color: "var(--accent)" }}>{p.tag}</span>
+                    {p.lien && <span className="row-arrow text-xl" style={{ color: "var(--text-muted)" }}>↗</span>}
+                  </div>
                 </div>
-                <h3 className="font-display font-bold text-base leading-tight" style={{ color: "var(--text)" }}>{p.titre}</h3>
-                <p className="text-xs leading-relaxed font-light flex-1" style={{ color: "var(--text-muted)" }}>{p.desc}</p>
-                {p.lien && (
-                  <a href={p.lien} target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--accent)" }}>Voir →</a>
-                )}
-              </div>
-            ))}
+              );
+              return (
+                <div key={i} data-reveal data-delay={String(Math.min(i + 1, 5))}>
+                  {p.lien ? <a href={p.lien} className="block">{inner}</a> : inner}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ── STATS ── */}
-      <section className="px-8 md:px-16 lg:px-24 py-20" style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="max-w-5xl mx-auto">
+      <section className="px-6 py-20 md:px-14 lg:px-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+        <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-3 gap-8 text-center">
             {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
               <AnimatedCounter key={i} target={s.value} suffix={s.suffix} label={s.label} />
@@ -140,40 +130,29 @@ export default function Home() {
       </section>
 
       {/* ── GALLERY ── */}
-      <section id="gallery" className="py-28" style={{ borderTop: "1px solid var(--border)", overflow: "hidden" }}>
-        <div className="max-w-5xl mx-auto px-8 md:px-16 lg:px-24">
-          <div className="flex items-center gap-3 mb-14" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Galerie</span>
-            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
-          </div>
+      <section id="gallery" className="overflow-hidden py-28" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
+          <Label n="04" text="Galerie" />
         </div>
 
-        {/* Full-width marquee strip */}
         <div className="gallery-strip-wrap" style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)", overflow: "hidden" }}>
-          <div className="gallery-strip" style={{ display: "flex", gap: "12px", width: "max-content" }}>
+          <div className="gallery-strip" style={{ display: "flex", gap: "16px", width: "max-content" }}>
             {[...gallery, ...gallery].map((item: { url: string; caption: string; source: string }, i: number) => (
-              <div
-                key={i}
-                className="gallery-item"
-                style={{ width: "280px", height: "360px", flexShrink: 0, borderRadius: "16px", overflow: "hidden", position: "relative" }}
-              >
+              <div key={i} className="gallery-item" style={{ width: "280px", height: "380px", flexShrink: 0 }}>
                 {item.url ? (
                   <>
-                    <img
-                      src={item.url}
-                      alt={item.caption}
-                      style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: i % 2 === 0 ? "top" : "center" }}
-                    />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={item.url} alt={item.caption} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: i % 2 === 0 ? "top" : "center" }} />
                     <div className="overlay">
-                      <div className="absolute bottom-3 left-3 right-3">
-                        <p className="text-white text-xs font-medium">{item.caption}</p>
-                        <p className="text-white/60 text-[10px] uppercase tracking-widest mt-0.5">{item.source}</p>
+                      <div className="absolute bottom-5 left-5 right-5">
+                        <p className="font-display text-base text-white">{item.caption}</p>
+                        <p className="mt-1 text-[10px] uppercase tracking-widest text-white/60">{item.source}</p>
                       </div>
                     </div>
                   </>
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center" style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}>
-                    <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>Photo</span>
+                  <div className="flex h-full w-full items-center justify-center" style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}>
+                    <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>Photo</span>
                   </div>
                 )}
               </div>
@@ -181,40 +160,43 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-8 md:px-16 lg:px-24">
-          <div className="flex items-center gap-4 mt-8" data-reveal="fade">
-            <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
-              Instagram ↗
-            </a>
+        <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
+          <div className="mt-10 flex items-center gap-4" data-reveal="fade">
+            <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="gallery-ext-link text-xs uppercase tracking-widest transition-colors">Instagram ↗</a>
             <span style={{ color: "var(--border)" }}>·</span>
-            <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors gallery-ext-link">
-              VSCO ↗
-            </a>
+            <a href="https://vsco.co/evrardadr" target="_blank" rel="noopener noreferrer" className="gallery-ext-link text-xs uppercase tracking-widest transition-colors">VSCO ↗</a>
           </div>
         </div>
       </section>
 
-      {/* ── SOCIALS ── */}
-      <section id="socials" className="px-8 md:px-16 lg:px-24 py-28" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-14" data-reveal="fade">
-            <span className="text-[10px] uppercase tracking-[0.3em] font-medium" style={{ color: "var(--accent)" }}>Réseaux</span>
-            <span className="flex-1 h-px max-w-xs" style={{ backgroundColor: "var(--border)" }} />
-          </div>
-          <div className="flex flex-col md:flex-row gap-14 items-start">
-            <div className="flex-1 grid sm:grid-cols-2 gap-2 w-full max-w-lg" data-reveal>
+      {/* ── CONTACT / RÉSEAUX ── */}
+      <section id="socials" className="px-6 py-28 md:px-14 lg:px-20" style={{ borderTop: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Label n="05" text="Réseaux" />
+          <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+            <h2 className="font-display text-[clamp(2.4rem,6vw,5rem)] leading-[1.02]" data-mask>
+              <span className="mask-line"><span>Une idée, un projet,</span></span>
+              <span className="mask-line"><span><em style={{ color: "var(--accent)" }}>parlons-en.</em></span></span>
+            </h2>
+            <div className="grid gap-2" data-reveal>
               {socials.map((s: { name: string; url: string; handle: string }) => (
-                <SocialIcon key={s.handle} {...s} />
+                <SocialIcon key={`${s.name}-${s.handle}`} {...s} />
               ))}
             </div>
           </div>
+          <Link href="/contact" className="group mt-12 inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-widest transition-transform hover:-translate-y-0.5" style={{ background: "var(--accent)", color: "var(--bg)" }}>
+            Me contacter <span className="transition-transform duration-500 group-hover:translate-x-1.5">→</span>
+          </Link>
         </div>
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="px-8 md:px-16 lg:px-24 py-10 flex items-center justify-between" style={{ borderTop: "1px solid var(--border)" }}>
-        <span className="font-display font-bold text-xs uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>Evrard André</span>
-        <span className="text-xs" style={{ color: "var(--text-faint)" }}>Fait maison · {new Date().getFullYear()}</span>
+      <footer className="px-6 pb-10 pt-20 md:px-14 lg:px-20" style={{ borderTop: "1px solid var(--border)" }}>
+        <p className="font-display select-none text-center text-[clamp(3.5rem,15vw,12rem)] italic leading-none" style={{ color: "var(--text-faint)" }} aria-hidden="true">Evrard André</p>
+        <div className="mx-auto mt-10 flex max-w-6xl items-center justify-between">
+          <span className="font-display text-sm" style={{ color: "var(--text-muted)" }}>Evrard André</span>
+          <span className="text-xs" style={{ color: "var(--text-muted)" }}>Lyon · {new Date().getFullYear()}</span>
+        </div>
       </footer>
     </main>
   );

@@ -10,16 +10,15 @@ const config: Config = {
     extend: {
       fontFamily: {
         body: ["var(--font-dm)", "sans-serif"],
-        display: ["var(--font-bricolage)", "sans-serif"],
+        display: ["var(--font-fraunces)", "sans-serif"],
       },
       colors: {
-        bg: "#070b08",
-        surface: "#0d1410",
-        border: "#1a2a1e",
-        text: "#eef2ee",
-        muted: "#5a7060",
-        accent: "#4ade80",
-        "accent-dim": "#22c55e",
+        bg: "var(--bg)",
+        surface: "var(--bg2)",
+        border: "var(--border)",
+        text: "var(--text)",
+        muted: "var(--text-muted)",
+        accent: "var(--accent)",
       },
       animation: {
         "fade-up": "fadeUp 0.8s ease forwards",

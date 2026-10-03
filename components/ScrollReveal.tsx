@@ -1,9 +1,9 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function ScrollReveal() {
   useEffect(() => {
-    const els = document.querySelectorAll("[data-reveal]");
+    const els = document.querySelectorAll("[data-reveal],[data-mask]");
     const io = new IntersectionObserver(
       (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("revealed"); io.unobserve(e.target); } }),
       { threshold: 0.12 }

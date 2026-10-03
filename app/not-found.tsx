@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-[150px] pointer-events-none" style={{ backgroundColor: "var(--accent-glow)" }} />
 
       <p className="text-[10px] uppercase tracking-[0.3em] mb-6" style={{ color: "var(--accent)" }}>Page introuvable</p>
-      <h1 className="font-display font-extrabold leading-none mb-4" style={{ fontSize: "clamp(5rem, 20vw, 12rem)", color: "var(--text)" }}>
+      <h1 className="font-display italic leading-none mb-4" style={{ fontSize: "clamp(5rem, 20vw, 12rem)", color: "var(--text)" }}>
         404
       </h1>
       <p className="text-sm font-light text-center max-w-xs mb-10" style={{ color: "var(--text-muted)" }}>
@@ -21,7 +21,7 @@ export default function NotFound() {
         Retour à l&apos;accueil →
       </Link>
 
-      <div className="absolute bottom-10 right-12 font-display font-extrabold select-none pointer-events-none" style={{ fontSize: "clamp(4rem, 15vw, 10rem)", color: "var(--text-faint)" }}>
+      <div className="absolute bottom-10 right-12 font-display italic select-none pointer-events-none" style={{ fontSize: "clamp(4rem, 15vw, 10rem)", color: "var(--text-faint)" }}>
         Evrard.
       </div>
     </div>

@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, DM_Sans, Lexend } from "next/font/google";
+import { Fraunces, DM_Sans, Lexend } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import A11yWidget from "@/components/A11yWidget";
 import PageTransition from "@/components/PageTransition";
 
-const bricolage = Bricolage_Grotesque({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-bricolage",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-fraunces",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
 });
 
 const dmSans = DM_Sans({
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${bricolage.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
+    <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
       <body className="font-body antialiased">
         <Providers>
 <PageTransition>

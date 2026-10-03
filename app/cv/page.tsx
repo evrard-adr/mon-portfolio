@@ -27,10 +27,10 @@ export default function CVPage() {
 
           <div className="flex items-end gap-8">
             <div>
-              <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-2" style={{ color: "var(--text)" }}>
+              <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-1" style={{ color: "var(--text)" }}>
                 Evrard
               </h1>
-              <h1 className="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight mb-6" style={{ color: "var(--accent)" }}>
+              <h1 className="font-display italic text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-6" style={{ color: "var(--accent)" }}>
                 André
               </h1>
               <p className="text-sm font-light" style={{ color: "var(--text-muted)" }}>{hero.title}</p>
@@ -39,11 +39,12 @@ export default function CVPage() {
             {/* Photo de profil ronde */}
             <div className="shrink-0 ml-auto print-profile">
               <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden"
-                style={{ border: "2px solid var(--accent-border)", boxShadow: "0 0 0 4px var(--accent-glow)" }}>
+                style={{ border: "2px solid var(--accent-border)", boxShadow: "0 0 0 4px var(--accent-glow)", background: "radial-gradient(120% 90% at 50% 10%, var(--arch-from), var(--arch-to))" }}>
                 <img
-                  src="/gallery/profile.jpg"
+                  src="/gallery/evrard-portrait.webp"
                   alt="Evrard André"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "50% 0%", transform: "scale(2.1)", transformOrigin: "50% 17%" }}
                 />
               </div>
             </div>
@@ -53,14 +54,14 @@ export default function CVPage() {
         <div className="grid md:grid-cols-3 gap-16">
           <div className="md:col-span-2 space-y-16">
             <div>
-              <h2 className="font-display font-bold text-[11px] uppercase tracking-[0.25em] mb-8 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
+              <h2 className="font-body font-medium text-[11px] uppercase tracking-[0.25em] mb-8 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
                 <span className="w-4 h-px" style={{ backgroundColor: "var(--accent)" }} /> Formation
               </h2>
               <div className="space-y-8">
                 {cv.formations.map((f: { annee: string; titre: string; etablissement: string; description: string }, i: number) => (
                   <div key={i} className="pl-5 transition-colors" style={{ borderLeft: "1px solid var(--border)" }}>
                     <p className="text-[10px] tracking-[0.2em] uppercase font-medium mb-1" style={{ color: "var(--accent)" }}>{f.annee}</p>
-                    <h3 className="font-display font-bold text-base mb-0.5" style={{ color: "var(--text)" }}>{f.titre}</h3>
+                    <h3 className="font-display text-xl mb-0.5" style={{ color: "var(--text)" }}>{f.titre}</h3>
                     <p className="text-xs mb-2" style={{ color: "var(--text-muted)" }}>{f.etablissement}</p>
                     <p className="font-light text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{f.description}</p>
                   </div>
@@ -69,14 +70,14 @@ export default function CVPage() {
             </div>
 
             <div>
-              <h2 className="font-display font-bold text-[11px] uppercase tracking-[0.25em] mb-8 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
+              <h2 className="font-body font-medium text-[11px] uppercase tracking-[0.25em] mb-8 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
                 <span className="w-4 h-px" style={{ backgroundColor: "var(--accent)" }} /> Expériences
               </h2>
               <div className="space-y-8">
                 {cv.experiences.map((e: { annee: string; titre: string; role: string; description: string }, i: number) => (
                   <div key={i} className="pl-5 transition-colors" style={{ borderLeft: "1px solid var(--border)" }}>
                     <p className="text-[10px] tracking-[0.2em] uppercase font-medium mb-1" style={{ color: "var(--accent)" }}>{e.annee}</p>
-                    <h3 className="font-display font-bold text-base mb-0.5" style={{ color: "var(--text)" }}>{e.titre}</h3>
+                    <h3 className="font-display text-xl mb-0.5" style={{ color: "var(--text)" }}>{e.titre}</h3>
                     <p className="text-xs mb-2 italic" style={{ color: "var(--text-muted)" }}>{e.role}</p>
                     <p className="font-light text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{e.description}</p>
                   </div>
@@ -87,7 +88,7 @@ export default function CVPage() {
 
           <div className="space-y-10">
             <div>
-              <h2 className="font-display font-bold text-[11px] uppercase tracking-[0.25em] mb-5 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
+              <h2 className="font-body font-medium text-[11px] uppercase tracking-[0.25em] mb-5 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
                 <span className="w-4 h-px" style={{ backgroundColor: "var(--accent)" }} /> Compétences
               </h2>
               <div className="flex flex-wrap gap-1.5">
@@ -100,7 +101,7 @@ export default function CVPage() {
             </div>
 
             <div>
-              <h2 className="font-display font-bold text-[11px] uppercase tracking-[0.25em] mb-5 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
+              <h2 className="font-body font-medium text-[11px] uppercase tracking-[0.25em] mb-5 flex items-center gap-3" style={{ color: "var(--text-muted)" }}>
                 <span className="w-4 h-px" style={{ backgroundColor: "var(--accent)" }} /> Intérêts
               </h2>
               <ul className="space-y-2">
@@ -114,7 +115,7 @@ export default function CVPage() {
             </div>
 
             <div className="rounded-xl p-5 space-y-3" style={{ backgroundColor: "var(--bg2)", border: "1px solid var(--border)" }}>
-              <h2 className="font-display font-bold text-[11px] uppercase tracking-[0.25em]" style={{ color: "var(--text-muted)" }}>Contact</h2>
+              <h2 className="font-body font-medium text-[11px] uppercase tracking-[0.25em]" style={{ color: "var(--text-muted)" }}>Contact</h2>
               <a href={`mailto:${about.email}`} className="block text-xs transition-colors" style={{ color: "var(--text-muted)" }}>
                 {about.email}
               </a>

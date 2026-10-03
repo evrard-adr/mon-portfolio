@@ -47,19 +47,19 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
             )}
           </div>
 
-          <h1 className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-8"
+          <h1 className="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-8"
             style={{ color: "var(--text)" }}>
             {reflexion.titre}
           </h1>
 
-          <p className="text-base md:text-lg font-light leading-relaxed border-l-2 pl-5"
+          <p className="font-display italic text-xl md:text-2xl leading-relaxed border-l-2 pl-6"
             style={{ color: "var(--text-muted)", borderColor: "var(--accent-border)" }}>
             {reflexion.chapeau}
           </p>
 
           <div className="flex items-center gap-4 mt-10">
             <div className="w-8 h-px" style={{ backgroundColor: "var(--accent)" }} />
-            <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-faint)" }}>
+            <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>
               Evrard André
             </span>
           </div>
@@ -69,7 +69,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
           {reflexion.contenu.map((bloc: { type: string; text: string }, i: number) => {
             if (bloc.type === "heading") {
               return (
-                <h2 key={i} className="font-display font-bold text-xl md:text-2xl pt-6"
+                <h2 key={i} className="font-display text-2xl md:text-3xl pt-8"
                   style={{ color: "var(--text)" }}>
                   {bloc.text}
                 </h2>
@@ -81,7 +81,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
                   style={{ backgroundColor: "var(--accent-glow)", border: "1px solid var(--accent-border)" }}>
                   <span className="absolute top-4 left-6 font-display text-5xl leading-none select-none"
                     style={{ color: "var(--accent)", opacity: 0.4 }}>"</span>
-                  <p className="font-display font-bold text-lg md:text-xl leading-snug relative z-10"
+                  <p className="font-display italic text-xl md:text-2xl leading-snug relative z-10"
                     style={{ color: "var(--text)" }}>
                     {bloc.text}
                   </p>
@@ -89,7 +89,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
               );
             }
             return (
-              <p key={i} className="text-base font-light leading-[1.9] text-justify"
+              <p key={i} className="text-[17px] font-light leading-[1.95]"
                 style={{ color: "var(--text-muted)" }}>
                 {bloc.text}
               </p>
