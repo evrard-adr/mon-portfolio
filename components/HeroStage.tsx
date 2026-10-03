@@ -127,10 +127,10 @@ export default function HeroStage() {
         className="absolute inset-x-0 top-[8.4rem] z-[1] flex flex-col items-center lg:top-[calc(100svh-var(--ph)*0.8)] lg:-translate-y-1/2 lg:grid lg:grid-cols-[1fr_var(--sp)_1fr] lg:items-center"
       >
         <h1 className="contents">
-          <span className="w1 block font-display leading-[0.95] text-[min(17vw,11.5svh)] lg:col-start-1 lg:justify-self-end lg:text-[min(10.5vw,19svh)]" style={{ color: "var(--text)" }}>
+          <span className="w1 block font-display leading-[0.88] text-[min(21vw,13.5svh)] lg:col-start-1 lg:justify-self-end lg:text-[min(13vw,23svh)]" style={{ color: "var(--text)" }}>
             <Chars text="Evrard" />
           </span>
-          <span className="w2 relative block font-display italic leading-[0.95] text-[min(17vw,11.5svh)] lg:col-start-3 lg:justify-self-start lg:text-[min(10.5vw,19svh)]" style={{ color: "var(--accent)" }}>
+          <span className="w2 relative block font-display leading-[0.88] text-[min(21vw,13.5svh)] lg:col-start-3 lg:justify-self-start lg:text-[min(13vw,23svh)]" style={{ color: "var(--accent)" }}>
             <Chars text="André" />
             {/* Trait de « ligne » avec ses stations */}
             <span className="pointer-events-none absolute inset-x-0 bottom-[0.02em] block h-0" aria-hidden="true">

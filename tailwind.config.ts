@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         body: ["var(--font-dm)", "sans-serif"],
-        display: ["var(--font-fraunces)", "sans-serif"],
+        display: ["var(--font-display)", "sans-serif"],
       },
       colors: {
         bg: "var(--bg)",

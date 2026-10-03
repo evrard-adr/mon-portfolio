@@ -43,7 +43,8 @@
   --hl: #23378a;
 }
 
-:where(.font-display) { font-weight: 600; letter-spacing: -0.025em; font-variation-settings: "SOFT" 40; }
+:where(.font-display) { font-weight: 800; letter-spacing: -0.02em; font-stretch: 88%; }
+.font-display, .font-display * { font-style: normal; }
 
 /* ── Système « ligne de métro » : pastilles, traits, stations ── */
 .badge-line { display: inline-grid; place-items: center; width: 1.7em; height: 1.7em; flex: none; border-radius: 50%; background: var(--c, var(--l-a)); color: #fff; font-family: var(--font-dm), sans-serif; font-weight: 800; font-size: .8em; line-height: 1; box-shadow: 0 0 0 2px var(--card); }

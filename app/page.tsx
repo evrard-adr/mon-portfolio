@@ -24,7 +24,7 @@ function Label({ letter, color, text }: { letter: string; color: string; text: s
   );
 }
 
-const H2 = "font-display leading-[1] text-[clamp(2.4rem,7.2vw,6.4rem)]";
+const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
@@ -44,7 +44,7 @@ export default function Home() {
       <div className="relative z-10 py-5" style={{ background: "var(--navy)", color: "#f5f1e8" }}>
         <Marquee duration={70}>
           {tickerWords.map((w, i) => (
-            <span key={i} className="font-display flex items-center whitespace-nowrap text-3xl italic md:text-5xl">
+            <span key={i} className="font-display flex items-center whitespace-nowrap text-4xl md:text-6xl">
               {w}
               <span className="mx-6 flex items-center gap-1 md:mx-9" aria-hidden="true"><i className="block h-2.5 w-2.5 rounded-full" style={{ background: "var(--l-a)" }} /><i className="block h-2.5 w-2.5 rounded-full" style={{ background: "var(--l-b)" }} /><i className="block h-2.5 w-2.5 rounded-full" style={{ background: "var(--l-c)" }} /><i className="block h-2.5 w-2.5 rounded-full" style={{ background: "var(--l-d)" }} /></span>
             </span>
@@ -198,7 +198,7 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="overflow-hidden px-6 pb-8 pt-16 md:px-14 lg:px-20" style={{ background: "var(--navy)", color: "#f5f1e8" }}>
-        <p className="font-display select-none whitespace-nowrap text-center italic leading-none text-[clamp(2.6rem,11vw,10.5rem)]" style={{ color: "var(--pink)" }} aria-hidden="true">Evrard André</p>
+        <p className="font-display select-none whitespace-nowrap text-center leading-none text-[clamp(3rem,15vw,15rem)]" style={{ color: "var(--pink)" }} aria-hidden="true">Evrard André</p>
         <div className="mx-auto mt-10 flex max-w-6xl items-center justify-between text-xs" style={{ color: "rgba(245,241,232,0.7)" }}>
           <span className="font-display text-base" style={{ color: "#f5f1e8" }}>Evrard André</span>
           <span>Lyon · {new Date().getFullYear()}</span>

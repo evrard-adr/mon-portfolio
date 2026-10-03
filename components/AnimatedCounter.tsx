@@ -46,7 +46,7 @@ export default function AnimatedCounter({ target, suffix = "", label }: Animated
   return (
     <div ref={ref} className="flex flex-col items-center gap-2">
       <span
-        className="font-display text-6xl md:text-8xl tabular-nums italic"
+        className="font-display text-6xl md:text-8xl tabular-nums"
         style={{ color: "var(--accent)" }}
       >
         {count}{suffix}

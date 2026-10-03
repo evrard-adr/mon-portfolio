@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans, Lexend } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans, Lexend } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import A11yWidget from "@/components/A11yWidget";
 import PageTransition from "@/components/PageTransition";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const fraunces = Fraunces({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  style: ["normal", "italic"],
-  axes: ["opsz", "SOFT"],
+  variable: "--font-display",
+  axes: ["opsz", "wdth"],
 });
 
 const dmSans = DM_Sans({
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${fraunces.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
+    <html lang="fr" className={`${display.variable} ${dmSans.variable} ${lexend.variable}`} suppressHydrationWarning>
       <body className="font-body antialiased">
         <Providers>
           <SmoothScroll />
