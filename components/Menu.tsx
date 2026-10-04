@@ -20,18 +20,19 @@ const LINE_COLORS = ["var(--l-a)", "var(--l-b)", "var(--l-c)", "var(--l-d)"];
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [compact, setCompact] = useState(false);
   const { theme, toggle } = useTheme();
   const pathname = usePathname();
+  const isCompact = compact && !open;
 
-  // L'îlot se masque en descendant, réapparaît dès qu'on remonte.
+  // L'îlot se réduit en pastille « E. » en descendant, se redéploie dès qu'on remonte.
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
-      if (y < 80) setHidden(false);
-      else if (y - last > 8) setHidden(true);
-      else if (last - y > 8) setHidden(false);
+      if (y < 80) setCompact(false);
+      else if (y - last > 8) setCompact(true);
+      else if (last - y > 8) setCompact(false);
       last = y;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -55,13 +56,39 @@ export default function Menu() {
       {/* Nav */}
       <nav
         aria-label="Navigation principale"
-        className="pointer-events-none fixed inset-x-0 top-3 z-[110] flex justify-center px-3 transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)]"
-        style={{ transform: hidden && !open ? "translateY(-170%)" : "none" }}
+        className="pointer-events-none fixed inset-x-0 top-3 z-[110] flex justify-center px-3"
       >
         <div
-          className="pointer-events-auto flex w-full max-w-[560px] items-center justify-between gap-3 rounded-full py-1.5 pl-5 pr-1.5 backdrop-blur-md"
-          style={{ background: "var(--nav-bg)", border: "2px solid var(--ink)", boxShadow: "3px 3px 0 var(--ink)" }}
+          className="pointer-events-auto relative overflow-hidden rounded-full backdrop-blur-md"
+          style={{
+            width: isCompact ? 52 : "100%",
+            maxWidth: isCompact ? 52 : 560,
+            height: 52,
+            transform: isCompact ? "translateX(calc(50vw - 2.375rem))" : "none",
+            background: "var(--nav-bg)",
+            border: "2px solid var(--ink)",
+            boxShadow: "3px 3px 0 var(--ink)",
+            transition: "width .7s cubic-bezier(.76,0,.24,1), max-width .7s cubic-bezier(.76,0,.24,1), transform .7s cubic-bezier(.76,0,.24,1)",
+          }}
         >
+          {/* Pastille « E. » (mode réduit) */}
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label="Ouvrir le menu"
+            tabIndex={isCompact ? 0 : -1}
+            className="font-display absolute inset-0 grid place-items-center text-xl"
+            style={{ color: "var(--text)", opacity: isCompact ? 1 : 0, pointerEvents: isCompact ? "auto" : "none", transition: isCompact ? "opacity .3s .3s" : "opacity .15s" }}
+          >
+            <span>E<span style={{ color: "var(--accent)" }}>.</span></span>
+          </button>
+
+          {/* Contenu complet */}
+          <div
+            className="flex items-center justify-between gap-3 py-1 pl-5 pr-1"
+            style={{ width: "min(calc(100vw - 1.5rem - 4px), 556px)", opacity: isCompact ? 0 : 1, pointerEvents: isCompact ? "none" : "auto", transition: isCompact ? "opacity .15s" : "opacity .3s .3s" }}
+            aria-hidden={isCompact}
+          >
         <Link href="/" className="font-display text-lg tracking-tight" style={{ color: "var(--text)" }} onClick={() => setOpen(false)}>
           <span>Evrard</span><span style={{ color: "var(--accent)" }}>.</span>
         </Link>
@@ -98,7 +125,8 @@ export default function Menu() {
               style={{ backgroundColor: "var(--text)", transform: open ? "translateY(-4px) rotate(-45deg)" : "none" }} />
           </button>
         </div>
-              </div>
+          </div>
+        </div>
       </nav>
 
       {/* Menu plein écran : s'ouvre en cercle depuis l'îlot */}
