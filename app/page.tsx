@@ -29,7 +29,7 @@ const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
-  const { about, socials, gallery, engagements, stats, projets, creations, creationsLien } = content as any;
+  const { about, socials, gallery, engagements, stats, projets, creations, creationsLiens } = content as any;
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -125,7 +125,7 @@ export default function Home() {
       </section>
 
       {/* ── CRÉATIONS ── */}
-      <section id="creations" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
+      <section id="creations" className="overflow-x-clip px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
           <Label letter="D" color="var(--l-d)" text="Mes créations" />
           <h2 className={`${H2} mb-6`} data-mask>
@@ -133,9 +133,9 @@ export default function Home() {
             <span className="mask-line"><span><span className="hl-mark">donnent envie.</span></span></span>
           </h2>
           <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            Affiches et posts que je conçois pour le Parlement des Étudiants, au national comme à Lyon : annonces de publications, lancements, événements, identité visuelle.
+            Affiches, annonces et contenus que je conçois pour le Parlement des Étudiants, et mes prises de parole sur mon propre compte.
           </p>
-          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4 [&>*]:min-w-0">
             {creations.map((c: { img: string; tag?: string; titre: string; desc: string; lien?: string }, i: number) => {
               const fig = (
                 <figure className="card-brut group relative h-full overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }}>
@@ -156,10 +156,19 @@ export default function Home() {
                 </div>
               );
             })}
-            <a href={creationsLien.url} target="_blank" rel="noopener noreferrer" className="card-brut flex aspect-[4/5] flex-col justify-between p-5 md:p-6 lg:aspect-auto" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "1deg" }}>
-              <span className="font-display text-2xl leading-tight md:text-3xl">Tous les posts sur {creationsLien.label}</span>
-              <span className="text-4xl">↗</span>
-            </a>
+            <div className="card-brut col-span-2 flex flex-col justify-between gap-6 p-6 md:p-8" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-0.6deg" }} data-reveal>
+              <div>
+                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Mon compte</p>
+                <a href={creationsLiens.principal.url} target="_blank" rel="noopener noreferrer" className="font-display block text-3xl leading-none [overflow-wrap:anywhere] md:text-5xl">{creationsLiens.principal.label} ↗</a>
+                <p className="mt-3 max-w-sm text-sm font-medium leading-snug" style={{ opacity: 0.8 }}>{creationsLiens.principal.desc}</p>
+              </div>
+              <p className="text-xs font-bold">
+                Aussi :{" "}
+                {creationsLiens.secondaires.map((l: { label: string; url: string }, i: number) => (
+                  <span key={l.url}>{i > 0 && " · "}<a href={l.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 [overflow-wrap:anywhere]">{l.label}</a></span>
+                ))}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -170,7 +179,7 @@ export default function Home() {
         style={{ background: "var(--navy)", color: "#f5f1e8", ["--accent" as string]: "#ffd6a5", ["--text-muted" as string]: "rgba(245,241,232,0.7)" }}
       >
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4 md:gap-6">
+          <div className="grid grid-cols-3 gap-4 text-center md:gap-6">
             {stats.map((s: { value: number; suffix: string; label: string }, i: number) => (
               <AnimatedCounter key={i} target={s.value} suffix={s.suffix} label={s.label} />
             ))}

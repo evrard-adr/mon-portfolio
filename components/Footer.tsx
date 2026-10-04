@@ -16,7 +16,7 @@ const SITE = [
 ];
 
 const SOCIALS = [
-  { label: "Instagram", href: "https://instagram.com/evrardadr" },
+  { label: "Instagram @evrardadr", href: "https://instagram.com/evrardadr" },
   { label: "LinkedIn", href: "https://linkedin.com/in/evrardandre" },
   { label: "Twitter / X", href: "https://x.com/evrard_andre" },
 ];

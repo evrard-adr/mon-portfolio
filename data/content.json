@@ -7,7 +7,7 @@
   },
   "about": {
     "teaser": "Étudiant en droit à Lyon 3, passionné de droit public et de science politique. Responsable communication du Parlement des Étudiants, je sais construire un message et animer des réseaux sociaux. Usager quotidien des transports en commun, je m'intéresse aussi à la manière dont on les pense et les fait évoluer. Je veux mettre ces compétences au service des élus et de l'action publique.",
-    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, montage vidéo (Canva, CapCut, Premiere Pro). J'ai aussi été chargé de communication pendant la campagne « Cœur Lyonnais » de Jean-Michel Aulas et « Grand Cœur Lyonnais » de Véronique Sarselli, aujourd'hui présidente de la Métropole de Lyon : j'y ai travaillé les éléments de langage. Je peux rédiger un discours ou un argumentaire, et je suis très à l'aise en anglais (niveau C1 Cambridge).\n\nJ'ai été président de groupe lors des simulations parlementaires du Parlement des Étudiants : même fictif, on y apprend les rouages du travail parlementaire. Un jour, j'aimerais travailler aux côtés d'un élu, voir de l'intérieur comment se prennent les décisions, et pourquoi pas porter moi-même des projets pour mon territoire.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
+    "text": "Je suis étudiant en droit à Lyon 3, mais la science politique m'intéresse tout autant. Ce qui me plaît vraiment, c'est la chose publique : comment une décision se construit, comment elle se justifie, et ce qu'elle change concrètement pour les gens. Je retrouve tout ça dans mon engagement associatif, où le droit et le politique finissent toujours par se croiser.\n\nJe suis responsable communication au Parlement des Étudiants de Lyon, et depuis peu au niveau national aussi. C'est concret : structurer un message, porter une institution, essayer de convaincre. À côté de ça, je travaille en job étudiant, ce qui garde les pieds sur terre.\n\nJe ne fais pas d'études de communication politique, mais je me suis formé sur le terrain : réseaux sociaux, identité visuelle, relations presse, montage vidéo (Canva, CapCut, Premiere Pro). J'ai aussi été chargé de communication pendant la campagne « Cœur Lyonnais » de Jean-Michel Aulas et « Grand Cœur Lyonnais » de Véronique Sarselli, aujourd'hui présidente de la Métropole de Lyon : j'y ai travaillé les éléments de langage. Je peux rédiger un discours ou un argumentaire, et je suis très à l'aise en anglais (niveau C1 Cambridge).\n\nJ'ai été président de groupe lors des simulations parlementaires du Parlement des Étudiants : même fictif, on y apprend les rouages du travail parlementaire. Un jour, j'aimerais travailler aux côtés d'un élu, voir de l'intérieur comment se prennent les décisions, et pourquoi pas porter moi-même des projets pour mon territoire.\n\nJe prends aussi la parole à titre personnel sur mon compte Instagram @evrardadr : vie publique, transports, actualité locale. Mes publications n'engagent que moi.\n\nEn dehors de tout ça, je regarde le ciel dès qu'un orage approche, je fais un peu de photo, et je m'intéresse beaucoup à la mobilité urbaine et aux transports. Je joue du violoncelle depuis tout petit et j'apprends le piano en ce moment. Des choses assez différentes, mais toujours la même envie de comprendre comment un système fonctionne, qu'il soit juridique, urbain ou météo.",
     "location": "Lyon, France",
     "email": "evrard.andre@aol.com",
     "phone": "07 67 26 38 51"
@@ -181,7 +181,7 @@
     {
       "icon": "📣",
       "titre": "Communication & réseaux sociaux",
-      "desc": "Responsable communication du Parlement des Étudiants (Lyon, puis national) : réseaux sociaux (4 600 abonnés Instagram pour le national, 1 800 pour Lyon), identité visuelle, relations presse. Chargé de communication de la campagne Cœur Lyonnais / Grand Cœur Lyonnais, où j'ai travaillé les éléments de langage."
+      "desc": "Responsable communication du Parlement des Étudiants (Lyon, puis national) : réseaux sociaux de plusieurs milliers d'abonnés, identité visuelle, relations presse. Chargé de communication de la campagne Cœur Lyonnais / Grand Cœur Lyonnais, où j'ai travaillé les éléments de langage."
     },
     {
       "icon": "🚋",
@@ -196,23 +196,18 @@
   ],
   "stats": [
     {
-      "value": 4600,
-      "label": "Abonnés Instagram · PE national",
-      "suffix": "+"
-    },
-    {
-      "value": 3200,
-      "label": "Abonnés LinkedIn · PE national",
-      "suffix": "+"
-    },
-    {
-      "value": 1800,
-      "label": "Abonnés Instagram · PE Lyon",
+      "value": 9700,
+      "label": "Abonnés cumulés · comptes du PE (national + Lyon)",
       "suffix": "+"
     },
     {
       "value": 25,
       "label": "Sections coordonnées",
+      "suffix": ""
+    },
+    {
+      "value": 2,
+      "label": "Campagnes accompagnées en 2026",
       "suffix": ""
     }
   ],
@@ -418,12 +413,6 @@
       "desc": "Annonce du nouveau site du Parlement des Étudiants"
     },
     {
-      "img": "/creations/nouvelle-section-orleans.jpg",
-      "tag": "National",
-      "titre": "Nouvelle section · Orléans",
-      "desc": "Bienvenue à la section orléanaise"
-    },
-    {
       "img": "/creations/simulation-historique.jpg",
       "tag": "Lyon",
       "titre": "Simulation historique · Lois Ferry",
@@ -436,8 +425,21 @@
       "desc": "Annonce de l'événement, Hôtel du département"
     }
   ],
-  "creationsLien": {
-    "url": "https://instagram.com/parlementdesetudiants",
-    "label": "@parlementdesetudiants"
+  "creationsLiens": {
+    "principal": {
+      "label": "@evrardadr",
+      "url": "https://instagram.com/evrardadr",
+      "desc": "Mon compte : vie publique, transports, actualité. Mes publications n'engagent que moi."
+    },
+    "secondaires": [
+      {
+        "label": "@parlementdesetudiants",
+        "url": "https://instagram.com/parlementdesetudiants"
+      },
+      {
+        "label": "@pe.lyon",
+        "url": "https://instagram.com/pe.lyon"
+      }
+    ]
   }
 }

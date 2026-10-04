@@ -163,7 +163,7 @@ export default function HeroStage() {
       <div data-depth="40" className="pointer-events-none absolute inset-0 z-[3]">
         <div className="absolute left-3 top-[50%] -rotate-6 lg:left-[7%] lg:top-[52%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-a)" }}>A</b>Droit public · Lyon 3</span></div>
         <div className="absolute right-3 top-[55%] rotate-6 lg:right-[6%] lg:top-[44%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-b)" }}>B</b>Communication & réseaux</span></div>
-        <div className="absolute right-[6%] top-[70%] -rotate-3 lg:right-[13%] lg:top-[74%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-d)" }}>D</b>Parlement des Étudiants</span></div>
+        <div className="absolute right-[6%] top-[70%] -rotate-3 lg:right-[13%] lg:top-[74%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-d)" }}>D</b>Vie publique & engagement</span></div>
         <div className="absolute left-[8%] top-[66%] rotate-3 lg:left-[15%] lg:top-[72%]"><span className={`hero-chip block ${chip}`}><b className="badge-line" style={{ ["--c" as string]: "var(--l-c)" }}>C</b>Transports en commun</span></div>
       </div>
 
