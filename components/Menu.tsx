@@ -64,11 +64,10 @@ export default function Menu() {
             width: isCompact ? 52 : "100%",
             maxWidth: isCompact ? 52 : 560,
             height: 52,
-            transform: isCompact ? "translateX(calc(50vw - 2.375rem))" : "none",
-            background: "var(--nav-bg)",
+                        background: "var(--nav-bg)",
             border: "2px solid var(--ink)",
             boxShadow: "3px 3px 0 var(--ink)",
-            transition: "width .7s cubic-bezier(.76,0,.24,1), max-width .7s cubic-bezier(.76,0,.24,1), transform .7s cubic-bezier(.76,0,.24,1)",
+            transition: "width .7s cubic-bezier(.76,0,.24,1), max-width .7s cubic-bezier(.76,0,.24,1)",
           }}
         >
           {/* Pastille « E. » (mode réduit) */}
