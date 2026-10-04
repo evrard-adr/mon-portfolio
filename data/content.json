@@ -325,6 +325,12 @@
         "titre": "Certificat Cambridge · niveau C1",
         "etablissement": "Cambridge English",
         "description": "Anglais courant, à l'écrit comme à l'oral."
+      },
+      {
+        "annee": "Baccalauréat",
+        "titre": "Baccalauréat général · mention assez bien",
+        "etablissement": "Spécialités HGGSP (histoire-géographie, géopolitique, sciences politiques) et HLP (humanités, littérature, philosophie) · section européenne anglais",
+        "description": "Options latin et DGEMC (droit et grands enjeux du monde contemporain)."
       }
     ],
     "experiences": [
@@ -441,5 +447,69 @@
         "url": "https://instagram.com/pe.lyon"
       }
     ]
-  }
+  },
+  "parcours": [
+    {
+      "date": "2024",
+      "titre": "Licence de droit",
+      "lieu": "Université Jean Moulin Lyon 3",
+      "desc": "Droit civil, droit constitutionnel, droit des obligations, introduction au droit public."
+    },
+    {
+      "date": "Juin 2025",
+      "titre": "Responsable communication",
+      "lieu": "Parlement des Étudiants de Lyon",
+      "desc": "Réseaux sociaux, identité visuelle, relations presse. Refonte complète de la communication de la section."
+    },
+    {
+      "date": "Municipales 2026",
+      "titre": "Chargé de communication de campagne",
+      "lieu": "Cœur Lyonnais · Grand Cœur Lyonnais",
+      "desc": "Éléments de langage et communication auprès des listes de Jean-Michel Aulas et de Véronique Sarselli."
+    },
+    {
+      "date": "Juin 2026",
+      "titre": "Responsable communication nationale",
+      "lieu": "Parlement des Étudiants · Bureau national",
+      "desc": "Communication des 25 sections : contenu, cohérence visuelle, coordination avec les bureaux locaux."
+    },
+    {
+      "date": "2026",
+      "titre": "Livre blanc du Parlement des Étudiants",
+      "lieu": "Conception et rédaction",
+      "desc": "Bilan de l'année écoulée et projection du mandat 2026-2027."
+    },
+    {
+      "date": "Prochaine station",
+      "titre": "À vos côtés ?",
+      "lieu": "",
+      "desc": "Un cabinet, une équipe, un projet : j'arrive avec le droit public, la plume et le sens du terrain."
+    }
+  ],
+  "concretement": [
+    {
+      "verbe": "Écrire",
+      "desc": "Discours, argumentaires, éléments de langage : écrits pour des listes en campagne et des groupes parlementaires en simulation."
+    },
+    {
+      "verbe": "Analyser",
+      "desc": "Notes de synthèse, veille juridique et politique, lecture de textes : le droit public comme boussole."
+    },
+    {
+      "verbe": "Animer",
+      "desc": "Réseaux sociaux, calendrier de publication, cohérence de l'image : des comptes de plusieurs milliers d'abonnés."
+    },
+    {
+      "verbe": "Créer",
+      "desc": "Affiches, visuels, identité graphique (Canva), montage vidéo (CapCut, Premiere Pro)."
+    },
+    {
+      "verbe": "Préparer",
+      "desc": "Débats, interventions, dossiers : j'ai présidé un groupe parlementaire en simulation."
+    },
+    {
+      "verbe": "Organiser",
+      "desc": "Événements, coordination de bénévoles et de 25 sections à l'échelle nationale."
+    }
+  ]
 }

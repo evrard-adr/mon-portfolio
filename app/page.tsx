@@ -10,6 +10,7 @@ import ScrubText from "@/components/ScrubText";
 import Magnetic from "@/components/Magnetic";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import Parcours from "@/components/Parcours";
 
 export const dynamic = "force-dynamic";
 
@@ -29,7 +30,7 @@ const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
-  const { about, socials, gallery, engagements, stats, projets, creations, creationsLiens } = content as any;
+  const { about, socials, gallery, engagements, stats, projets, creations, creationsLiens, parcours, concretement } = content as any;
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -75,10 +76,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ENGAGEMENTS ── */}
-      <section className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
+      {/* ── PARCOURS ── */}
+      <section id="parcours" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="B" color="var(--l-b)" text="Ce que j'apporte" />
+          <Label letter="B" color="var(--l-b)" text="Mon parcours" />
+          <h2 className={`${H2} mb-20`} data-mask>
+            <span className="mask-line"><span>De station</span></span>
+            <span className="mask-line"><span>en <span className="hl-mark">station.</span></span></span>
+          </h2>
+          <Parcours etapes={parcours} />
+        </div>
+      </section>
+
+      {/* ── ENGAGEMENTS ── */}
+      <section className="px-6 py-28 md:px-14 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <Label letter="C" color="var(--l-c)" text="Ce que j'apporte" />
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
               <div
@@ -97,10 +110,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CONCRÈTEMENT ── */}
+      <section id="concretement" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
+        <div className="mx-auto max-w-6xl">
+          <Label letter="D" color="var(--l-d)" text="Concrètement" />
+          <h2 className={`${H2} mb-14`} data-mask>
+            <span className="mask-line"><span>Pour un élu et</span></span>
+            <span className="mask-line"><span>son équipe, je peux…</span></span>
+          </h2>
+          <div style={{ borderTop: "2px solid var(--ink)" }}>
+            {concretement.map((c: { verbe: string; desc: string }, i: number) => (
+              <div key={i} data-reveal data-delay={String(Math.min(i + 1, 5))}>
+                <div className="row-link grid items-baseline gap-2 py-7 md:grid-cols-[minmax(0,1fr)_1.2fr] md:gap-10" style={{ borderBottom: "2px solid var(--ink)" }}>
+                  <h3 className="font-display text-5xl leading-none md:text-7xl" style={{ color: "var(--text)" }}>{c.verbe}<span style={{ color: "var(--accent)" }}>.</span></h3>
+                  <p className="text-base font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>{c.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── PROJETS ── */}
       <section id="projets" className="px-6 py-32 md:px-14 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <Label letter="C" color="var(--l-c)" text="Projets" />
+          <Label letter="A" color="var(--l-a)" text="Projets" />
           <div style={{ borderTop: "2px solid var(--ink)" }}>
             {projets.map((p: { titre: string; desc: string; date: string; tag: string; lien: string }, i: number) => {
               const inner = (
@@ -124,10 +158,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── CITATION ── */}
+      <section className="px-6 py-28 md:px-14 lg:px-20" style={{ background: "var(--navy)", color: "#f5f1e8", ["--hl" as string]: "#2f6bff" }}>
+        <div className="mx-auto max-w-5xl">
+          <ScrubText
+            className="font-display text-[clamp(2rem,6vw,5rem)] leading-[1.02]"
+            parts={[
+              { t: "« La chose publique, c'est comment une décision" },
+              { t: "se construit, se justifie,", hl: true },
+              { t: "et ce qu'elle change concrètement pour les gens. »" },
+            ]}
+          />
+          <p className="mt-10 flex items-center gap-4 text-sm font-bold">
+            <span className="stationline on" style={{ ["--c" as string]: "var(--l-a)" }} /> Evrard André
+          </p>
+        </div>
+      </section>
+
       {/* ── CRÉATIONS ── */}
       <section id="creations" className="overflow-x-clip px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="D" color="var(--l-d)" text="Mes créations" />
+          <Label letter="B" color="var(--l-b)" text="Mes créations" />
           <h2 className={`${H2} mb-6`} data-mask>
             <span className="mask-line"><span>Des posts qui</span></span>
             <span className="mask-line"><span><span className="hl-mark">donnent envie.</span></span></span>
@@ -190,7 +241,7 @@ export default function Home() {
       {/* ── GALLERY ── */}
       <section id="gallery" className="overflow-hidden py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
-          <Label letter="E" color="var(--l-b)" text="Galerie" />
+          <Label letter="C" color="var(--l-c)" text="Galerie" />
         </div>
         <div className="py-6">
           <Marquee duration={90} slowOnHover>
@@ -227,7 +278,7 @@ export default function Home() {
       {/* ── CONTACT / RÉSEAUX ── */}
       <section id="socials" className="px-6 py-32 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="A" color="var(--l-a)" text="Réseaux" />
+          <Label letter="D" color="var(--l-d)" text="Réseaux" />
           <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
             <h2 className="font-display leading-[0.95] text-[clamp(2.3rem,6vw,5.4rem)]" data-mask>
               <span className="mask-line"><span>Un collaborateur</span></span>

@@ -6,11 +6,13 @@ const EMAIL = "evrard.andre@aol.com";
 const SITE = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/about" },
+  { label: "Parcours", href: "/#parcours" },
   { label: "Projets", href: "/#projets" },
   { label: "Créations", href: "/#creations" },
   { label: "Réflexion", href: "/reflexion" },
   { label: "Galerie", href: "/#gallery" },
   { label: "CV", href: "/cv" },
+  { label: "CV en PDF", href: "/cv-evrard-andre.pdf" },
   { label: "Contact", href: "/contact" },
   { label: "Mentions légales", href: "/mentions-legales" },
 ];

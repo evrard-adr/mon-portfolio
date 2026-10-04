@@ -1,24 +1,10 @@
-"use client";
-import { useRouter } from "next/navigation";
-
 export default function HeroPDFButton() {
-  const router = useRouter();
-
-  const handleClick = () => {
-    // Navigue vers /cv puis déclenche l'impression
-    router.push("/cv?print=1");
-  };
-
   return (
-    <button
-      onClick={handleClick}
-      className="btn-pill btn-ghost"
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
-        <path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/>
-        <path d="M4 16v4h16v-4"/>
+    <a href="/cv-evrard-andre.pdf" download="CV-Evrard-Andre.pdf" className="btn-pill btn-ghost">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-3.5 w-3.5" aria-hidden="true">
+        <path d="M12 4v11m0 0l-4-4m4 4l4-4M4 19h16" />
       </svg>
       CV PDF
-    </button>
+    </a>
   );
 }

@@ -7,6 +7,7 @@ import { useTheme } from "./Providers";
 const links = [
   { label: "Accueil", href: "/" },
   { label: "À propos", href: "/about" },
+  { label: "Parcours", href: "/#parcours" },
   { label: "Projets", href: "/#projets" },
   { label: "Créations", href: "/#creations" },
   { label: "Réflexion", href: "/reflexion" },
@@ -15,7 +16,7 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
-const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+const LETTERS = ["A", "B", "C", "D", "A", "B", "C", "D", "A"];
 const LINE_COLORS = ["var(--l-a)", "var(--l-b)", "var(--l-c)", "var(--l-d)"];
 
 export default function Menu() {

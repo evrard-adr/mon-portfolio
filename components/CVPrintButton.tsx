@@ -1,16 +1,10 @@
-"use client";
-
 export default function CVPrintButton() {
   return (
-    <button
-      onClick={() => window.print()}
-      className="btn-pill print:hidden" style={{ padding: ".55rem 1.1rem", fontSize: ".75rem" }}
-    >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5">
-        <path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/>
-        <path d="M4 16v4h16v-4"/>
+    <a href="/cv-evrard-andre.pdf" download="CV-Evrard-Andre.pdf" className="btn-pill print:hidden" style={{ padding: ".55rem 1.1rem", fontSize: ".75rem" }}>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-3.5 w-3.5" aria-hidden="true">
+        <path d="M12 4v11m0 0l-4-4m4 4l4-4M4 19h16" />
       </svg>
-      Exporter PDF
-    </button>
+      Télécharger le PDF
+    </a>
   );
 }
