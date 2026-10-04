@@ -402,9 +402,9 @@
     },
     {
       "img": "/creations/presidentielle-2027.jpg",
-      "tag": "National",
+      "tag": "Lyon",
       "titre": "Présidentielle 2027",
-      "desc": "Visuel de la simulation de l'élection présidentielle"
+      "desc": "Visuel de la simulation de l'élection présidentielle, PE Lyon"
     },
     {
       "img": "/creations/quorum.jpg",
@@ -432,11 +432,7 @@
     }
   ],
   "creationsLiens": {
-    "principal": {
-      "label": "@evrardadr",
-      "url": "https://instagram.com/evrardadr",
-      "desc": "Mon compte : vie publique, transports, actualité. Mes publications n'engagent que moi."
-    },
+    "principal": null,
     "secondaires": [
       {
         "label": "@parlementdesetudiants",
@@ -511,5 +507,50 @@
       "verbe": "Organiser",
       "desc": "Événements, coordination de bénévoles et de 25 sections à l'échelle nationale."
     }
-  ]
+  ],
+  "idees": {
+    "intro": "Sur mon compte @evrardadr, je défends mes idées : Europe, climat, mémoire républicaine, droits. Des formats courts, pensés pour être lus et partagés. Mes publications n'engagent que moi.",
+    "lien": {
+      "url": "https://instagram.com/evrardadr",
+      "label": "@evrardadr"
+    },
+    "posts": [
+      {
+        "img": "/posts/europe-canicule.jpg",
+        "tag": "Climat",
+        "titre": "L'Europe s'apprête à suffoquer pour la 4e fois",
+        "url": "https://www.instagram.com/evrardadr/p/DbNu64YDeGT/"
+      },
+      {
+        "img": "/posts/marc-bloch.jpg",
+        "tag": "Mémoire",
+        "titre": "Marc Bloch",
+        "url": "https://www.instagram.com/evrardadr/p/DZ69CY5DoOp/"
+      },
+      {
+        "img": "/posts/appel-18-juin.jpg",
+        "tag": "Mémoire",
+        "titre": "L'appel du 18 juin 1940",
+        "url": "https://www.instagram.com/evrardadr/p/DZu0clUDd9q/"
+      },
+      {
+        "img": "/posts/love-is-love.jpg",
+        "tag": "Droits",
+        "titre": "Journée mondiale contre l'homophobie, la transphobie et la biphobie",
+        "url": "https://www.instagram.com/evrardadr/p/DYbpoouNImP/"
+      },
+      {
+        "img": "/posts/europe-9-mai.jpg",
+        "tag": "Europe",
+        "titre": "Journée de l'Europe",
+        "url": "https://www.instagram.com/evrardadr/p/DYHLRTPDanm/"
+      },
+      {
+        "img": "/posts/paix-8-mai-1945.jpg",
+        "tag": "Mémoire",
+        "titre": "Et la paix revint au monde · 8 mai 1945",
+        "url": "https://www.instagram.com/evrardadr/p/DYDwHhTiHPM/"
+      }
+    ]
+  }
 }
