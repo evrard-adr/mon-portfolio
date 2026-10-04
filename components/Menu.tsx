@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "./Providers";
 
 const links = [
@@ -14,10 +15,14 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
+const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+const LINE_COLORS = ["var(--l-a)", "var(--l-b)", "var(--l-c)", "var(--l-d)"];
+
 export default function Menu() {
   const [open, setOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { theme, toggle } = useTheme();
+  const pathname = usePathname();
 
   // L'îlot se masque en descendant, réapparaît dès qu'on remonte.
   useEffect(() => {
@@ -96,23 +101,41 @@ export default function Menu() {
               </div>
       </nav>
 
-      {/* Overlay */}
-      <div className={`menu-overlay ${open ? "open" : ""}`}>
-        <div className="mb-12">
-          {links.map((l) => (
-            <div key={l.href} className="border-b py-4" style={{ borderColor: "var(--border)" }}>
-              <Link href={l.href} className="menu-link block" onClick={() => setOpen(false)}>
-                {l.label}
-              </Link>
-            </div>
-          ))}
+      {/* Menu plein écran : s'ouvre en cercle depuis l'îlot */}
+      <div className={`menu-overlay ${open ? "open" : ""}`} aria-hidden={!open} data-lenis-prevent>
+        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+          <div className="blob" style={{ left: "-25vw", top: "-10vw", width: "70vw", height: "70vw", background: "var(--pink)", opacity: 0.55 }} />
+          <div className="blob" style={{ right: "-25vw", bottom: "-5vw", width: "65vw", height: "65vw", background: "var(--sky)", opacity: 0.6 }} />
         </div>
-        <a href="mailto:evrard.andre@aol.com" className="btn-pill mb-6 self-start">✉ Me contacter</a>
-        <div className="flex items-center gap-4 mt-4">
-          <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>Instagram</a>
-          
-          <span style={{ color: "var(--border)" }}>·</span>
-          <a href="https://linkedin.com/in/evrardandre" target="_blank" rel="noopener noreferrer" className="text-xs uppercase tracking-widest transition-colors" style={{ color: "var(--text-muted)" }}>LinkedIn</a>
+
+        <nav aria-label="Menu" className="relative mx-auto w-full max-w-3xl">
+          {links.map((l, i) => {
+            const current = l.href === "/" ? pathname === "/" : pathname === l.href;
+            return (
+              <Link
+                key={l.href}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="menu-item group"
+                style={{ ["--i" as string]: i, ["--c" as string]: LINE_COLORS[i % 4] }}
+                aria-current={current ? "page" : undefined}
+              >
+                <span className="badge-line text-sm">{LETTERS[i]}</span>
+                <span className={`menu-label ${current ? "hl-mark on" : ""}`}>{l.label}</span>
+                <span className="menu-arrow ml-auto text-2xl" aria-hidden="true">↗</span>
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="menu-foot relative mx-auto w-full max-w-3xl" style={{ ["--i" as string]: links.length }}>
+          <a href="mailto:evrard.andre@aol.com" className="btn-pill mb-6">✉ Me contacter par mail</a>
+          <div className="flex flex-wrap items-center gap-2">
+            <a href="https://instagram.com/evrardadr" target="_blank" rel="noopener noreferrer" className="btn-pill btn-ghost" style={{ padding: ".5rem 1.1rem", fontSize: ".8rem" }}>Instagram ↗</a>
+            <a href="https://linkedin.com/in/evrardandre" target="_blank" rel="noopener noreferrer" className="btn-pill btn-ghost" style={{ padding: ".5rem 1.1rem", fontSize: ".8rem" }}>LinkedIn ↗</a>
+            <a href="https://x.com/evrard_andre" target="_blank" rel="noopener noreferrer" className="btn-pill btn-ghost" style={{ padding: ".5rem 1.1rem", fontSize: ".8rem" }}>X ↗</a>
+          </div>
+          <p className="mt-6 text-xs" style={{ color: "var(--text-muted)" }}>Droit public · Communication · Transports en commun — Lyon</p>
         </div>
       </div>
     </>
