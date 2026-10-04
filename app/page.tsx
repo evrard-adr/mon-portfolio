@@ -28,7 +28,7 @@ const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
-  const { about, socials, gallery, stats, creations, creationsLiens, parcours, concretement, reflexions, idees } = content as any;
+  const { about, socials, gallery, stats, creations, creationsLiens, parcours, concretement, reflexions } = content as any;
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -149,50 +149,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── IDÉES ── */}
-      <section id="idees" className="px-6 py-28 md:px-14 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          <Label letter="A" color="var(--l-a)" text="Mes idées" />
-          <h2 className={`${H2} mb-6`} data-mask>
-            <span className="mask-line"><span>Je ne fais pas que relayer.</span></span>
-            <span className="mask-line"><span><span className="hl-mark">Je prends position.</span></span></span>
-          </h2>
-          <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }} data-reveal>{idees.intro}</p>
-          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3 [&>*]:min-w-0">
-            {idees.posts.map((c: { img: string; tag: string; titre: string; url: string }, i: number) => (
-              <div key={i} data-reveal data-delay={String((i % 3) + 1)}>
-                <a href={c.url} target="_blank" rel="noopener noreferrer" className="block h-full">
-                  <figure className="card-brut group relative h-full overflow-hidden" style={{ rotate: `${[-1.2, 0.9, -0.7][i % 3]}deg` }}>
-                    <span className="sticker absolute left-3 top-3 z-[1] px-3 py-1 text-[10px] uppercase tracking-widest">{c.tag}</span>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={c.img} alt={c.titre} loading="lazy" className="block aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                    <figcaption className="p-4" style={{ background: "var(--card)", borderTop: "2px solid var(--ink)" }}>
-                      <p className="font-display text-base leading-tight md:text-lg">{c.titre} ↗</p>
-                    </figcaption>
-                  </figure>
-                </a>
-              </div>
-            ))}
-            <a href={idees.lien.url} target="_blank" rel="noopener noreferrer" className="card-brut col-span-2 flex items-center justify-between gap-6 p-6 md:p-8 lg:col-span-3" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-0.5deg" }} data-reveal>
-              <span className="font-display text-3xl leading-none [overflow-wrap:anywhere] md:text-5xl">Tous mes posts sur {idees.lien.label}</span>
-              <span className="text-4xl md:text-5xl" aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ── CRÉATIONS ── */}
       <section id="creations" className="overflow-x-clip px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="B" color="var(--l-b)" text="Pour le Parlement des Étudiants" />
+          <Label letter="A" color="var(--l-a)" text="Ce que j'ai créé" />
           <h2 className={`${H2} mb-6`} data-mask>
-            <span className="mask-line"><span>Des visuels qui</span></span>
-            <span className="mask-line"><span><span className="hl-mark">font venir.</span></span></span>
+            <span className="mask-line"><span>Mes talents au service</span></span>
+            <span className="mask-line"><span>du <span className="hl-mark">Parlement des Étudiants.</span></span></span>
           </h2>
           <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            Affiches, annonces et contenus que je conçois pour le Parlement des Étudiants, au national comme à Lyon.
+            Affiches, infographies et posts, pour le Parlement des Étudiants au national comme à Lyon, et sur mon propre compte : un même savoir-faire, un message clair et une image forte.
           </p>
-          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4 [&>*]:min-w-0">
+          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3 [&>*]:min-w-0">
             {creations.map((c: { img: string; tag?: string; titre: string; desc: string; lien?: string }, i: number) => {
               const fig = (
                 <figure className="card-brut group relative h-full overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }}>
@@ -213,12 +181,14 @@ export default function Home() {
                 </div>
               );
             })}
-            <div className="card-brut col-span-2 flex flex-col justify-between gap-6 p-6 md:p-8" style={{ background: "var(--sky)", color: "#0b1b4d", rotate: "-0.6deg" }} data-reveal>
+            <div className="card-brut col-span-2 flex flex-col justify-between gap-6 p-6 md:p-8 lg:col-span-3 lg:flex-row lg:items-end" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-0.5deg" }} data-reveal>
               <div>
-                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Les comptes du PE</p>
-                <p className="font-display text-3xl leading-none md:text-4xl">Tout le reste est là-bas.</p>
+                <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Mon compte</p>
+                <a href={creationsLiens.principal.url} target="_blank" rel="noopener noreferrer" className="font-display block text-3xl leading-none [overflow-wrap:anywhere] md:text-5xl">{creationsLiens.principal.label} ↗</a>
+                <p className="mt-3 max-w-sm text-sm font-medium leading-snug" style={{ opacity: 0.8 }}>{creationsLiens.principal.desc}</p>
               </div>
               <p className="text-sm font-bold">
+                Les comptes du PE :{" "}
                 {creationsLiens.secondaires.map((l: { label: string; url: string }, i: number) => (
                   <span key={l.url}>{i > 0 && " · "}<a href={l.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 [overflow-wrap:anywhere]">{l.label} ↗</a></span>
                 ))}
@@ -245,7 +215,7 @@ export default function Home() {
       {/* ── GALLERY ── */}
       <section id="gallery" className="overflow-hidden py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
-          <Label letter="C" color="var(--l-c)" text="Galerie" />
+          <Label letter="B" color="var(--l-b)" text="Galerie" />
         </div>
         <div className="py-6">
           <Marquee duration={90} slowOnHover>
@@ -282,7 +252,7 @@ export default function Home() {
       {/* ── CONTACT / RÉSEAUX ── */}
       <section id="socials" className="px-6 py-32 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="D" color="var(--l-d)" text="Réseaux" />
+          <Label letter="C" color="var(--l-c)" text="Réseaux" />
           <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
             <h2 className="font-display leading-[0.95] text-[clamp(2.3rem,6vw,5.4rem)]" data-mask>
               <span className="mask-line"><span>Un collaborateur</span></span>

@@ -401,10 +401,24 @@
       "lien": "https://fr.linkedin.com/posts/le-parlement-des-etudiants_livre-blanc-edition-2026-2027-activity-7511762103150497792-qYJa"
     },
     {
+      "img": "/posts/marc-bloch.jpg",
+      "tag": "Mon compte",
+      "titre": "Marc Bloch",
+      "desc": "Hommage, sur mon compte",
+      "lien": "https://www.instagram.com/evrardadr/p/DZ69CY5DoOp/"
+    },
+    {
       "img": "/creations/presidentielle-2027.jpg",
       "tag": "Lyon",
       "titre": "Présidentielle 2027",
       "desc": "Visuel de la simulation de l'élection présidentielle, PE Lyon"
+    },
+    {
+      "img": "/posts/europe-canicule.jpg",
+      "tag": "Mon compte",
+      "titre": "L'Europe s'apprête à suffoquer pour la 4e fois",
+      "desc": "Format court sur la canicule, sur mon compte",
+      "lien": "https://www.instagram.com/evrardadr/p/DbNu64YDeGT/"
     },
     {
       "img": "/creations/quorum.jpg",
@@ -413,16 +427,24 @@
       "desc": "Annonce du lancement du journal"
     },
     {
-      "img": "/creations/refonte-site.jpg",
-      "tag": "National",
-      "titre": "Refonte du site internet",
-      "desc": "Annonce du nouveau site du Parlement des Étudiants"
+      "img": "/posts/appel-18-juin.jpg",
+      "tag": "Mon compte",
+      "titre": "L'appel du 18 juin 1940",
+      "desc": "Mémoire républicaine, sur mon compte",
+      "lien": "https://www.instagram.com/evrardadr/p/DZu0clUDd9q/"
     },
     {
       "img": "/creations/simulation-historique.jpg",
       "tag": "Lyon",
       "titre": "Simulation historique · Lois Ferry",
       "desc": "Simulation nationale délocalisée à Lyon"
+    },
+    {
+      "img": "/posts/paix-8-mai-1945.jpg",
+      "tag": "Mon compte",
+      "titre": "Et la paix revint au monde · 8 mai 1945",
+      "desc": "Commémoration, sur mon compte",
+      "lien": "https://www.instagram.com/evrardadr/p/DYDwHhTiHPM/"
     },
     {
       "img": "/creations/nuit-du-debat.jpg",
@@ -432,7 +454,11 @@
     }
   ],
   "creationsLiens": {
-    "principal": null,
+    "principal": {
+      "label": "@evrardadr",
+      "url": "https://instagram.com/evrardadr",
+      "desc": "Mon compte personnel. Mes publications n'engagent que moi."
+    },
     "secondaires": [
       {
         "label": "@parlementdesetudiants",
@@ -507,50 +533,5 @@
       "verbe": "Organiser",
       "desc": "Événements, coordination de bénévoles et de 25 sections à l'échelle nationale."
     }
-  ],
-  "idees": {
-    "intro": "Sur mon compte @evrardadr, je défends mes idées : Europe, climat, mémoire républicaine, droits. Des formats courts, pensés pour être lus et partagés. Mes publications n'engagent que moi.",
-    "lien": {
-      "url": "https://instagram.com/evrardadr",
-      "label": "@evrardadr"
-    },
-    "posts": [
-      {
-        "img": "/posts/europe-canicule.jpg",
-        "tag": "Climat",
-        "titre": "L'Europe s'apprête à suffoquer pour la 4e fois",
-        "url": "https://www.instagram.com/evrardadr/p/DbNu64YDeGT/"
-      },
-      {
-        "img": "/posts/marc-bloch.jpg",
-        "tag": "Mémoire",
-        "titre": "Marc Bloch",
-        "url": "https://www.instagram.com/evrardadr/p/DZ69CY5DoOp/"
-      },
-      {
-        "img": "/posts/appel-18-juin.jpg",
-        "tag": "Mémoire",
-        "titre": "L'appel du 18 juin 1940",
-        "url": "https://www.instagram.com/evrardadr/p/DZu0clUDd9q/"
-      },
-      {
-        "img": "/posts/love-is-love.jpg",
-        "tag": "Droits",
-        "titre": "Journée mondiale contre l'homophobie, la transphobie et la biphobie",
-        "url": "https://www.instagram.com/evrardadr/p/DYbpoouNImP/"
-      },
-      {
-        "img": "/posts/europe-9-mai.jpg",
-        "tag": "Europe",
-        "titre": "Journée de l'Europe",
-        "url": "https://www.instagram.com/evrardadr/p/DYHLRTPDanm/"
-      },
-      {
-        "img": "/posts/paix-8-mai-1945.jpg",
-        "tag": "Mémoire",
-        "titre": "Et la paix revint au monde · 8 mai 1945",
-        "url": "https://www.instagram.com/evrardadr/p/DYDwHhTiHPM/"
-      }
-    ]
-  }
+  ]
 }
