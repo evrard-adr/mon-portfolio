@@ -14,8 +14,6 @@ import Parcours from "@/components/Parcours";
 
 export const dynamic = "force-dynamic";
 
-const PASTELS = ["var(--pink)", "var(--sky)", "var(--peach)", "#bfeccf"];
-
 function Label({ letter, color, text }: { letter: string; color: string; text: string }) {
   return (
     <div className="mb-10 flex items-center gap-4" data-reveal="fade" style={{ ["--c" as string]: color }}>
@@ -30,7 +28,7 @@ const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
 export default function Home() {
   const content = getContent();
-  const { about, socials, gallery, engagements, stats, projets, creations, creationsLiens, parcours, concretement } = content as any;
+  const { about, socials, gallery, stats, creations, creationsLiens, parcours, concretement, reflexions } = content as any;
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -88,32 +86,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ENGAGEMENTS ── */}
-      <section className="px-6 py-28 md:px-14 lg:px-20">
-        <div className="mx-auto max-w-6xl">
-          <Label letter="C" color="var(--l-c)" text="Ce que j'apporte" />
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-            {engagements.map((item: { icon: string; titre: string; desc: string }, i: number) => (
-              <div
-                key={i}
-                className="card-brut flex flex-col gap-5 p-8"
-                style={{ background: PASTELS[i % 4], color: "#0b1b4d", rotate: `${[-1.2, 0.8, -0.6, 1][i % 4]}deg` }}
-                data-reveal
-                data-delay={String(i + 1)}
-              >
-                <span className="font-display text-7xl leading-none">0{i + 1}</span>
-                <h3 className="font-display text-2xl leading-tight">{item.titre}</h3>
-                <p className="text-sm font-medium leading-relaxed" style={{ color: "rgba(11,27,77,0.75)" }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── CONCRÈTEMENT ── */}
-      <section id="concretement" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
+      <section id="concretement" className="px-6 py-28 md:px-14 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <Label letter="D" color="var(--l-d)" text="Concrètement" />
+          <Label letter="C" color="var(--l-c)" text="Concrètement" />
           <h2 className={`${H2} mb-14`} data-mask>
             <span className="mask-line"><span>Pour un élu et</span></span>
             <span className="mask-line"><span>son équipe, je peux…</span></span>
@@ -131,29 +107,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PROJETS ── */}
-      <section id="projets" className="px-6 py-32 md:px-14 lg:px-20">
+      {/* ── TRANSPORTS ── */}
+      <section id="transports" className="px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="A" color="var(--l-a)" text="Projets" />
-          <div style={{ borderTop: "2px solid var(--ink)" }}>
-            {projets.map((p: { titre: string; desc: string; date: string; tag: string; lien: string }, i: number) => {
-              const inner = (
-                <div className="row-link grid items-baseline gap-3 py-9 md:grid-cols-[90px_1.2fr_1fr_210px] md:gap-8" style={{ borderBottom: "2px solid var(--ink)" }}>
-                  <span className="font-display text-lg" style={{ color: "var(--text-muted)" }}>{p.date}</span>
-                  <h3 className="font-display text-2xl leading-tight md:text-4xl" style={{ color: "var(--text)" }}>{p.titre}</h3>
-                  <p className="text-sm font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>{p.desc}</p>
-                  <div className="flex items-center gap-4 md:justify-end">
-                    <span className="rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest" style={{ border: "2px solid currentColor" }}>{p.tag}</span>
-                    {p.lien && <span className="row-arrow text-2xl">↗</span>}
-                  </div>
-                </div>
-              );
-              return (
-                <div key={i} data-reveal data-delay={String(Math.min(i + 1, 5))}>
-                  {p.lien ? <a href={p.lien} className="block" {...(p.lien.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}>{inner}</a> : inner}
-                </div>
-              );
-            })}
+          <Label letter="D" color="var(--l-d)" text="Mon autre ligne" />
+          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+            <div>
+              <h2 className={`${H2} mb-8`} data-mask>
+                <span className="mask-line"><span>Les transports</span></span>
+                <span className="mask-line"><span><span className="hl-mark">en commun.</span></span></span>
+              </h2>
+              <p className="max-w-lg text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }} data-reveal>
+                Usager quotidien du réseau lyonnais, je m&apos;intéresse à la façon dont les transports en commun se pensent, se financent et se gèrent, et à ce que sera la ville en 2050.
+              </p>
+            </div>
+            {reflexions[0] && (
+              <Link href={`/reflexion/${reflexions[0].slug}`} className="card-brut group block p-7 md:p-9" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-1deg" }} data-reveal>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Note de réflexion · {reflexions[0].date}</p>
+                <p className="font-display mt-3 text-2xl leading-tight md:text-3xl">{reflexions[0].titre}</p>
+                <p className="mt-6 flex items-center gap-2 text-sm font-bold">Lire la note <span className="transition-transform duration-500 group-hover:translate-x-1.5">→</span></p>
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -178,7 +152,7 @@ export default function Home() {
       {/* ── CRÉATIONS ── */}
       <section id="creations" className="overflow-x-clip px-6 py-28 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)", borderBottom: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="B" color="var(--l-b)" text="Mes créations" />
+          <Label letter="A" color="var(--l-a)" text="Mes créations" />
           <h2 className={`${H2} mb-6`} data-mask>
             <span className="mask-line"><span>Des posts qui</span></span>
             <span className="mask-line"><span><span className="hl-mark">donnent envie.</span></span></span>
@@ -241,7 +215,7 @@ export default function Home() {
       {/* ── GALLERY ── */}
       <section id="gallery" className="overflow-hidden py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-14 lg:px-20">
-          <Label letter="C" color="var(--l-c)" text="Galerie" />
+          <Label letter="B" color="var(--l-b)" text="Galerie" />
         </div>
         <div className="py-6">
           <Marquee duration={90} slowOnHover>
@@ -278,7 +252,7 @@ export default function Home() {
       {/* ── CONTACT / RÉSEAUX ── */}
       <section id="socials" className="px-6 py-32 md:px-14 lg:px-20" style={{ backgroundColor: "var(--bg2)", borderTop: "2px solid var(--ink)" }}>
         <div className="mx-auto max-w-6xl">
-          <Label letter="D" color="var(--l-d)" text="Réseaux" />
+          <Label letter="C" color="var(--l-c)" text="Réseaux" />
           <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
             <h2 className="font-display leading-[0.95] text-[clamp(2.3rem,6vw,5.4rem)]" data-mask>
               <span className="mask-line"><span>Un collaborateur</span></span>
