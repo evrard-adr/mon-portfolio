@@ -25,6 +25,9 @@
   --l-b: #2f6bff;
   --l-c: #ff9d2e;
   --l-d: #17b26a;
+  --blob-a: var(--pink);
+  --blob-b: var(--sky);
+  --blob-c: var(--peach);
 }
 
 .dark {
@@ -41,6 +44,9 @@
   --accent-border: rgba(255,122,152,0.3);
   --nav-bg: rgba(10,17,40,0.84);
   --hl: #23378a;
+  --blob-a: #e63462;
+  --blob-b: #2f6bff;
+  --blob-c: #ff9d2e;
 }
 
 :where(.font-display) { font-weight: 800; letter-spacing: -0.02em; font-stretch: 88%; }
@@ -69,7 +75,12 @@
 @keyframes blob-a { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(6vw,4vw) scale(1.12);} }
 @keyframes blob-b { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(-5vw,6vw) scale(1.1);} }
 @keyframes blob-c { 0%,100% { transform: translate(0,0) scale(1);} 50% { transform: translate(4vw,-5vw) scale(1.15);} }
-.dark .blob { opacity: .35; }
+.dark .blob { opacity: .5; filter: blur(90px); }
+.dark .blob[data-c="c"] { opacity: .3; }
+
+/* Portrait : liseré lumineux pour détacher le costume sombre du fond */
+.hero-photo { filter: drop-shadow(0 30px 40px rgba(0,0,0,0.22)); }
+.dark .hero-photo { filter: drop-shadow(0 0 1.5px rgba(245,241,232,0.55)) drop-shadow(0 0 34px rgba(90,130,255,0.5)) drop-shadow(0 24px 40px rgba(0,0,0,0.4)); }
 
 /* ── Lenis ── */
 html.lenis, html.lenis body { height: auto; }

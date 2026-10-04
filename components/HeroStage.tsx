@@ -110,9 +110,9 @@ export default function HeroStage() {
       {/* ── Taches pastel ── */}
       <div className="blob-wrap pointer-events-none absolute inset-0" aria-hidden="true">
         <div data-depth="-60" className="absolute inset-0">
-          <div className="blob" style={{ left: "-12vw", top: "-6vw", width: "55vw", height: "55vw", background: "var(--pink)" }} />
-          <div className="blob" style={{ right: "-14vw", top: "22%", width: "50vw", height: "50vw", background: "var(--sky)" }} />
-          <div className="blob" style={{ left: "32%", bottom: "-22vw", width: "46vw", height: "46vw", background: "var(--peach)", opacity: 0.9 }} />
+          <div className="blob" style={{ left: "-12vw", top: "-6vw", width: "55vw", height: "55vw", background: "var(--blob-a)" }} />
+          <div className="blob" style={{ right: "-14vw", top: "22%", width: "50vw", height: "50vw", background: "var(--blob-b)" }} />
+          <div className="blob" data-c="c" style={{ left: "32%", bottom: "-22vw", width: "46vw", height: "46vw", background: "var(--blob-c)", opacity: 0.9 }} />
         </div>
       </div>
 
@@ -153,7 +153,6 @@ export default function HeroStage() {
             width={1080}
             height={1350}
             className="hero-photo block h-[var(--ph)] w-auto max-w-none origin-bottom"
-            style={{ filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.22))" }}
             fetchPriority="high"
           />
         </div>

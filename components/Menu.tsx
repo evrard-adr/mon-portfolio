@@ -131,8 +131,8 @@ export default function Menu() {
       {/* Menu plein écran : s'ouvre en cercle depuis l'îlot */}
       <div className={`menu-overlay ${open ? "open" : ""}`} aria-hidden={!open} data-lenis-prevent>
         <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-          <div className="blob" style={{ left: "-25vw", top: "-10vw", width: "70vw", height: "70vw", background: "var(--pink)", opacity: 0.55 }} />
-          <div className="blob" style={{ right: "-25vw", bottom: "-5vw", width: "65vw", height: "65vw", background: "var(--sky)", opacity: 0.6 }} />
+          <div className="blob" style={{ left: "-25vw", top: "-10vw", width: "70vw", height: "70vw", background: "var(--blob-a)", opacity: 0.55 }} />
+          <div className="blob" style={{ right: "-25vw", bottom: "-5vw", width: "65vw", height: "65vw", background: "var(--blob-b)", opacity: 0.6 }} />
         </div>
 
         <nav aria-label="Menu" className="relative mx-auto w-full max-w-3xl">
