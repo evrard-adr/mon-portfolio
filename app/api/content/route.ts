@@ -8,7 +8,7 @@ export async function GET() {
 
 export async function POST(req: NextRequest) {
   // Seul l'administrateur connecté peut modifier le contenu.
-  if (!isAdmin()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  if (!(await isAdmin())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const data = await req.json();
 
   // Sur Vercel : sauvegarde via l'API GitHub (déclenche un redéploiement auto)

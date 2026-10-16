@@ -29,8 +29,8 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="overflow-hidden" style={{ background: "var(--navy)", color: "#f5f1e8" }}>
-      <div className="mx-auto max-w-6xl px-6 pt-20 md:px-14 lg:px-20">
-        <div className="grid gap-14 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div className="mx-auto max-w-6xl px-6 pt-14 md:px-14 md:pt-20 lg:px-20">
+        <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr] md:gap-14">
           <div>
             <p className="font-display mb-4 text-4xl leading-none md:text-5xl">Evrard André</p>
             <p className="mb-8 max-w-xs text-sm leading-relaxed" style={{ color: "rgba(245,241,232,0.7)" }}>
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <p
-          className="font-display mt-16 select-none whitespace-nowrap text-center leading-none text-[clamp(3rem,15vw,15rem)]"
+          className="font-display mt-16 hidden select-none whitespace-nowrap text-center leading-none text-[clamp(3rem,15vw,15rem)] md:block"
           style={{ color: "rgba(245,241,232,0.08)" }}
           aria-hidden="true"
         >

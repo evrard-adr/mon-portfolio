@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import PasswordForm from "@/components/PasswordForm";
 
 type KN = { k: string; n: number };
 type Recent = {
@@ -17,6 +18,18 @@ type Summary = {
 };
 
 const RANGES = [["24h", "24 h"], ["7j", "7 jours"], ["30j", "30 jours"], ["90j", "90 jours"], ["13m", "13 mois"]] as const;
+type TagStat = { tag: string; views: number; visitors: number; first: string; last: string; countries: string[] | null };
+const PRESETS: { slug: string; label: string; where: string }[] = [
+  { slug: "linkedin", label: "LinkedIn", where: "Champ « Site web » du profil et section « À la une »" },
+  { slug: "paage", label: "Page paa.ge", where: "Lien dans ta page paa.ge/evrardandre" },
+  { slug: "instagram", label: "Instagram @evrardadr", where: "Lien dans la bio" },
+  { slug: "x", label: "X / Twitter", where: "Lien dans la bio" },
+  { slug: "mail", label: "Signature de mes e-mails", where: "Signature des mails et candidatures" },
+  { slug: "cv-pdf", label: "QR code du CV", where: "Déjà intégré au PDF du CV" },
+  { slug: "pe-lyon", label: "Bio @pe.lyon", where: "Lien dans la bio du compte PE Lyon" },
+  { slug: "pe-national", label: "Bio @parlementdesetudiants", where: "Lien dans la bio du PE national" },
+];
+const DEST = [["home", "Accueil"], ["cv", "CV"], ["about", "À propos"], ["reflexion", "Réflexions"], ["contact", "Contact"]] as const;
 const DOW = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const EV: Record<string, string> = {
   mail_click: "✉ Clics sur ton mail", cv_download: "⬇ Téléchargements du CV", outbound_click: "↗ Clics vers l'extérieur",
@@ -96,6 +109,9 @@ export default function StatsPage() {
   const [ownerOn, setOwnerOn] = useState<boolean | null>(null);
   const [label, setLabel] = useState("");
   const [copied, setCopied] = useState("");
+  const [dest, setDest] = useState("home");
+  const [tagStats, setTagStats] = useState<TagStat[]>([]);
+  const [showPw, setShowPw] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -108,6 +124,9 @@ export default function StatsPage() {
   }, [range, bots, owner]);
 
   useEffect(() => { load(); }, [load]);
+  useEffect(() => {
+    fetch("/api/admin/stats?tags=1", { cache: "no-store" }).then((r) => (r.ok ? r.json() : [])).then((j) => Array.isArray(j) && setTagStats(j)).catch(() => {});
+  }, [data]);
   useEffect(() => { const t = setInterval(load, 45_000); return () => clearInterval(t); }, [load]);
   useEffect(() => { fetch("/api/admin/owner").then((r) => r.json()).then((j) => setOwnerOn(!!j.on)).catch(() => {}); }, []);
 
@@ -155,7 +174,11 @@ export default function StatsPage() {
 
   const origin = typeof window !== "undefined" ? window.location.origin : "";
   const slug = label.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-  const link = slug ? `${origin}/?r=${slug}` : "";
+  const mk = (sl: string, to = "home") => `${origin}/l/${sl}${to !== "home" ? `?to=${to}` : ""}`;
+  const link = slug ? mk(slug, dest) : "";
+  const tagMap = new Map(tagStats.map((t) => [t.tag, t]));
+  const presetSlugs = new Set(PRESETS.map((p) => p.slug));
+  const fmtAgo = (iso?: string) => (iso ? new Date(iso).toLocaleString("fr-FR", { timeZone: "Europe/Paris", day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }) : "—");
   const copy = async (t: string) => { await navigator.clipboard.writeText(t); setCopied(t); setTimeout(() => setCopied(""), 1800); };
 
   const consentRate = data && (data.consent.accept || data.consent.refuse)
@@ -268,20 +291,52 @@ export default function StatsPage() {
               </div>
             </Card>
 
-            <Card title="Liens suivis : savoir qui ouvre quoi" className="mb-6">
-              <p className="mb-4 max-w-2xl text-sm font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                Je ne peux pas connaître le nom d&apos;un visiteur. En revanche, tu peux créer un lien <b>par destinataire</b> (cabinet, sénateur, recruteur…).
-                Quand cette personne l&apos;ouvre, son étiquette apparaît ici, avec l&apos;heure et le lieu approximatif.
+            <Card title="Liens suivis : savoir d'où vient chaque visite" className="mb-6">
+              <p className="mb-5 max-w-2xl text-sm font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
+                Je ne peux pas connaître le nom d&apos;un visiteur, mais chaque lien ci-dessous porte une étiquette : en le mettant à un endroit précis
+                (LinkedIn, paa.ge, ta signature…), tu sais <b>quel canal</b> a été ouvert, quand et d&apos;où. Copie le lien et colle-le à l&apos;endroit indiqué.
               </p>
-              <div className="mb-5 flex flex-wrap items-center gap-2">
-                <input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="ex. cabinet-senateur-dupont"
-                  className="min-w-[16rem] flex-1 rounded-full px-4 py-2.5 text-sm outline-none" style={{ border: "2px solid var(--ink)", background: "var(--card)", color: "var(--text)" }} />
-                <button disabled={!link} onClick={() => copy(link)} className="btn-pill" style={{ padding: ".6rem 1.2rem", fontSize: ".8rem", opacity: link ? 1 : 0.4 }}>
-                  {copied === link ? "Copié ✓" : "Copier le lien"}
-                </button>
+              <div className="-mx-2 mb-8 overflow-x-auto">
+                <table className="w-full min-w-[720px] text-left text-xs">
+                  <thead><tr style={{ color: "var(--text-muted)" }}>{["Canal", "Lien à utiliser", "Ouvertures", "Visiteurs", "Dernière ouverture", "Pays"].map((h) => <th key={h} className="px-2 pb-3 font-bold uppercase tracking-widest">{h}</th>)}</tr></thead>
+                  <tbody>
+                    {PRESETS.map((p) => {
+                      const t = tagMap.get(p.slug);
+                      const u = mk(p.slug);
+                      return (
+                        <tr key={p.slug} style={{ borderTop: "1px solid var(--border)" }}>
+                          <td className="px-2 py-3"><b className="text-sm">{p.label}</b><br /><span style={{ color: "var(--text-muted)" }}>{p.where}</span></td>
+                          <td className="px-2 py-3"><button onClick={() => copy(u)} className="btn-pill btn-ghost" style={{ padding: ".35rem .8rem", fontSize: ".72rem" }}>{copied === u ? "Copié ✓" : "Copier"}</button><br /><span className="mt-1 inline-block break-all font-medium" style={{ color: "var(--text-muted)" }}>/l/{p.slug}</span></td>
+                          <td className="px-2 py-3 text-base font-bold tabular-nums">{t?.views ?? 0}</td>
+                          <td className="px-2 py-3 tabular-nums">{t?.visitors ?? 0}</td>
+                          <td className="whitespace-nowrap px-2 py-3">{fmtAgo(t?.last)}</td>
+                          <td className="px-2 py-3">{(t?.countries || []).map((c) => flag(c)).join(" ") || "—"}</td>
+                        </tr>
+                      );
+                    })}
+                    {tagStats.filter((t) => !presetSlugs.has(t.tag)).map((t) => (
+                      <tr key={t.tag} style={{ borderTop: "1px solid var(--border)" }}>
+                        <td className="px-2 py-3"><b className="text-sm">{t.tag}</b><br /><span style={{ color: "var(--text-muted)" }}>Lien personnalisé</span></td>
+                        <td className="px-2 py-3"><button onClick={() => copy(mk(t.tag))} className="btn-pill btn-ghost" style={{ padding: ".35rem .8rem", fontSize: ".72rem" }}>{copied === mk(t.tag) ? "Copié ✓" : "Copier"}</button></td>
+                        <td className="px-2 py-3 text-base font-bold tabular-nums">{t.views}</td>
+                        <td className="px-2 py-3 tabular-nums">{t.visitors}</td>
+                        <td className="whitespace-nowrap px-2 py-3">{fmtAgo(t.last)}</td>
+                        <td className="px-2 py-3">{(t.countries || []).map((c) => flag(c)).join(" ") || "—"}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              {link && <p className="mb-5 break-all rounded-xl p-3 text-xs font-medium" style={{ background: "var(--bg2)" }}>{link}</p>}
-              <Bars data={data.tags} label={(k) => `?r=${k}`} color="var(--l-a)" />
+              <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--text-muted)" }}>Créer un lien pour une personne ou un projet précis</p>
+              <div className="mb-3 flex flex-wrap items-center gap-2">
+                <input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="ex. cabinet-senateur-dupont"
+                  className="min-w-[14rem] flex-1 rounded-full px-4 py-2.5 text-sm outline-none" style={{ border: "2px solid var(--ink)", background: "var(--card)", color: "var(--text)" }} />
+                <select value={dest} onChange={(e) => setDest(e.target.value)} className="rounded-full px-4 py-2.5 text-sm outline-none" style={{ border: "2px solid var(--ink)", background: "var(--card)", color: "var(--text)" }}>
+                  {DEST.map(([k, l]) => <option key={k} value={k}>Ouvre : {l}</option>)}
+                </select>
+                <button disabled={!link} onClick={() => copy(link)} className="btn-pill" style={{ padding: ".6rem 1.2rem", fontSize: ".8rem", opacity: link ? 1 : 0.4 }}>{copied === link ? "Copié ✓" : "Copier le lien"}</button>
+              </div>
+              {link && <p className="break-all rounded-xl p-3 text-xs font-medium" style={{ background: "var(--bg2)" }}>{link}</p>}
             </Card>
 
             <Card title="Derniers visiteurs" className="mb-6">
@@ -321,6 +376,11 @@ export default function StatsPage() {
                 <button onClick={() => act("purge", { days: 395 }, "Supprimer les données de plus de 13 mois ?")} className="btn-pill btn-ghost" style={{ padding: ".55rem 1.1rem", fontSize: ".8rem" }}>Purger &gt; 13 mois</button>
                 <button onClick={() => act("delete_all", { confirm: true }, "ATTENTION : supprimer TOUTES les statistiques, définitivement ?")} className="btn-pill btn-ghost" style={{ padding: ".55rem 1.1rem", fontSize: ".8rem", color: "var(--accent)" }}>Tout effacer</button>
               </div>
+              <div className="mt-5 flex flex-wrap items-center gap-2">
+                <Link href="/admin/articles" className="btn-pill btn-ghost" style={{ padding: ".55rem 1.1rem", fontSize: ".8rem" }}>Écrire un article →</Link>
+                <button onClick={() => setShowPw(!showPw)} className="btn-pill btn-ghost" style={{ padding: ".55rem 1.1rem", fontSize: ".8rem" }}>{showPw ? "Fermer" : "Changer le mot de passe"}</button>
+              </div>
+              {showPw && <div className="mt-4 max-w-sm"><PasswordForm /></div>}
               <p className="mt-4 text-xs font-medium" style={{ color: "var(--text-muted)" }}>
                 Conservation automatique : 13 mois pour les visites et événements, 25 mois pour les preuves de consentement. {data.bots} visite(s) de robots écartée(s) de ces chiffres.
               </p>

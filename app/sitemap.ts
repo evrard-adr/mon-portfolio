@@ -1,10 +1,10 @@
 import { MetadataRoute } from "next";
-import { getContent } from "@/lib/content";
+import { getArticles } from "@/lib/articles";
 import { SITE } from "@/lib/seo";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const reflexions = ((getContent() as any).reflexions ?? []) as { slug: string }[];
+  const reflexions = await getArticles();
   return [
     { url: SITE, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },

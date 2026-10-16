@@ -15,7 +15,7 @@ const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 const font = (pkg, file) => pathToFileURL(path.join(root, "node_modules/@fontsource", pkg, "files", file)).href;
 const portrait = "data:image/png;base64," + fs.readFileSync(path.join(root, "assets/og-portrait.png")).toString("base64");
-const qr = await QRCode.toString(SITE, { type: "svg", margin: 0, color: { dark: "#0b1b4d", light: "#0000" } });
+const qr = await QRCode.toString(SITE + "/l/cv-pdf", { type: "svg", margin: 0, color: { dark: "#0b1b4d", light: "#0000" } });
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 
 const COLORS = ["#e63462", "#2f6bff", "#ff9d2e", "#17b26a"];

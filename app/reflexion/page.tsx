@@ -1,4 +1,4 @@
-import { getContent } from "@/lib/content";
+import { getArticles, readingMinutes } from "@/lib/articles";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
@@ -14,9 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reflexion" },
 };
 
-export default function ReflexionListPage() {
-  const content = getContent() as any;
-  const reflexions = content.reflexions ?? [];
+export default async function ReflexionListPage() {
+  const reflexions = await getArticles();
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
@@ -36,7 +35,7 @@ export default function ReflexionListPage() {
           </h1>
 
           <div style={{ borderTop: "1px solid var(--border)" }}>
-            {reflexions.map((r: { slug: string; titre: string; date: string; tag?: string; chapeau: string }) => (
+            {reflexions.map((r) => (
               <Link
                 key={r.slug}
                 href={`/reflexion/${r.slug}`}
@@ -46,6 +45,7 @@ export default function ReflexionListPage() {
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>{r.date}</span>
                   {r.tag && <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--accent)" }}>{r.tag}</span>}
+                  <span className="text-[10px] uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>· {readingMinutes(r)} min</span>
                 </div>
                 <h2 className="font-display font-bold text-2xl md:text-4xl leading-tight mb-4 group-hover:text-[var(--accent)] transition-colors" style={{ color: "var(--text)" }}>
                   {r.titre}

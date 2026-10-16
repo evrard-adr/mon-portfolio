@@ -4,12 +4,16 @@
 const URL_ = process.env.STATS_SUPABASE_URL || "https://okceryxzpmepbbqecpic.supabase.co";
 const KEY = process.env.STATS_SUPABASE_KEY || "sb_publishable_vfN4Vkwj4VtkNPfuDv_lYg__VMbn1jf";
 
-export async function rpc<T = unknown>(fn: string, body: Record<string, unknown>): Promise<T> {
+export async function rpc<T = unknown>(
+  fn: string,
+  body: Record<string, unknown>,
+  cacheOpts?: { revalidate: number; tags?: string[] }
+): Promise<T> {
   const res = await fetch(`${URL_}/rest/v1/rpc/${fn}`, {
     method: "POST",
     headers: { apikey: KEY, "Content-Type": "application/json" },
     body: JSON.stringify(body),
-    cache: "no-store",
+    ...(cacheOpts ? { next: cacheOpts } : { cache: "no-store" as const }),
   });
   if (!res.ok) {
     const text = await res.text().catch(() => "");
@@ -19,4 +23,4 @@ export async function rpc<T = unknown>(fn: string, body: Record<string, unknown>
   return (txt ? JSON.parse(txt) : null) as T;
 }
 
-export const readKey = () => process.env.ANALYTICS_READ_KEY || "";
+export const readKey = () => process.env.ANALYTICS_SALT || "pf-salt-v1";

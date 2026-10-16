@@ -1,4 +1,7 @@
-import { getContent } from "@/lib/content";
+import { getArticle, getArticles, readingMinutes } from "@/lib/articles";
+import { adminToken } from "@/lib/auth";
+import { renderInline } from "@/lib/inline";
+import ShareButtons from "@/components/ShareButtons";
 import type { Metadata } from "next";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
@@ -9,25 +12,24 @@ import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const c = getContent() as any;
-  const r = (c.reflexions ?? []).find((x: any) => x.slug === params.slug);
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const r = await getArticle(params.slug, await adminToken());
   if (!r) return {};
   const desc = String(r.chapeau || "").replace(/\s+/g, " ").slice(0, 157) + "…";
   return {
     title: r.titre,
     description: desc,
     alternates: { canonical: `/reflexion/${r.slug}` },
-    openGraph: { type: "article", title: r.titre, description: desc, url: `/reflexion/${r.slug}`, authors: [NAME] },
+    ...(r.draft ? { robots: { index: false, follow: false } } : {}),
+    openGraph: { type: "article", title: r.titre, description: desc, url: `/reflexion/${r.slug}`, authors: [NAME], publishedTime: r.dateISO || undefined },
   };
 }
 
-export default function ReflexionPage({ params }: { params: { slug: string } }) {
-  const content = getContent() as any;
-  const reflexions = content.reflexions ?? [];
-  const reflexion = reflexions.find((r: any) => r.slug === params.slug);
-
+export default async function ReflexionPage({ params }: { params: { slug: string } }) {
+  const reflexion = await getArticle(params.slug, await adminToken());
   if (!reflexion) notFound();
+  const autres = (await getArticles()).filter((a) => a.slug !== reflexion.slug).slice(0, 2);
+  const url = `${SITE}/reflexion/${reflexion.slug}`;
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
@@ -44,6 +46,9 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
         ],
       }} />
       <Menu />
+      {reflexion.draft && (
+        <div className="fixed inset-x-0 top-20 z-[60] mx-auto w-fit rounded-full px-4 py-1.5 text-xs font-bold" style={{ background: "var(--accent)", color: "#fff" }}>BROUILLON — visible uniquement par vous</div>
+      )}
 
       <article className="px-8 md:px-16 lg:px-24 pt-36 pb-32 max-w-3xl mx-auto">
 
@@ -66,6 +71,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
                 {reflexion.date}
               </span>
             </div>
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: "var(--text-muted)" }}>{readingMinutes(reflexion)} min de lecture</span>
             {reflexion.tag && (
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full"
                 style={{ border: "1px solid var(--border)", backgroundColor: "var(--bg2)" }}>
@@ -100,7 +106,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
               return (
                 <h2 key={i} className="font-display text-xl md:text-2xl pt-8"
                   style={{ color: "var(--text)" }}>
-                  {bloc.text}
+                  {renderInline(bloc.text)}
                 </h2>
               );
             }
@@ -112,7 +118,7 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
                     style={{ color: "var(--accent)", opacity: 0.4 }}>"</span>
                   <p className="font-display font-bold text-xl md:text-2xl leading-snug relative z-10"
                     style={{ color: "var(--text)" }}>
-                    {bloc.text}
+                    {renderInline(bloc.text)}
                   </p>
                 </blockquote>
               );
@@ -120,11 +126,27 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
             return (
               <p key={i} className="text-[17px] font-light leading-[1.95]"
                 style={{ color: "var(--text-muted)" }}>
-                {bloc.text}
+                {renderInline(bloc.text)}
               </p>
             );
           })}
         </div>
+
+        <div className="mt-16"><ShareButtons url={url} title={reflexion.titre} /></div>
+
+        {autres.length > 0 && (
+          <div className="mt-16">
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--text-muted)" }}>À lire aussi</p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {autres.map((a) => (
+                <Link key={a.slug} href={`/reflexion/${a.slug}`} className="card-brut block p-5">
+                  <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: "var(--text-muted)" }}>{a.tag || "Réflexion"} · {readingMinutes(a)} min</p>
+                  <p className="font-display mt-2 text-lg leading-tight">{a.titre}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-20 pt-10 flex items-center justify-between"
           style={{ borderTop: "1px solid var(--border)" }}>

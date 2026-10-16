@@ -160,10 +160,10 @@ export default function Home() {
             <span className="mask-line"><span>Mes talents au service</span></span>
             <span className="mask-line"><span>du <span className="hl-mark">Parlement des Étudiants.</span></span></span>
           </h2>
-          <p className="mb-14 max-w-xl text-lg font-medium leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          <p className="mb-10 max-w-xl text-lg font-medium leading-relaxed md:mb-14" style={{ color: "var(--text-muted)" }}>
             Affiches, infographies et posts, pour le Parlement des Étudiants au national comme à Lyon, et sur mon propre compte : un même savoir-faire, un message clair et une image forte.
           </p>
-          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3 [&>*]:min-w-0">
+          <div className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-3 [&>*]:min-w-0 max-md:-mx-6 max-md:flex max-md:snap-x max-md:snap-mandatory max-md:gap-4 max-md:overflow-x-auto max-md:px-6 max-md:pb-8 max-md:[scrollbar-width:none] max-md:[&::-webkit-scrollbar]:hidden max-md:[&>*]:w-[76%] max-md:[&>*]:shrink-0 max-md:[&>*]:snap-center">
             {creations.map((c: { img: string; tag?: string; titre: string; desc: string; lien?: string }, i: number) => {
               const fig = (
                 <figure className="card-brut group relative h-full overflow-hidden" style={{ rotate: `${[-1.5, 1, -0.8, 1.4][i % 4]}deg` }}>

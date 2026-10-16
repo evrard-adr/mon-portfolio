@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import PasswordForm from "@/components/PasswordForm";
 
 export default function AdminPage() {
   const [authed, setAuthed] = useState(false);
+  const [mustChange, setMustChange] = useState(false);
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [content, setContent] = useState<any>(null);
@@ -19,7 +21,7 @@ export default function AdminPage() {
     // La session est vérifiée côté serveur (cookie signé), plus un simple indicateur du navigateur.
     fetch("/api/admin-login").then(r => r.json()).then(d => {
       if (d.ok) setAuthed(true);
-      else if (d.configured === false) setError("ADMIN_PASSWORD n'est pas défini sur le serveur.");
+      else if (d.mustChange) setMustChange(true);
     }).catch(() => {});
   }, []);
 
@@ -30,12 +32,14 @@ export default function AdminPage() {
       body: JSON.stringify({ password }),
     });
     if (res.ok) {
+      const d = await res.json().catch(() => ({}));
+      if (d.mustChange) { setMustChange(true); return; }
       setAuthed(true);
       loadContent();
     } else if (res.status === 429) {
       setError("Trop de tentatives, réessayez dans quelques minutes.");
     } else if (res.status === 503) {
-      setError("ADMIN_PASSWORD n'est pas défini sur le serveur.");
+      setError("Service indisponible, réessayez.");
     } else {
       setError("Mot de passe incorrect.");
     }
@@ -103,6 +107,20 @@ export default function AdminPage() {
     });
   };
 
+  if (mustChange && !authed) {
+    return (
+      <div className="min-h-screen bg-[#f5f1e8] flex items-center justify-center px-4">
+        <div className="w-full max-w-sm card-brut p-7">
+          <h1 className="font-display text-3xl mb-2" style={{ color: "#0b1b4d" }}>Choisissez votre mot de passe</h1>
+          <p className="text-sm mb-6" style={{ color: "rgba(11,27,77,0.7)" }}>
+            Vous êtes connecté avec le mot de passe par défaut. Créez le vôtre pour sécuriser l&apos;administration : 8 caractères minimum.
+          </p>
+          <PasswordForm forced onDone={() => { setMustChange(false); setAuthed(true); setPassword(""); loadContent(); }} />
+        </div>
+      </div>
+    );
+  }
+
   if (!authed) {
     return (
       <div className="min-h-screen bg-[#0a0a0a] flex items-center justify-center px-4">
@@ -143,6 +161,9 @@ export default function AdminPage() {
       <div className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur border-b border-[#1e1e1e] px-8 py-4 flex items-center justify-between">
         <h1 className="font-serif text-xl">Panel Admin</h1>
         <div className="flex items-center gap-4">
+          <a href="/admin/articles" className="text-sm text-[#c9a96e] hover:text-[#f0ebe3] transition-colors">
+            Articles →
+          </a>
           <a href="/admin/stats" className="text-sm text-[#c9a96e] hover:text-[#f0ebe3] transition-colors">
             Statistiques →
           </a>
