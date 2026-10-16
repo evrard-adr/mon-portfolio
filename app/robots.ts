@@ -1,8 +1,10 @@
 import { MetadataRoute } from "next";
+import { SITE } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/", disallow: ["/admin", "/api/"] },
-    sitemap: "https://evrard-andre.vercel.app/sitemap.xml",
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/admin", "/api/"] }],
+    sitemap: `${SITE}/sitemap.xml`,
+    host: SITE,
   };
 }

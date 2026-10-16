@@ -1,4 +1,7 @@
 import { getContent } from "@/lib/content";
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import CVPrintButton from "@/components/CVPrintButton";
@@ -8,6 +11,14 @@ import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
+export const metadata: Metadata = {
+  title: "CV — droit public, communication politique, stratégie politique",
+  description:
+    "Curriculum vitae d'Evrard André : licence de droit à Lyon 3, responsable communication du Parlement des Étudiants, campagne Cœur Lyonnais et Grand Cœur Lyonnais, éléments de langage, réseaux sociaux. CV en PDF.",
+  alternates: { canonical: "/cv" },
+  openGraph: { title: "CV d'Evrard André", url: "/cv", type: "profile" },
+};
+
 export default function CVPage() {
   const content = getContent();
   const { hero, cv, about } = content;
@@ -15,6 +26,7 @@ export default function CVPage() {
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
       <Suspense><AutoPrint /></Suspense>
+      <JsonLd data={breadcrumbLd([{ name: "Accueil", path: "/" }, { name: "CV", path: "/cv" }])} />
       <Menu />
 
       <div className="px-8 md:px-16 lg:px-24 pt-36 pb-32 max-w-5xl mx-auto">

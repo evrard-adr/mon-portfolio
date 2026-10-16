@@ -1,12 +1,22 @@
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const dynamic = "force-dynamic";
 
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Contacter Evrard André par mail, LinkedIn ou Instagram : communication politique, droit public, collaboration auprès d'un élu.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <JsonLd data={breadcrumbLd([{ name: "Accueil", path: "/" }, { name: "Contact", path: "/contact" }])} />
       <Menu />
       <ScrollReveal />
 

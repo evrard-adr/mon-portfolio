@@ -1,9 +1,18 @@
 import { getContent } from "@/lib/content";
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Réflexions — politique, transports en commun et villes",
+  description: "Notes de réflexion d'Evrard André sur la politique, les politiques publiques, les transports en commun et la ville de demain.",
+  alternates: { canonical: "/reflexion" },
+};
 
 export default function ReflexionListPage() {
   const content = getContent() as any;
@@ -11,6 +20,7 @@ export default function ReflexionListPage() {
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <JsonLd data={breadcrumbLd([{ name: "Accueil", path: "/" }, { name: "Réflexions", path: "/reflexion" }])} />
       <Menu />
 
       <section className="px-6 md:px-14 lg:px-20 pt-36 pb-28">

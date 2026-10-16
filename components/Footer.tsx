@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BackToTop from "@/components/BackToTop";
+import ManageCookies from "@/components/ManageCookies";
 
 const EMAIL = "evrard.andre@aol.com";
 
@@ -80,7 +81,8 @@ export default function Footer() {
             © {year} Evrard André — Tous droits réservés. Ce site (conception, textes, design et développement) a été réalisé par Evrard André ;
             son motion design a été propulsé par l&apos;IA. Toute reproduction sans autorisation est interdite.
             Photographies : droits réservés à leurs auteurs.{" "}
-            <Link href="/mentions-legales" className="underline underline-offset-4">Mentions légales</Link>
+            <Link href="/mentions-legales" className="underline underline-offset-4">Mentions légales</Link>{" · "}
+            <ManageCookies className="underline underline-offset-4" />
           </p>
           <BackToTop />
         </div>

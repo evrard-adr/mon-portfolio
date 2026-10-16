@@ -5,6 +5,8 @@ const words = [
   "le droit public.",
   "les transports en commun.",
   "les institutions.",
+  "la stratégie politique.",
+  "les campagnes électorales.",
   "la communication politique.",
   "la mobilité urbaine.",
   "les politiques publiques.",

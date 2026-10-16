@@ -1,10 +1,21 @@
 import { getContent } from "@/lib/content";
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "À propos — droit public, communication politique, stratégie politique",
+  description:
+    "Qui est Evrard André : étudiant en droit public à Lyon 3, responsable communication du Parlement des Étudiants, passionné de communication politique, de stratégie politique et de transports en commun.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "À propos d'Evrard André", url: "/about", type: "profile" },
+};
 
 export default function AboutPage() {
   const content = getContent() as any;
@@ -13,6 +24,7 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <JsonLd data={breadcrumbLd([{ name: "Accueil", path: "/" }, { name: "À propos", path: "/about" }])} />
       <Menu />
       <ScrollReveal />
 

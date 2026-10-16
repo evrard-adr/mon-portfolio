@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { SITE, NAME, KEYWORDS } from "@/lib/seo";
 import { Bricolage_Grotesque, DM_Sans, Lexend } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import A11yWidget from "@/components/A11yWidget";
 import PageTransition from "@/components/PageTransition";
 import SmoothScroll from "@/components/SmoothScroll";
+import Analytics from "@/components/Analytics";
+import ConsentBanner from "@/components/ConsentBanner";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -25,24 +28,46 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://evrard-andre.vercel.app"),
-  title: "Evrard André",
-  description: "Evrard André, étudiant en droit public à Lyon 3 et responsable communication du Parlement des Étudiants. Communication, réseaux sociaux, transports en commun.",
-  keywords: ["Evrard André", "droit", "Lyon", "Parlement des Étudiants", "communication", "portfolio"],
-  authors: [{ name: "Evrard André" }],
+  metadataBase: new URL(SITE),
+  title: {
+    default: "Evrard André — Communication politique & droit public (Lyon)",
+    template: "%s · Evrard André",
+  },
+  description:
+    "Evrard André, étudiant en droit public à Lyon : communication politique, stratégie politique, éléments de langage, réseaux sociaux et transports en commun. Portfolio et CV.",
+  keywords: KEYWORDS,
+  authors: [{ name: NAME, url: SITE }],
+  creator: NAME,
+  publisher: NAME,
+  category: "politics",
+  applicationName: NAME,
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   openGraph: {
-    title: "Evrard André — Droit public & communication",
-    description: "Droit public · Communication · Transports en commun",
-    url: "https://evrard-andre.vercel.app",
-    siteName: "Evrard André",
+    title: "Evrard André — Communication politique & droit public",
+    description: "Droit public · Communication politique · Stratégie politique · Transports en commun. Lyon.",
+    url: SITE,
+    siteName: NAME,
     locale: "fr_FR",
-    type: "website",
+    type: "profile",
+    firstName: "Evrard",
+    lastName: "André",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evrard André — Droit public & communication",
-    description: "Droit public · Communication · Transports en commun",
+    title: "Evrard André — Communication politique & droit public",
+    description: "Droit public · Communication politique · Stratégie politique · Transports en commun. Lyon.",
   },
+  formatDetection: { telephone: false, email: false },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f1e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a1128" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -55,6 +80,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {children}
           </PageTransition>
           <A11yWidget />
+          <Analytics />
+          <ConsentBanner />
         </Providers>
       </body>
     </html>

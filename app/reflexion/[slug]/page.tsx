@@ -1,10 +1,26 @@
 import { getContent } from "@/lib/content";
+import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, SITE, NAME } from "@/lib/seo";
 import Menu from "@/components/Menu";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const dynamic = "force-dynamic";
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const c = getContent() as any;
+  const r = (c.reflexions ?? []).find((x: any) => x.slug === params.slug);
+  if (!r) return {};
+  const desc = String(r.chapeau || "").replace(/\s+/g, " ").slice(0, 157) + "…";
+  return {
+    title: r.titre,
+    description: desc,
+    alternates: { canonical: `/reflexion/${r.slug}` },
+    openGraph: { type: "article", title: r.titre, description: desc, url: `/reflexion/${r.slug}`, authors: [NAME] },
+  };
+}
 
 export default function ReflexionPage({ params }: { params: { slug: string } }) {
   const content = getContent() as any;
@@ -15,6 +31,18 @@ export default function ReflexionPage({ params }: { params: { slug: string } }) 
 
   return (
     <main className="min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article", headline: reflexion.titre, description: String(reflexion.chapeau || "").slice(0, 300),
+            inLanguage: "fr-FR", datePublished: reflexion.dateISO || undefined, author: { "@id": `${SITE}/#person` },
+            mainEntityOfPage: `${SITE}/reflexion/${reflexion.slug}`, image: `${SITE}/gallery/evrard-portrait.webp`,
+            keywords: [reflexion.tag, "politique", "transports en commun", "politiques publiques"].filter(Boolean).join(", "),
+          },
+          breadcrumbLd([{ name: "Accueil", path: "/" }, { name: "Réflexions", path: "/reflexion" }, { name: reflexion.titre, path: `/reflexion/${reflexion.slug}` }]),
+        ],
+      }} />
       <Menu />
 
       <article className="px-8 md:px-16 lg:px-24 pt-36 pb-32 max-w-3xl mx-auto">

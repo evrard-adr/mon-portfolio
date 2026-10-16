@@ -9,6 +9,8 @@ import Marquee from "@/components/Marquee";
 import ScrubText from "@/components/ScrubText";
 import Magnetic from "@/components/Magnetic";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
+import { homeLd } from "@/lib/seo";
 import Footer from "@/components/Footer";
 import Parcours from "@/components/Parcours";
 
@@ -33,6 +35,7 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen font-body" style={{ backgroundColor: "var(--bg)", color: "var(--text)" }}>
+      <JsonLd data={homeLd} />
       <Menu />
       <ScrollReveal />
       <ScrollProgress />

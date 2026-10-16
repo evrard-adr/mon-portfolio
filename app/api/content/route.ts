@@ -1,11 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getContent } from "@/lib/content";
+import { isAdmin } from "@/lib/auth";
 
 export async function GET() {
   return NextResponse.json(getContent());
 }
 
 export async function POST(req: NextRequest) {
+  // Seul l'administrateur connecté peut modifier le contenu.
+  if (!isAdmin()) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const data = await req.json();
 
   // Sur Vercel : sauvegarde via l'API GitHub (déclenche un redéploiement auto)

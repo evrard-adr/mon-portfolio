@@ -16,7 +16,11 @@ export default function AdminPage() {
   const router = useRouter();
 
   useEffect(() => {
-    if (sessionStorage.getItem("admin_auth") === "ok") setAuthed(true);
+    // La session est vérifiée côté serveur (cookie signé), plus un simple indicateur du navigateur.
+    fetch("/api/admin-login").then(r => r.json()).then(d => {
+      if (d.ok) setAuthed(true);
+      else if (d.configured === false) setError("ADMIN_PASSWORD n'est pas défini sur le serveur.");
+    }).catch(() => {});
   }, []);
 
   const login = async () => {
@@ -26,9 +30,12 @@ export default function AdminPage() {
       body: JSON.stringify({ password }),
     });
     if (res.ok) {
-      sessionStorage.setItem("admin_auth", "ok");
       setAuthed(true);
       loadContent();
+    } else if (res.status === 429) {
+      setError("Trop de tentatives, réessayez dans quelques minutes.");
+    } else if (res.status === 503) {
+      setError("ADMIN_PASSWORD n'est pas défini sur le serveur.");
     } else {
       setError("Mot de passe incorrect.");
     }
@@ -136,6 +143,9 @@ export default function AdminPage() {
       <div className="sticky top-0 z-50 bg-[#0a0a0a]/90 backdrop-blur border-b border-[#1e1e1e] px-8 py-4 flex items-center justify-between">
         <h1 className="font-serif text-xl">Panel Admin</h1>
         <div className="flex items-center gap-4">
+          <a href="/admin/stats" className="text-sm text-[#c9a96e] hover:text-[#f0ebe3] transition-colors">
+            Statistiques →
+          </a>
           <a href="/contact" target="_blank" className="text-sm text-[#6b6b6b] hover:text-[#f0ebe3] transition-colors">
             Contact →
           </a>
