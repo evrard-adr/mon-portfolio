@@ -10,6 +10,7 @@ import ScrubText from "@/components/ScrubText";
 import Magnetic from "@/components/Magnetic";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import { getTransportArticle } from "@/lib/articles";
 import { homeLd } from "@/lib/seo";
 import Footer from "@/components/Footer";
 import Parcours from "@/components/Parcours";
@@ -28,9 +29,10 @@ function Label({ letter, color, text }: { letter: string; color: string; text: s
 
 const H2 = "font-display leading-[0.95] text-[clamp(2.6rem,8.4vw,7.4rem)]";
 
-export default function Home() {
+export default async function Home() {
   const content = getContent();
-  const { about, socials, gallery, stats, creations, creationsLiens, parcours, concretement, reflexions } = content as any;
+  const { about, socials, gallery, stats, creations, creationsLiens, parcours, concretement } = content as any;
+  const transportArticle = await getTransportArticle();
   const tickerWords: string[] = (content.ticker as string).split(/\s*·\s*/).filter(Boolean);
 
   return (
@@ -124,10 +126,10 @@ export default function Home() {
                 Usager quotidien du réseau lyonnais, je m&apos;intéresse à la façon dont les transports en commun se pensent, se financent et se gèrent, et à ce que sera la ville en 2050.
               </p>
             </div>
-            {reflexions[0] && (
-              <Link href={`/reflexion/${reflexions[0].slug}`} className="card-brut group block p-7 md:p-9" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-1deg" }} data-reveal>
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Note de réflexion · {reflexions[0].date}</p>
-                <p className="font-display mt-3 text-2xl leading-tight md:text-3xl">{reflexions[0].titre}</p>
+            {transportArticle && (
+              <Link href={`/reflexion/${transportArticle.slug}`} className="card-brut group block p-7 md:p-9" style={{ background: "var(--peach)", color: "#0b1b4d", rotate: "-1deg" }} data-reveal>
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em]" style={{ opacity: 0.7 }}>Note de réflexion · {transportArticle.date}</p>
+                <p className="font-display mt-3 text-2xl leading-tight md:text-3xl">{transportArticle.titre}</p>
                 <p className="mt-6 flex items-center gap-2 text-sm font-bold">Lire la note <span className="transition-transform duration-500 group-hover:translate-x-1.5">→</span></p>
               </Link>
             )}

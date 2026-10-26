@@ -10,15 +10,22 @@ export type Article = {
 const words = (a: Article) => (a.chapeau + " " + a.contenu.map((b) => b.text).join(" ")).trim().split(/\s+/).length;
 export const readingMinutes = (a: Article) => Math.max(1, Math.round(words(a) / 210));
 
-/** Articles publiés en base (écrits depuis l'admin) + articles historiques du site. */
+/**
+ * Articles publiés en base (écrits et modifiables depuis l'admin).
+ * Les articles historiques du fichier content.json ne servent plus que de secours si la base est injoignable.
+ */
 export async function getArticles(): Promise<Article[]> {
-  const statics = (((getContent() as any).reflexions ?? []) as Article[]).map((a) => ({ ...a }));
-  let db: Article[] = [];
   try {
-    db = (await rpc<Article[]>("portfolio_articles", {}, { revalidate: 30, tags: ["articles"] })) || [];
+    const db = await rpc<Article[]>("portfolio_articles", {}, { revalidate: 30, tags: ["articles"] });
+    if (Array.isArray(db)) return db;
   } catch {}
-  const slugs = new Set(db.map((a) => a.slug));
-  return [...db, ...statics.filter((a) => !slugs.has(a.slug))];
+  return (((getContent() as any).reflexions ?? []) as Article[]).map((a) => ({ ...a }));
+}
+
+/** Article à mettre en avant dans le bloc « transports » de l'accueil. */
+export async function getTransportArticle(): Promise<Article | null> {
+  const all = await getArticles();
+  return all.find((a) => a.slug === "mobilites-2050") || all.find((a) => /transport|mobilit/i.test(`${a.tag ?? ""} ${a.titre}`)) || null;
 }
 
 export async function getArticle(slug: string, adminKey?: string | null): Promise<Article | null> {
